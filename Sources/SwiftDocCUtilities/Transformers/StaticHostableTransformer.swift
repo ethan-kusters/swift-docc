@@ -42,7 +42,15 @@ class StaticHostableTransformer {
     ///   - fileManager: The FileManager to use for file processes.
     ///   - outputURL: The folder where the output will be placed
     ///   - indexHTML: The HTML to be used in the generated index.html file.
-    init(dataProvider: FileSystemProvider, fileManager: FileManagerProtocol, outputURL: URL, htmlTemplate: URL, staticHostingBasePath: String?) throws {
+    init(
+        dataProvider: FileSystemProvider,
+        fileManager: FileManagerProtocol,
+        outputURL: URL,
+        htmlTemplate: URL,
+        staticHostingBasePath: String?,
+        enableCustomHeaderFooter: Bool = false,
+        bundle: DocumentationBundle? = nil
+    ) throws {
         self.dataProvider = dataProvider
         self.fileManager = fileManager
         self.outputURL = outputURL
@@ -50,6 +58,22 @@ class StaticHostableTransformer {
         let indexFileName = staticHostingBasePath != nil ? HTMLTemplate.templateFileName.rawValue : HTMLTemplate.indexFileName.rawValue
         let indexFileURL = htmlTemplate.appendingPathComponent(indexFileName)
         var indexHTML = try String(contentsOfFile: indexFileURL.path)
+        
+        if enableCustomHeaderFooter,
+            let customHeader = bundle?.customHeader,
+            let templateData = fileManager.contents(atPath: customHeader.path),
+            let templateContents = String(data: templateData, encoding: .utf8)
+        {
+            indexHTML.injectCustomTemplate(templateContents, identifiedBy: .header)
+        }
+        
+        if enableCustomHeaderFooter,
+            let customFooter = bundle?.customFooter,
+            let templateData = fileManager.contents(atPath: customFooter.path),
+            let templateContents = String(data: templateData, encoding: .utf8)
+        {
+            indexHTML.injectCustomTemplate(templateContents, identifiedBy: .footer)
+        }
 
 
         if let staticHostingBasePath = staticHostingBasePath {

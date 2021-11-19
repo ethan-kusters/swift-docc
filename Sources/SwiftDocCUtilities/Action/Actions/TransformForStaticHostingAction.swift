@@ -89,7 +89,13 @@ struct TransformForStaticHostingAction: Action {
 
         // Create a StaticHostableTransformer targeted at the archive data folder
         let dataProvider = try LocalFileSystemDataProvider(rootURL: rootURL.appendingPathComponent("data"))
-        let transformer = try StaticHostableTransformer(dataProvider: dataProvider, fileManager: fileManager, outputURL: outputURL, htmlTemplate: htmlTemplateDirectory, staticHostingBasePath: staticHostingBasePath)
+        let transformer = try StaticHostableTransformer(
+            dataProvider: dataProvider,
+            fileManager: fileManager,
+            outputURL: outputURL,
+            htmlTemplate: htmlTemplateDirectory,
+            staticHostingBasePath: staticHostingBasePath
+        )
         try transformer.transform()
         
     }

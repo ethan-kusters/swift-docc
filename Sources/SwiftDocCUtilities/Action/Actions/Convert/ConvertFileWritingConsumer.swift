@@ -20,11 +20,6 @@ struct ConvertFileWritingConsumer: ConvertOutputConsumer {
     var indexer: ConvertAction.Indexer?
     let enableCustomTemplates: Bool
 
-    private enum CustomTemplateIdentifier: String {
-        case header = "custom-header"
-        case footer = "custom-footer"
-    }
-    
     init(targetFolder: URL, bundleRootFolder: URL?, fileManager: FileManagerProtocol, context: DocumentationContext, indexer: ConvertAction.Indexer?, enableCustomTemplates: Bool = false) {
         self.targetFolder = targetFolder
         self.bundleRootFolder = bundleRootFolder
@@ -171,14 +166,12 @@ struct ConvertFileWritingConsumer: ConvertOutputConsumer {
         guard let indexData = fileManager.contents(atPath: index.path),
               let indexContents = String(data: indexData, encoding: .utf8),
               let templateData = fileManager.contents(atPath: templateURL.path),
-              let templateContents = String(data: templateData, encoding: .utf8),
-              let bodyTagRange = indexContents.range(of: "<body[^>]*>", options: .regularExpression) else {
+              let templateContents = String(data: templateData, encoding: .utf8) else {
             return
         }
 
-        let template = "<template id=\"\(id.rawValue)\">\(templateContents)</template>"
         var newIndexContents = indexContents
-        newIndexContents.replaceSubrange(bodyTagRange, with: indexContents[bodyTagRange] + template)
+        newIndexContents.injectCustomTemplate(templateContents, identifiedBy: id)
         try newIndexContents.write(to: index, atomically: true, encoding: .utf8)
     }
     
@@ -187,6 +180,31 @@ struct ConvertFileWritingConsumer: ConvertOutputConsumer {
     
     /// File name for the build metadata file emitted during conversion.
     static var buildMetadataFileName = "metadata.json"
+}
+
+enum CustomTemplateIdentifier: String {
+    case header = "custom-header"
+    case footer = "custom-footer"
+}
+
+extension String {
+    /// Injects the given custom header or footer template into the given string.
+    mutating func injectCustomTemplate(
+        _ templateContents: String,
+        identifiedBy id: CustomTemplateIdentifier
+    ) {
+        guard let bodyTagRange = range(
+            of: "<body[^>]*>",
+            options: .regularExpression
+        ) else {
+            return
+        }
+
+        let template = """
+            <template id="\(id.rawValue)">\(templateContents)</template>
+            """
+        replaceSubrange(bodyTagRange, with: self[bodyTagRange] + template)
+    }
 }
 
 enum Digest {

@@ -355,7 +355,15 @@ public struct ConvertAction: Action, RecreatingContext {
         // Process Static Hosting is needed.
         if transformForStaticHosting, let templateDirectory = htmlTemplateDirectory {
             let dataProvider = try LocalFileSystemDataProvider(rootURL: temporaryFolder.appendingPathComponent("data"))
-            let transformer = try StaticHostableTransformer(dataProvider: dataProvider, fileManager: fileManager, outputURL: temporaryFolder, htmlTemplate: templateDirectory, staticHostingBasePath: staticHostingBasePath)
+            let transformer = try StaticHostableTransformer(
+                dataProvider: dataProvider,
+                fileManager: fileManager,
+                outputURL: temporaryFolder,
+                htmlTemplate: templateDirectory,
+                staticHostingBasePath: staticHostingBasePath,
+                enableCustomHeaderFooter: experimentalEnableCustomTemplates,
+                bundle: context.registeredBundles.first
+            )
             try transformer.transform()
         }
         
