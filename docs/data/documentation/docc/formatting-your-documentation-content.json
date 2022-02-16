@@ -1,0 +1,4062 @@
+{
+  "abstract" : [
+    {
+      "text" : "Enhance your content’s presentation with special formatting and styling for text, links, and other page elements.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/DocC\/formatting-your-documentation-content"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "DocC"
+      }
+    ],
+    "role" : "article",
+    "roleHeading" : "Article",
+    "title" : "Formatting Your Documentation Content"
+  },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/daringfireball.net\/projects\/markdown\/syntax",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ", a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "lightweight markup language, to give structure and style to your documentation.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "DocC includes a custom dialect of Markdown, documentation markup, which",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "extends Markdown’s syntax to include features like symbol linking, improved",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "image support, term lists, and asides.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To ensure consistent structure and styling, use DocC’s documentation markup for",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "all of the documentation you write.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Add-a-Page-Title-and-Section-Headers",
+          "level" : 3,
+          "text" : "Add a Page Title and Section Headers",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To add a page title, precede the text you want to use with a hash (",
+              "type" : "text"
+            },
+            {
+              "code" : "#",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") and a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "space. For the page title of an article or API collection, use plain text only.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# Getting Started with Sloths"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Page titles must be the first line of content in a documentation",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "file. One or more empty lines can precede the page title.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "style" : "important",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For the page title of a framework landing page or extension file, use a ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "symbol",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "link",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ". To create a symbol link, wrap the framework’s name, or the symbol’s name",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "(including its hierarchy within the framework, when necessary), within a set of",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "double backticks (``).",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# ``SlothCreator``",
+            "# ``SlothCreator\/CareSchedule\/Event``"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Augment every page title with a short and concise single-sentence abstract or",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "summary that provides additional information about the content. Add the summary",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "using a new paragraph directly below the page title.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# Getting Started with Sloths",
+            "",
+            "Create a sloth and assign personality traits and abilities."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To add a header for an Overview or a Discussion section, use a double hash",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "(",
+              "type" : "text"
+            },
+            {
+              "code" : "##",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") and a space, and then include either term in plain text.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "## Overview"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For all other section headers, use a triple hash (",
+              "type" : "text"
+            },
+            {
+              "code" : "###",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") and a space, and then",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "add the title of the header in plain text.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "### Create a Sloth"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use this type of section header in framework landing pages, top-level pages,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "articles, and occasionally in symbol reference pages where you need to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "provide more detail.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Format-Text-in-Bold,-Italics,-and-Code-Voice",
+          "level" : 3,
+          "text" : "Format Text in Bold, Italics, and Code Voice",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC provides three ways to format the text in your documentation. You can",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "apply bold or italic styling, or you can use code voice, which renders the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "specified text in a monospace font.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To add bold styling, wrap the text in a pair of double asterisks (",
+              "type" : "text"
+            },
+            {
+              "code" : "**",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") or you can wrap it in a pair of double underscores (",
+              "type" : "text"
+            },
+            {
+              "code" : "__",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") .",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Alternatively, use double underscores (",
+              "type" : "text"
+            },
+            {
+              "code" : "__",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ").",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following example uses bold styling for the names of the sloths:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "**Super Sloth**: Likes to eat sticks.",
+            "__Silly Sloth__: Prefers twigs for breakfast."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use italicized text to introduce new or alternative terms to the reader. To add",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "italic styling, wrap the text in a set of single underscores (",
+              "type" : "text"
+            },
+            {
+              "code" : "_",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") or single",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "asterisks (",
+              "type" : "text"
+            },
+            {
+              "code" : "*",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ").",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following example uses italics for the words ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "metabolism",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "habitat",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ":",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "A sloth's _metabolism_ is highly dependent on its *habitat*."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use code voice to refer to symbols inline, or to include short code fragments,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "such as class names or method signatures.  To add code voice, wrap the text in",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "a set of backticks (`).",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In the following example, DocC renders the words ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "ice",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "fire",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "wind",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "lightning",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " in a monospace font:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "If your sloth possesses one of the special powers: `ice`, `fire`, ",
+            "`wind`, or `lightning`."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "To include multiple lines of code, use a code listing instead. For more",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "information, see ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/formatting-your-documentation-content#Add-Code-Listings",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When referencing symbols that appear within your Swift framework or",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "package, use symbol links. To create a symbol link, wrap the symbol",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "name in a set of double backticks (``).",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In the following example, DocC renders the referenced methods in a monospace",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "font and wraps them in links to the corresponding documentation pages:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "You can increase the sloth's energy level by asking them to ",
+            "``eat(_:quantity:)`` or ``sleep(in:for:)``."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For more information, see",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/formatting-your-documentation-content#Link-to-Symbols-and-Other-Content",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Add-Code-Listings",
+          "level" : 3,
+          "text" : "Add Code Listings",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC includes support for code listings, or fenced code blocks, which allow you",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to go beyond the basic declaration sections you find in symbol reference pages,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "and to provide more complete code examples for adopters of your framework. You can",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "include code listings in your in-source symbol documentation, in extension",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "files, and in articles and tutorials.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To create a code listing, start a new paragraph and add three backticks",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "(```). Then, directly following the backticks, add the name of the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "programming language in lowercase text. Add one or more lines of code, and then",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "add a new line and terminate the code listing by adding another three backticks:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "```swift",
+            "struct Sightseeing: Activity {",
+            "    func perform(with sloth: inout Sloth) -> Speed {",
+            "        sloth.energyLevel -= 10",
+            "        return .slow",
+            "    }",
+            "}",
+            "```"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "When formatting your code listing, use spaces to indent lines",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "instead of tabs so that DocC preserves the indentation when compiling your",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "documentation.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "style" : "important",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC uses the programming language you specify to apply the correct syntax",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "color formatting. For the example above, DocC generates the following:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "struct Sightseeing: Activity {",
+            "    func perform(with sloth: inout Sloth) -> Speed {",
+            "        sloth.energyLevel -= 10",
+            "        return .slow",
+            "    }",
+            "}"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following table lists the names of programming languages that can be used",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to specify the syntax highlighting for a given code listing. Each one may have",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "aliases that can also be used to specify the same language.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "header" : "row",
+          "rows" : [
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Name",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Aliases",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "bash",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "sh, zsh",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "c",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "h",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "cpp",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "cc, c++, h++, hpp, hh, hxx, cxx",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "css",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "diff",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "patch",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "http",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "https",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "java",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "jsp",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "javascript",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "js, jsx, mjs, cjs",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "json",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "llvm",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "markdown",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "md, mkdown, mkd",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "objectivec",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "mm, objc, obj-c",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "perl",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "pl, pm",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "php",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "python",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "py, gyp, ipython",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "ruby",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "rb, gemspec, podspec, thor, irb",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "scss",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "shell",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "console, shellsession",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "swift",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "xml",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "html, xhtml, rss, atom, xjb, xsd, xsl, plist, wsf, svg",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ]
+          ],
+          "type" : "table"
+        },
+        {
+          "anchor" : "Link-to-Symbols-and-Other-Content",
+          "level" : 3,
+          "text" : "Link to Symbols and Other Content",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC supports the following link types to enable navigation between pages:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "header" : "row",
+          "rows" : [
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Type",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Usage",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Symbol",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Links to a symbol’s reference page in your documentation.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Article",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Links to an article or API collection in your documentation catalog.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Tutorial",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Links to a tutorial in your documentation catalog.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Web",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Links to an external URL.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ]
+          ],
+          "type" : "table"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To add a link to a symbol, wrap the symbol’s name in a set of double backticks",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "(``).",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "``SlothCreator``"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For nested symbols, include the entire path to the symbol in the link.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "``SlothCreator\/Sloth\/eat(_:quantity:)``"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC resolves symbol links relative to the context they appear in. For example,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "a symbol link that appears inline in the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Sloth",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " class, and targets a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "symbol in that class, can omit the ",
+              "type" : "text"
+            },
+            {
+              "code" : "SlothCreator\/Sloth\/",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " portion of the symbol",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "path.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In some cases, a symbol’s path isn’t unique, such as with overloaded methods in",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Swift. For example, consider the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Sloth",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " structure, which has multiple",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "update(_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " methods.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "\/\/\/ Updates the sloth's power.",
+            "\/\/\/",
+            "\/\/\/ - Parameter power: The sloth's new power.",
+            "mutating public func update(_ power: Power) {",
+            "    self.power = power",
+            "}",
+            "",
+            "\/\/\/ Updates the sloth's energy level.",
+            "\/\/\/",
+            "\/\/\/ - Parameter energyLevel: The sloth's new energy level.",
+            "mutating public func update(_ energyLevel: Int) {",
+            "    self.energyLevel = energyLevel",
+            "}"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Both methods have an identical symbol path of ",
+              "type" : "text"
+            },
+            {
+              "code" : "SlothCreator\/Sloth\/update(_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "In this scenario, and to ensure uniqueness, DocC uses the symbol’s unique",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "identifier instead of its name to disambiguate.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "### Updating Sloths",
+            "- ``Sloth\/update(_:)-4ko57``",
+            "- ``Sloth\/update(_:)-jixx``"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In the example above, both symbol paths are identical, regardless of text case.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "However, another scenario where you need to provide more context to DocC about",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the symbol you’re linking is when the case-insensitive nature of symbol paths",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "comes into play. For example, consider the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Sloth",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " structure, which has a nested",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "Color",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " enumeration and a ",
+              "type" : "text"
+            },
+            {
+              "code" : "color",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " property.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "public struct Sloth {",
+            "    public enum Color { }",
+            "    ",
+            "    public var color: Color",
+            "}"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Because symbol paths are case-insensitive, both symbols resolve to the same path.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "To address this issue, add the suffix for the target’s type to the linked symbol path .",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "``Sloth\/Color.swift-enum``"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC supports the following symbol types for use in symbol links:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "header" : "row",
+          "rows" : [
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Symbol type",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Suffix",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Enumeration",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.enum",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Enumeration case",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.enum.case",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Protocol",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.protocol",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Operator",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.func.op",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Typealias",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.typealias",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Function",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.func",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Structure",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.struct",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Class",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.class",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Type property",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.type.property",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Type method",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.type.method",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Type subscript",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.type.subscript",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Property",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.property",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Initializer",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.init",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Deinitializer",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.deinit",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Method",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.method",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Subscript",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "-swift.subscript",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ]
+          ],
+          "type" : "table"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To add a link to an article, use the less-than symbol (",
+              "type" : "text"
+            },
+            {
+              "code" : "<",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "), the ",
+              "type" : "text"
+            },
+            {
+              "code" : "doc",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " keyword,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "a colon (",
+              "type" : "text"
+            },
+            {
+              "code" : ":",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "), the name of the article, and a greater-than symbol",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "(",
+              "type" : "text"
+            },
+            {
+              "code" : ">",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "). Don’t include the article’s file extension in the name.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "<doc:GettingStarted>"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When DocC resolves the link, it uses the article’s page title as the link’s",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "text, and the article’s filename as the link’s URL. Links to tutorials follow",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the same format, except you must add the ",
+              "type" : "text"
+            },
+            {
+              "code" : "\/tutorials\/",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " prefix to the path.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "<doc:\/tutorials\/SlothCreator>"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "You can also link to symbols using the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "<doc:>",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " syntax. Just insert the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "symbol’s path between the colon (",
+                  "type" : "text"
+                },
+                {
+                  "code" : ":",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ") and the terminating greater-than",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "symbol (",
+                  "type" : "text"
+                },
+                {
+                  "code" : ">",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ").",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "style" : "tip",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To include a regular web link, add a set of square brackets (",
+              "type" : "text"
+            },
+            {
+              "code" : "[]",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "a set of parentheses (",
+              "type" : "text"
+            },
+            {
+              "code" : "()",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "). Then add the link’s text between the square brackets, and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "add the link’s URL destination within the parentheses.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "[Apple](https:\/\/www.apple.com)"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Add-Images-to-Your-Content",
+          "level" : 3,
+          "text" : "Add Images to Your Content",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC extends Markdown’s image support so you can provide appearance and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "display scale-aware versions of an image. You use specific components to create image filenames, and DocC  uses the most appropriate version of the image when displaying your documentation.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "docc-image-filename",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "header" : "row",
+          "rows" : [
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Component",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Description",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Image name",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "inlineContent" : [
+                        {
+                          "text" : "Required",
+                          "type" : "text"
+                        }
+                      ],
+                      "type" : "strong"
+                    },
+                    {
+                      "text" : ". Identifies the image within the documentation catalog. The name must be unique across all images in the catalog, even if you store them in separate folders.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Appearance",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "inlineContent" : [
+                        {
+                          "text" : "Optional",
+                          "type" : "text"
+                        }
+                      ],
+                      "type" : "strong"
+                    },
+                    {
+                      "text" : ". Identifies the appearance mode in which DocC uses the image. Add ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "~dark",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " directly after the image name to identify the image as a dark appearance mode variant.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Display scale",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "inlineContent" : [
+                        {
+                          "text" : "Optional",
+                          "type" : "text"
+                        }
+                      ],
+                      "type" : "strong"
+                    },
+                    {
+                      "text" : ". Identifies the display scale at which DocC uses the image. Possible values are ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "@1x",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ", ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "@2x",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ", and ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "@3x",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ". When specifying a display scale, add it directly before the file extension.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "File extension",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "inlineContent" : [
+                        {
+                          "text" : "Required",
+                          "type" : "text"
+                        }
+                      ],
+                      "type" : "strong"
+                    },
+                    {
+                      "text" : ". Identifies the type of image, such as .png or .jpeg.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ]
+          ],
+          "type" : "table"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For example, the following are all valid DocC image filenames:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "An image that’s independent of all appearance modes and display scales.",
+                        "type" : "text"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "code" : "sloth.png",
+                    "type" : "codeVoice"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "An image that’s specific to a dark appearance mode, but is display-scale independent.",
+                        "type" : "text"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "code" : "sloth~dark.png",
+                    "type" : "codeVoice"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "An image that’s specific to a dark appearance mode and the 2x display scale.",
+                        "type" : "text"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "code" : "sloth~dark@2x.png",
+                    "type" : "codeVoice"
+                  }
+                ]
+              }
+            }
+          ],
+          "type" : "termList"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "You must store images you include in your documentation in a",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "documentation catalog. For more information, see ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/documenting-a-swift-framework-or-package",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "style" : "important",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To add an image, use an exclamation mark (",
+              "type" : "text"
+            },
+            {
+              "code" : "!",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "), a set of square brackets",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "(",
+              "type" : "text"
+            },
+            {
+              "code" : "[]",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "), and a set of parentheses (",
+              "type" : "text"
+            },
+            {
+              "code" : "()",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ").",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Add a description of what the image shows between the square brackets. Screen",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "readers read this text aloud. Provide enough detail to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "allow people with impaired vision to understand what the image shows.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Within the parentheses, include only the image name. Omit the appearance,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "display scale, and file extension components. Don’t include the path to the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "image, even if you store the image in a folder in the documentation catalog.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "![A photograph of a sloth hanging off a tree.](sloth)"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Add-Bulleted,-Numbered,-and-Term-Lists",
+          "level" : 3,
+          "text" : "Add Bulleted, Numbered, and Term Lists",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC supports the following list types:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "header" : "row",
+          "rows" : [
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Type",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Usage",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Bulleted list",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Groups items that can appear in any order.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Numbered list",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Delineates a sequence of events in a particular order.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Term list",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Defines a series of term-definition pairs.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ]
+          ],
+          "type" : "table"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Don’t add images or code listings between list items. Bulleted and",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "numbered lists must contain two or more items.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "style" : "important",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To create a bulleted list, precede each of the list’s items with an asterisk (",
+              "type" : "text"
+            },
+            {
+              "code" : "*",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") and a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "space. Alternatively, use a dash (",
+              "type" : "text"
+            },
+            {
+              "code" : "-",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") or a plus sign (",
+              "type" : "text"
+            },
+            {
+              "code" : "+",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") instead of an asterisk (",
+              "type" : "text"
+            },
+            {
+              "code" : "*",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "); the list markers are interchangeable.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "* Ice",
+            "- Fire",
+            "* Wind",
+            "+ Lightning"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To create a numbered list, precede each of the list’s items with the number of the step, then a period (",
+              "type" : "text"
+            },
+            {
+              "code" : ".",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") and a space.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "1. Give the sloth some food.",
+            "2. Take the sloth for a walk.",
+            "3. Read the sloth a story.",
+            "4. Put the sloth to bed."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To create a term list, precede each term with a dash (",
+              "type" : "text"
+            },
+            {
+              "code" : "-",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") and a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "space, the ",
+              "type" : "text"
+            },
+            {
+              "code" : "term",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " keyword, and another space. Then add a colon (",
+              "type" : "text"
+            },
+            {
+              "code" : ":",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "), a space, and the definition after the term.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "- term Ice: Ice sloths thrive below freezing temperatures.",
+            "- term Fire: Fire sloths thrive at boiling temperatures.",
+            "- term Wind: Wind sloths thrive at soaring altitudes.",
+            "- term Lightning: Lightning sloths thrive in stormy climates."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A list item’s text, including terms and their definitions, can use the same",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "style attributes as other text, and include links to other content, including",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "symbols.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Add-Tables-of-Data",
+          "level" : 3,
+          "text" : "Add Tables of Data",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC includes support for tables, which you can use to organize information.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To create a table, start a new paragraph and use dashes (",
+              "type" : "text"
+            },
+            {
+              "code" : "-",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") to define",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "columns, and pipes (",
+              "type" : "text"
+            },
+            {
+              "code" : "|",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") as column separators. Construction of a table requires",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "at least three rows:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "A row that contains the column names.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "A row with cells that contain only dashes (",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "-",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : "); three or more for each",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "column.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "One or more rows of content.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "code" : [
+            "| Sloth speed  | Description                           |",
+            "| ------------ | ------------------------------------- | ",
+            "| `slow`       | Moves slightly faster than a snail.   |",
+            "| `medium`     | Moves at an average speed.            |",
+            "| `fast`       | Moves faster than a hare.             |",
+            "| `supersonic` | Moves faster than the speed of sound. |"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "There’s no need to impose a column width. A column determines its width",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "using the contents of its widest cell. You can also omit the leading",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "and trailing pipes.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "Sloth speed | Description",
+            "--- | ---",
+            "`slow` | Moves slightly faster than a snail.",
+            "`medium` | Moves at an average speed.",
+            "`fast` | Moves faster than a hare.",
+            "`supersonic` | Moves faster than the speed of sound."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Both examples result in the same output:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "header" : "row",
+          "rows" : [
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Sloth speed",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Description",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "slow",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Moves slightly faster than a snail.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "medium",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Moves at an average speed.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "fast",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Moves faster than a hare.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "supersonic",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Moves faster than the speed of sound.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ]
+          ],
+          "type" : "table"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Table cells don’t support multiple paragraphs, lists, or code",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "listings.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The text of a table cell can use the same style attributes as other text, and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "include links to other content, including symbols.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Add-Notes-and-Other-Asides",
+          "level" : 3,
+          "text" : "Add Notes and Other Asides",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "There may be circumstances when you want to get the reader’s attention to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "provide additional advice, or to warn them about common errors or requisite",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "configuration. For those situations, use an aside.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC supports the following types of asides:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "header" : "row",
+          "rows" : [
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Type",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Usage",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Note",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "General information that applies to some users.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Important",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Important information, such as a requirement.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Warning",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Critical information, like potential data loss or an irrecoverable state.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Tip",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Helpful information, such as shortcuts, suggestions, or hints.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ],
+            [
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Experiment",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ],
+              [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Instructional information to reinforce a learning objective, or to encourage developers to try out different parts of your framework.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            ]
+          ],
+          "type" : "table"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To create an aside, begin a new line with a greater-than symbol (",
+              "type" : "text"
+            },
+            {
+              "code" : ">",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "), add a space,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the type of the aside, a colon (",
+              "type" : "text"
+            },
+            {
+              "code" : ":",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "), and the content of the aside.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "> Tip: Sloths require sustenance to perform activities."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For the example above, DocC renders the following aside:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Sloths require sustenance to perform activities.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "style" : "tip",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The text of an aside can use the same style attributes as other text, and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "include links to other content, including symbols.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Include-Special-Characters-in-Text",
+          "level" : 3,
+          "text" : "Include Special Characters in Text",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To escape one or more special characters, precede each with a backslash",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "(",
+              "type" : "text"
+            },
+            {
+              "code" : "\\",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ").",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For example, to display an asterisk (",
+              "type" : "text"
+            },
+            {
+              "code" : "*",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") at the beginning of a line and prevent",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "DocC from converting it into a bulleted list item, place a backslash immediately before it.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "\\* Not a bulleted list item."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If you use single (",
+              "type" : "text"
+            },
+            {
+              "code" : "*",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") or double (",
+              "type" : "text"
+            },
+            {
+              "code" : "**",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") asterisks to apply italic or bold",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "styling, respectively, you can escape any asterisks that the text contains so",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "DocC doesn’t prematurely terminate the styling.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "*Sloths require sustenance\\* to perform activities.*",
+            "",
+            "**Sloths require sustenance\\*\\* to perform activities.**"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/adding-structure-to-your-documentation-pages",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/adding-supplemental-content-to-a-documentation-catalog"
+      ],
+      "title" : "Structure and Formatting"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/formatting-your-documentation-content"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/DocC": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/DocC/adding-structure-to-your-documentation-pages": {
+  "abstract" : [
+    {
+      "text" : "Arrange symbols into groups and collections that make them easy to find.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/adding-structure-to-your-documentation-pages",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Adding Structure to Your Documentation Pages",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/adding-structure-to-your-documentation-pages"
+},
+"doc://org.swift.docc/documentation/DocC/adding-supplemental-content-to-a-documentation-catalog": {
+  "abstract" : [
+    {
+      "text" : "Include articles and extension files to extend your source documentation comments or provide supporting conceptual content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/adding-supplemental-content-to-a-documentation-catalog",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Adding Supplemental Content to a Documentation Catalog",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/adding-supplemental-content-to-a-documentation-catalog"
+},
+"doc://org.swift.docc/documentation/DocC/documenting-a-swift-framework-or-package": {
+  "abstract" : [
+    {
+      "text" : "Create rich and engaging documentation from your in-source comments, and add a",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "documentation catalog to your code base to provide additional content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/documenting-a-swift-framework-or-package",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Documenting a Swift Framework or Package",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/documenting-a-swift-framework-or-package"
+},
+"doc://org.swift.docc/documentation/DocC/formatting-your-documentation-content#Add-Code-Listings": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/formatting-your-documentation-content#Add-Code-Listings",
+  "kind" : "section",
+  "title" : "Add Code Listings",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/formatting-your-documentation-content#Add-Code-Listings"
+},
+"doc://org.swift.docc/documentation/DocC/formatting-your-documentation-content#Link-to-Symbols-and-Other-Content": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/formatting-your-documentation-content#Link-to-Symbols-and-Other-Content",
+  "kind" : "section",
+  "title" : "Link to Symbols and Other Content",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/formatting-your-documentation-content#Link-to-Symbols-and-Other-Content"
+},
+"docc-image-filename": {
+  "alt" : "An image of a filename that’s split into four labeled sections to highlight the individual components. From left to right, the components are the image name, the apperance mode, the display scale, and the file extension.",
+  "identifier" : "docc-image-filename",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/docc-image-filename@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/docc-image-filename~dark@2x.png"
+    }
+  ]
+},
+"https://daringfireball.net/projects/markdown/syntax": {
+  "identifier" : "https:\/\/daringfireball.net\/projects\/markdown\/syntax",
+  "title" : "Markdown",
+  "titleInlineContent" : [
+    {
+      "text" : "Markdown",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/daringfireball.net\/projects\/markdown\/syntax"
+}
+}
+}

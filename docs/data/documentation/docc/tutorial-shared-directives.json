@@ -1,0 +1,197 @@
+{
+  "abstract" : [
+    {
+      "text" : "Directives supported by multiple directives in interactive tutorials.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-shared-directives"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "DocC"
+      }
+    ],
+    "role" : "collectionGroup",
+    "title" : "Shared Directives"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Chapter",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Intro"
+      ],
+      "title" : "Content Directives"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Image",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Video"
+      ],
+      "title" : "Media Directives"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/tutorial-shared-directives"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/DocC": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/DocC/Chapter": {
+  "abstract" : [
+    {
+      "text" : "Organizes related tutorial pages into a chapter on a table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Chapter",
+      "text" : "Chapter"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Chapter",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Chapter",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/chapter"
+},
+"doc://org.swift.docc/documentation/DocC/Image": {
+  "abstract" : [
+    {
+      "text" : "Displays an image in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Image",
+      "text" : "Image"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Image",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Image",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/image"
+},
+"doc://org.swift.docc/documentation/DocC/Intro": {
+  "abstract" : [
+    {
+      "text" : "Displays an introduction section at the top of a table of contents or tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Intro",
+      "text" : "Intro"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Intro",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Intro",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/intro"
+},
+"doc://org.swift.docc/documentation/DocC/Video": {
+  "abstract" : [
+    {
+      "text" : "Displays a video in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Video",
+      "text" : "Video"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Video",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Video",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/video"
+},
+"doc://org.swift.docc/documentation/DocC/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

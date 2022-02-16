@@ -1,0 +1,384 @@
+{
+  "abstract" : [
+    {
+      "text" : "Tests the reader’s knowledge at the end of a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Assessments"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "Assessments",
+    "fragments" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Assessments",
+        "text" : "Assessments"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "DocC",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Assessments",
+        "text" : "Assessments"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Assessments"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "__docc_universal_symbol_reference_$Assessments",
+              "text" : "Assessments"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n  ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Assessment",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive to display an assessments section that helps the reader check their knowledge of your Swift framework or package APIs at the end of a tutorial page. An assessment includes a set of multiple-choice questions that you create using the`MultipleChoice`` directive. If the reader gets a question wrong, you can provide a hint that points them toward the correct answer so they can try again.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: 30) {",
+            "    ",
+            "    ...",
+            "",
+            "    @Assessments {",
+            "        @MultipleChoice {",
+            "            What element did you use to add space around and between your views?",
+            "",
+            "            @Choice(isCorrect: false) {",
+            "                A state variable.",
+            "",
+            "                @Justification(reaction: \"Try again!\") {",
+            "                    Remember, it's something you used to arrange views vertically.",
+            "                }",
+            "            }",
+            "",
+            "            @Choice(isCorrect: true) {",
+            "                A `VStack` with trailing padding.",
+            "",
+            "                @Justification(reaction: \"That's right!\") {",
+            "                    A `VStack` arranges views in a vertical line.",
+            "                }",
+            "            }",
+            "",
+            "            @Choice(isCorrect: false) {",
+            "              ",
+            "              ...",
+            "              ",
+            "            }",
+            "        }  ",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Contained-Elements",
+          "level" : 3,
+          "text" : "Contained Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "An assessment contains the following items:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "A question with multiple possible answers that tests the reader’s knowledge about content within the tutorial. It’s a good practice to include 3-4 multiple choice questions. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/MultipleChoice",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            }
+          ],
+          "type" : "termList"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following items include assessments:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial"
+      ],
+      "title" : "Related Documentation"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/MultipleChoice"
+      ],
+      "title" : "Defining Questions"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/assessments"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/DocC": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/DocC/Assessments": {
+  "abstract" : [
+    {
+      "text" : "Tests the reader’s knowledge at the end of a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Assessments",
+      "text" : "Assessments"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Assessments",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Assessments",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/assessments"
+},
+"doc://org.swift.docc/documentation/DocC/MultipleChoice": {
+  "abstract" : [
+    {
+      "text" : "Defines a single question and multiple possible answers to include in the Assessments section of a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$MultipleChoice",
+      "text" : "MultipleChoice"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/MultipleChoice",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "MultipleChoice",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/multiplechoice"
+},
+"doc://org.swift.docc/documentation/DocC/Tutorial": {
+  "abstract" : [
+    {
+      "text" : "Displays a tutorial page that teaches your Swift framework or package APIs through interactive coding exercises.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorial",
+      "text" : "Tutorial"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Tutorial",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial"
+},
+"doc://org.swift.docc/documentation/DocC/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

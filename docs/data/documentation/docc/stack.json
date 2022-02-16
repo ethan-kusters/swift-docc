@@ -1,0 +1,516 @@
+{
+  "abstract" : [
+    {
+      "text" : "Displays set of horizontally arranged groupings that contain text and media in a section on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Section"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Stack"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "Stack",
+    "fragments" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Stack",
+        "text" : "Stack"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "DocC",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Stack",
+        "text" : "Stack"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Stack"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "__docc_universal_symbol_reference_$Stack",
+              "text" : "Stack"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n  ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the Stack directive to horizontally arrange between one and three groupings of text and media (images or videos) in a section on a tutorial page.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: 30) {",
+            "    ",
+            "    ...",
+            "    ",
+            "    @Section(title: \"Add a customization view\") {",
+            "        @ContentAndMedia(layout: \"horizontal\") {",
+            "            Add the ability for users to customize sloths and select their powers.",
+            "            ",
+            "            @Image(source: 01-creating-section2.png, alt: \"An outline of a sloth surrounded by four power type icons. The power type icons are arranged in the following order, clockwise from the top: fire, wind, lightning, and ice.\")",
+            "        }",
+            "        ",
+            "        @Stack {",
+            "            @ContentAndMedia(layout: \"horizontal\") {",
+            "                ...",
+            "            }",
+            "",
+            "            @ContentAndMedia(layout: \"horizontal\") {            ",
+            "                ...            ",
+            "            }",
+            "",
+            "            @ContentAndMedia(layout: \"horizontal\") {",
+            "                ...",
+            "            }",
+            "        ",
+            "        }            ",
+            "        ...",
+            " ",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Example of a 1-column stack:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "tutorial-stack-1col",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Example of a 2-column stack:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "tutorial-stack-2col",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Example of a 3-column stack:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "tutorial-stack-3col",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Contained-Elements",
+          "level" : 3,
+          "text" : "Contained Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A stack contains the following items:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "A grouping containing text and an image or a video. At least one is required ",
+                        "type" : "text"
+                      },
+                      {
+                        "code" : "ContentAndMedia",
+                        "type" : "codeVoice"
+                      },
+                      {
+                        "text" : " element is required. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            }
+          ],
+          "type" : "termList"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following items can include a stack:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Section",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia"
+      ],
+      "title" : "Optional Directives"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/stack"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/DocC": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/DocC/ContentAndMedia": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping that contains text and an image or a video in a section on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$ContentAndMedia",
+      "text" : "ContentAndMedia"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ContentAndMedia",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/contentandmedia"
+},
+"doc://org.swift.docc/documentation/DocC/Section": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping of text, images, and tasks on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+      "text" : "Section"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Section",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Section",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/section"
+},
+"doc://org.swift.docc/documentation/DocC/Stack": {
+  "abstract" : [
+    {
+      "text" : "Displays set of horizontally arranged groupings that contain text and media in a section on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Stack",
+      "text" : "Stack"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Stack",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Stack",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/stack"
+},
+"doc://org.swift.docc/documentation/DocC/Tutorial": {
+  "abstract" : [
+    {
+      "text" : "Displays a tutorial page that teaches your Swift framework or package APIs through interactive coding exercises.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorial",
+      "text" : "Tutorial"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Tutorial",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial"
+},
+"doc://org.swift.docc/documentation/DocC/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+},
+"tutorial-stack-1col": {
+  "alt" : "A screenshot showing an example of a 1-column stack.",
+  "identifier" : "tutorial-stack-1col",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/tutorial-stack-1col@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/tutorial-stack-1col~dark@2x.png"
+    }
+  ]
+},
+"tutorial-stack-2col": {
+  "alt" : "A screenshot showing an example of a 2-column stack.",
+  "identifier" : "tutorial-stack-2col",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/tutorial-stack-2col@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/tutorial-stack-2col~dark@2x.png"
+    }
+  ]
+},
+"tutorial-stack-3col": {
+  "alt" : "A screenshot showing an example of a 3-column stack.",
+  "identifier" : "tutorial-stack-3col",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/tutorial-stack-3col@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/tutorial-stack-3col~dark@2x.png"
+    }
+  ]
+}
+}
+}

@@ -1,0 +1,174 @@
+{
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through reference documentation you create from comments in source code and documentation extension files.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/DocC\/api-reference-syntax"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "DocC"
+      }
+    ],
+    "role" : "collectionGroup",
+    "title" : "API Documentation"
+  },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use documentation markup, a custom variant of Markdown, to add in-source documentation to your APIs. Then, use DocC to build your documentation and share it with developers.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "2_docs",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax"
+      ],
+      "title" : "Documentation Types"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Metadata"
+      ],
+      "title" : "Configuring Documentation Behavior"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/api-reference-syntax"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"2_docs": {
+  "alt" : "A screenshot showing the rendered documentation for the SlothCreator framework, including the overview and a partially obscured image.",
+  "identifier" : "2_docs",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/2_docs@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/2_docs~dark@2x.png"
+    }
+  ]
+},
+"doc://org.swift.docc/documentation/DocC": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/DocC/Metadata": {
+  "abstract" : [
+    {
+      "text" : "Use metadata directives to instruct DocC how to build certain documentation files.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Metadata",
+      "text" : "Metadata"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Metadata",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Metadata",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/metadata"
+},
+"doc://org.swift.docc/documentation/DocC/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

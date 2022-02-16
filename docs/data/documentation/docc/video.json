@@ -1,0 +1,957 @@
+{
+  "abstract" : [
+    {
+      "text" : "Displays a video in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-shared-directives"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Intro"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorials",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Intro"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-shared-directives",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Intro"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Section",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Section",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Stack",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Section",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Steps",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Step"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Video"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "Video",
+    "fragments" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Video",
+        "text" : "Video"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "DocC",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Video",
+        "text" : "Video"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Video"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "__docc_universal_symbol_reference_$Video",
+              "text" : "Video"
+            },
+            {
+              "kind" : "text",
+              "text" : "(...)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name and file extension of a video in your Swift framework or package project. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "source"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name and file extension of an image in your Swift framework or package project. This image serves as a poster image for the video and shows when the video isn’t playing. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "poster"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The ",
+              "type" : "text"
+            },
+            {
+              "code" : "Video",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive displays a video in your tutorial. Provide the name of a video and the name of a poster image to show when the video isn’t playing.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Video(source: \"sloth-smiling.mp4\", poster: \"happy-sloth-frame.png\")"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Videos and poster images can exist anywhere in your code base, but it’s good practice to centralize them in a resources folder. You create a resources` folder in your documentation catalog.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Within your code base, media file names must be unique. Videos must be in ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".mov",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " or ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".mp4",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " format. Poster images must be in ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".png",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".jpg",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".jpeg",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".svg",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", or ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".gif",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " format.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "To differentiate tutorial media files from reference documentation media files, you may wish to prefix media file names with tutorial.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "style" : "tip",
+          "type" : "aside"
+        },
+        {
+          "anchor" : "Provide-Poster-Image-Variants",
+          "level" : 3,
+          "text" : "Provide Poster Image Variants",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To ensure poster images look great on both standard and high-resolution displays, and in light and dark appearance modes, you can provide up to four versions of each image.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the following naming conventions for poster image files:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "[filename].[extension]",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      },
+                      {
+                        "text" : ", e.g. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "filename.png",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "text" : "Standard Light",
+                    "type" : "text"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "[filename]@2x.[extension]",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      },
+                      {
+                        "text" : ", e.g. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "filename@2x.png",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "text" : "High-Resolution Light",
+                    "type" : "text"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "[filename]~dark.[extension]",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      },
+                      {
+                        "text" : ", e.g. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "filename~dark.png",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "text" : "Standard Dark",
+                    "type" : "text"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "[filename]~dark@2x.[extension]",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      },
+                      {
+                        "text" : ", e.g. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "filename~dark@2x.png",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "text" : "High-Resolution Dark",
+                    "type" : "text"
+                  }
+                ]
+              }
+            }
+          ],
+          "type" : "termList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Exclude the resolution and appearance variant suffixes when specifying an image name in the ",
+              "type" : "text"
+            },
+            {
+              "code" : "poster",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter. For example, when you specify ",
+              "type" : "text"
+            },
+            {
+              "code" : "@Video(source: \"sloth-smiling.mp4\", poster: \"happy-sloth-frame.png\")",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", the appropriate variant automatically displays based on the reader’s context. If the reader views the tutorial on a high-resolution display with a dark appearance mode enabled, ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "happy-sloth-frame~dark@2x.png",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " is shown. At minimum, strive to provide high-resolution variants in light and dark appearance modes. If you don’t provide a certain variant, the system displays the closest match.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following tutorial elements can include videos.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Intro",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Step",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Image"
+      ],
+      "title" : "Media Directives"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/video"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/DocC": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/DocC/ContentAndMedia": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping that contains text and an image or a video in a section on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$ContentAndMedia",
+      "text" : "ContentAndMedia"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ContentAndMedia",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/contentandmedia"
+},
+"doc://org.swift.docc/documentation/DocC/Image": {
+  "abstract" : [
+    {
+      "text" : "Displays an image in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Image",
+      "text" : "Image"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Image",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Image",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/image"
+},
+"doc://org.swift.docc/documentation/DocC/Intro": {
+  "abstract" : [
+    {
+      "text" : "Displays an introduction section at the top of a table of contents or tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Intro",
+      "text" : "Intro"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Intro",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Intro",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/intro"
+},
+"doc://org.swift.docc/documentation/DocC/Section": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping of text, images, and tasks on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+      "text" : "Section"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Section",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Section",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/section"
+},
+"doc://org.swift.docc/documentation/DocC/Stack": {
+  "abstract" : [
+    {
+      "text" : "Displays set of horizontally arranged groupings that contain text and media in a section on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Stack",
+      "text" : "Stack"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Stack",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Stack",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/stack"
+},
+"doc://org.swift.docc/documentation/DocC/Step": {
+  "abstract" : [
+    {
+      "text" : "Defines an individual task the reader performs within a set of steps on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Step",
+      "text" : "Step"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Step",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Step",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/step"
+},
+"doc://org.swift.docc/documentation/DocC/Steps": {
+  "abstract" : [
+    {
+      "text" : "Defines a set of tasks the reader performs on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Steps",
+      "text" : "Steps"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Steps",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Steps",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/steps"
+},
+"doc://org.swift.docc/documentation/DocC/Tutorial": {
+  "abstract" : [
+    {
+      "text" : "Displays a tutorial page that teaches your Swift framework or package APIs through interactive coding exercises.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorial",
+      "text" : "Tutorial"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Tutorial",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial"
+},
+"doc://org.swift.docc/documentation/DocC/Tutorials": {
+  "abstract" : [
+    {
+      "text" : "Displays a table of contents page for readers to navigate the pages of an interactive tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorials",
+      "text" : "Tutorials"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorials",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorials"
+},
+"doc://org.swift.docc/documentation/DocC/Video": {
+  "abstract" : [
+    {
+      "text" : "Displays a video in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Video",
+      "text" : "Video"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Video",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Video",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/video"
+},
+"doc://org.swift.docc/documentation/DocC/tutorial-shared-directives": {
+  "abstract" : [
+    {
+      "text" : "Directives supported by multiple directives in interactive tutorials.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-shared-directives",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Shared Directives",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-shared-directives"
+},
+"doc://org.swift.docc/documentation/DocC/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

@@ -1,0 +1,509 @@
+{
+  "abstract" : [
+    {
+      "text" : "Organizes related chapters into a volume on a tutorial’s table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorials"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Volume"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "Volume",
+    "fragments" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Volume",
+        "text" : "Volume"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "DocC",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Volume",
+        "text" : "Volume"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Volume"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "__docc_universal_symbol_reference_$Volume",
+              "text" : "Volume"
+            },
+            {
+              "kind" : "text",
+              "text" : "(...)"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n  ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name of the volume. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "name"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If you need a second level of organization on a table of contents page, use ",
+              "type" : "text"
+            },
+            {
+              "code" : "Volume",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directives to organize related chapters into volume groupings. For each volume, use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "name",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter to specify a volume name, and provide some descriptive text. Then, insert ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Chapter",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directives for the chapters each volume contains. Optionally, use an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Image",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to show an image for a volume.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorials(name: \"SlothCreator\") {",
+            "    @Intro(title: \"Meet SlothCreator\") {",
+            "        ",
+            "        ...",
+            "    }",
+            "    ",
+            "    @Volume(name: \"Getting Started\") {",
+            "        Building sloths, caring for them, and interacting with them.",
+            "        ",
+            "        @Chapter(name: \"SlothCreator Essentials\") {",
+            "            ...",
+            "        }",
+            "        ",
+            "        @Chapter(name: \"Basic Sloth Care\") {",
+            "            ...",
+            "        }",
+            "        ",
+            "        @Chapter(name: \"Basic Sloth Interaction\") {",
+            "            ...",
+            "        }",
+            "    }",
+            "    ",
+            "    @Volume(name: \"Climbing Higher\") {",
+            "        Taking your sloths to the next level.",
+            "        ",
+            "        @Chapter(name: \"Powering Up\") {",
+            "            ...",
+            "        }",
+            "    ",
+            "        ...",
+            "    }",
+            "    ",
+            "   ...",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Contained-Elements",
+          "level" : 3,
+          "text" : "Contained Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A volume can contain the following items:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "A chapter containing one or more tutorial pages. A volume must contain at least one chapter. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Chapter",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "An image that represents the volume’s content. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Image",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            }
+          ],
+          "type" : "termList"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following pages can include volumes:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorials",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Chapter"
+      ],
+      "title" : "Organizing Content"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Chapter"
+      ],
+      "title" : "Referencing Chapters"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Image"
+      ],
+      "title" : "Displaying an Image"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/volume"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/DocC": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/DocC/Chapter": {
+  "abstract" : [
+    {
+      "text" : "Organizes related tutorial pages into a chapter on a table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Chapter",
+      "text" : "Chapter"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Chapter",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Chapter",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/chapter"
+},
+"doc://org.swift.docc/documentation/DocC/Image": {
+  "abstract" : [
+    {
+      "text" : "Displays an image in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Image",
+      "text" : "Image"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Image",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Image",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/image"
+},
+"doc://org.swift.docc/documentation/DocC/Tutorials": {
+  "abstract" : [
+    {
+      "text" : "Displays a table of contents page for readers to navigate the pages of an interactive tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorials",
+      "text" : "Tutorials"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorials",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorials"
+},
+"doc://org.swift.docc/documentation/DocC/Volume": {
+  "abstract" : [
+    {
+      "text" : "Organizes related chapters into a volume on a tutorial’s table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Volume",
+      "text" : "Volume"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Volume",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Volume",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/volume"
+},
+"doc://org.swift.docc/documentation/DocC/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

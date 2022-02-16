@@ -1,0 +1,178 @@
+{
+  "abstract" : [
+    {
+      "text" : "Captures a writer comment that’s not visible in the rendered documentation.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Comment"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "Comment",
+    "fragments" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Comment",
+        "text" : "Comment"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "DocC",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Comment",
+        "text" : "Comment"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Comment"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "__docc_universal_symbol_reference_$Comment",
+              "text" : "Comment"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n  ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use a comment directive to include author notes, like reminders to add more content, in your reference documentation or tutorial. DocC ignores comments when your documentation builds, and they don’t appear in the rendered content.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Comment {",
+            "    Add lots more photos of sloths here!",
+            "} "
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/comment"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/DocC": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/DocC/Comment": {
+  "abstract" : [
+    {
+      "text" : "Captures a writer comment that’s not visible in the rendered documentation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Comment",
+      "text" : "Comment"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Comment",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Comment",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/comment"
+}
+}
+}

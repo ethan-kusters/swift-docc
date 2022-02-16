@@ -1,0 +1,625 @@
+{
+  "abstract" : [
+    {
+      "text" : "Displays a grouping of text, images, and tasks on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Section"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "Section",
+    "fragments" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+        "text" : "Section"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "DocC",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+        "text" : "Section"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Section"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+              "text" : "Section"
+            },
+            {
+              "kind" : "text",
+              "text" : "(...)"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n  ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name of the section. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "title"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Section",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive to show a unit of work that consists of text, media, for example images and videos, and tasks on a tutorial page. A tutorial page must includes one or more sections.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "1",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "title",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter to provide a name for the section. Then, use the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to add text and media that introduces the tasks that the reader needs to follow. This directive must be the first directive in the section. You can optionally show additional text and media by inserting a ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Stack",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive. A stack contains between one and three horizontally arranged ",
+              "type" : "text"
+            },
+            {
+              "code" : "ContentAndMedia",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directives. Finally, add a ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Steps",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to insert a set of tasks for the reader to perform.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: 30) {",
+            "    ",
+            "    ...",
+            "    ",
+            "    @Section(title: \"Add a customization view\") {",
+            "        @ContentAndMedia(layout: \"horizontal\") {",
+            "            Add the ability for users to customize sloths and select their powers.",
+            "            ",
+            "            @Image(source: 01-creating-section2.png, alt: \"An outline of a sloth surrounded by four power type icons. The power type icons are arranged in the following order, clockwise from the top: fire, wind, lightning, and ice.\")",
+            "        }",
+            "        ",
+            "        @Steps {",
+            "            @Step {",
+            "                Create a new SwiftUI View file named `CustomizedSlothView.swift`.",
+            "                ",
+            "                @Code(name: \"CustomizedSlothView.swift\", file: 01-creating-code-02-01.swift) {",
+            "                    @Image(source: preview-01-creating-code-02-01.png, alt: \"A screenshot as it would appear on iPhone, with the text, Hello, World!, centered in the middle of the display.\")",
+            "                }",
+            "            }    ",
+            "            ",
+            "            @Step {",
+            "                ",
+            "                ...",
+            "                ",
+            "            }    ",
+            "            ",
+            "            ...",
+            " ",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Contained-Elements",
+          "level" : 3,
+          "text" : "Contained Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A section can contain the following items:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "A grouping that contains text and an image or video. At least one ",
+                        "type" : "text"
+                      },
+                      {
+                        "code" : "ContentAndMedia",
+                        "type" : "codeVoice"
+                      },
+                      {
+                        "text" : " directive is required and must be the first element within a section. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "A set of horizontally arranged groupings of text and media. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Stack",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "A set of tasks the reader performs. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Steps",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            }
+          ],
+          "type" : "termList"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following pages can include sections:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia"
+      ],
+      "title" : "Introducing a Section"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Steps"
+      ],
+      "title" : "Displaying Tasks"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Stack"
+      ],
+      "title" : "Arranging Content and Media"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/section"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"1": {
+  "alt" : "A screenshot showing a section on a tutorial page. The section includes text, an image, and coding steps.",
+  "identifier" : "1",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/1@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/1~dark@2x.png"
+    }
+  ]
+},
+"doc://org.swift.docc/documentation/DocC": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/DocC/ContentAndMedia": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping that contains text and an image or a video in a section on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$ContentAndMedia",
+      "text" : "ContentAndMedia"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/ContentAndMedia",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ContentAndMedia",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/contentandmedia"
+},
+"doc://org.swift.docc/documentation/DocC/Section": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping of text, images, and tasks on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+      "text" : "Section"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Section",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Section",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/section"
+},
+"doc://org.swift.docc/documentation/DocC/Stack": {
+  "abstract" : [
+    {
+      "text" : "Displays set of horizontally arranged groupings that contain text and media in a section on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Stack",
+      "text" : "Stack"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Stack",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Stack",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/stack"
+},
+"doc://org.swift.docc/documentation/DocC/Steps": {
+  "abstract" : [
+    {
+      "text" : "Defines a set of tasks the reader performs on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Steps",
+      "text" : "Steps"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Steps",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Steps",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/steps"
+},
+"doc://org.swift.docc/documentation/DocC/Tutorial": {
+  "abstract" : [
+    {
+      "text" : "Displays a tutorial page that teaches your Swift framework or package APIs through interactive coding exercises.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorial",
+      "text" : "Tutorial"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Tutorial",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Tutorial",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial"
+},
+"doc://org.swift.docc/documentation/DocC/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

@@ -1,0 +1,301 @@
+{
+  "abstract" : [
+    {
+      "text" : "Configures a documentation page that’s not associated with a particular framework so it appears as a top-level page.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/DocC",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/api-reference-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/Metadata"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/DocC\/TechnologyRoot"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "TechnologyRoot",
+    "fragments" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$TechnologyRoot",
+        "text" : "TechnologyRoot"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "DocC",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$TechnologyRoot",
+        "text" : "TechnologyRoot"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "TechnologyRoot"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "__docc_universal_symbol_reference_$TechnologyRoot",
+              "text" : "TechnologyRoot"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Place the ",
+              "type" : "text"
+            },
+            {
+              "code" : "TechnologyRoot",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive within a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Metadata",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive to configure a documentation page that’s not associated with a particular framework so it appears as a top-level page. Make sure the page includes a title, a summary line, an overview section, and a topics section with at least one topic group.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# Page Title",
+            "",
+            "@Metadata {",
+            "   @TechnologyRoot",
+            "}",
+            "",
+            "Summary line introducing the page.",
+            "",
+            "## Overview",
+            "",
+            "Add documentation here.",
+            "",
+            "## Topics",
+            "",
+            "### Topic Group Name",
+            "",
+            "- ``APILink``"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following items can include a technology root element:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Metadata",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/DocC\/formatting-your-documentation-content"
+      ],
+      "title" : "Related Documentation"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/technologyroot"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/DocC": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/DocC/Metadata": {
+  "abstract" : [
+    {
+      "text" : "Use metadata directives to instruct DocC how to build certain documentation files.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Metadata",
+      "text" : "Metadata"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/Metadata",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Metadata",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/metadata"
+},
+"doc://org.swift.docc/documentation/DocC/TechnologyRoot": {
+  "abstract" : [
+    {
+      "text" : "Configures a documentation page that’s not associated with a particular framework so it appears as a top-level page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$TechnologyRoot",
+      "text" : "TechnologyRoot"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/TechnologyRoot",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "TechnologyRoot",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/technologyroot"
+},
+"doc://org.swift.docc/documentation/DocC/api-reference-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through reference documentation you create from comments in source code and documentation extension files.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/api-reference-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "API Documentation",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/api-reference-syntax"
+},
+"doc://org.swift.docc/documentation/DocC/formatting-your-documentation-content": {
+  "abstract" : [
+    {
+      "text" : "Enhance your content’s presentation with special formatting and styling for text, links, and other page elements.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/DocC\/formatting-your-documentation-content",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Formatting Your Documentation Content",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/formatting-your-documentation-content"
+}
+}
+}
