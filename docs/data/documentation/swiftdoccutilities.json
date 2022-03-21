@@ -45,7 +45,7 @@
               "type" : "text"
             },
             {
-              "identifier" : "https:\/\/github.com\/apple\/swift-argument-parser",
+              "identifier" : "https:\/\/apple.github.io\/swift-argument-parser\/documentation\/argumentparser\/",
               "isActive" : true,
               "type" : "reference"
             },
@@ -682,8 +682,8 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftdoccutilities\/throttle"
 },
-"https://github.com/apple/swift-argument-parser": {
-  "identifier" : "https:\/\/github.com\/apple\/swift-argument-parser",
+"https://apple.github.io/swift-argument-parser/documentation/argumentparser/": {
+  "identifier" : "https:\/\/apple.github.io\/swift-argument-parser\/documentation\/argumentparser\/",
   "title" : "Argument Parser",
   "titleInlineContent" : [
     {
@@ -692,7 +692,7 @@
     }
   ],
   "type" : "link",
-  "url" : "https:\/\/github.com\/apple\/swift-argument-parser"
+  "url" : "https:\/\/apple.github.io\/swift-argument-parser\/documentation\/argumentparser\/"
 }
 }
 }
