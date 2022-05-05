@@ -306,14 +306,26 @@ public struct ConvertAction: Action, RecreatingContext {
             try? fileManager.removeItem(at: temporaryFolder)
         }
 
-        let indexHTMLData: Data?
+        let indexHTML: URL?
         if let htmlTemplateDirectory = htmlTemplateDirectory {
-            let data = try StaticHostableTransformer.indexHTMLData(
-                in: htmlTemplateDirectory,
-                with: hostingBasePath,
-                fileManager: fileManager
+            let indexHTMLUrl = temporaryFolder.appendingPathComponent(
+                HTMLTemplate.indexFileName.rawValue,
+                isDirectory: false
             )
-            indexHTMLData = data
+            indexHTML = indexHTMLUrl
+            
+            let customHostingBasePathProvided = !(hostingBasePath?.isEmpty ?? true)
+            if customHostingBasePathProvided {
+                let data = try StaticHostableTransformer.indexHTMLData(
+                    in: htmlTemplateDirectory,
+                    with: hostingBasePath,
+                    fileManager: fileManager
+                )
+                
+                // A hosting base path was provided which means we need to replace the standard
+                // 'index.html' file with the transformed one.
+                try fileManager.createFile(at: indexHTMLUrl, contents: data)
+            }
             
             let indexHTMLTemplateURL = temporaryFolder.appendingPathComponent(
                 HTMLTemplate.templateFileName.rawValue,
@@ -324,20 +336,8 @@ public struct ConvertAction: Action, RecreatingContext {
             // was copied into the temporary output directory with the
             // HTML template.
             try? fileManager.removeItem(at: indexHTMLTemplateURL)
-            
-            let customHostingBasePathProvided = !(hostingBasePath?.isEmpty ?? true)
-            if customHostingBasePathProvided {
-                let indexHTMLUrl = temporaryFolder.appendingPathComponent(
-                    HTMLTemplate.indexFileName.rawValue,
-                    isDirectory: false
-                )
-                
-                // A hosting base path was provided which means we need to replace the standard
-                // 'index.html' file with the transformed one.
-                try fileManager.createFile(at: indexHTMLUrl, contents: data)
-            }
         } else {
-            indexHTMLData = nil
+            indexHTML = nil
         }
         
         var coverageAction = CoverageAction(
@@ -360,7 +360,7 @@ public struct ConvertAction: Action, RecreatingContext {
             context: context,
             indexer: indexer,
             enableCustomTemplates: experimentalEnableCustomTemplates,
-            transformForStaticHostingIndexHTML: transformForStaticHosting ? indexHTMLData : nil
+            transformForStaticHostingIndexHTML: transformForStaticHosting ? indexHTML : nil
         )
 
         let analysisProblems: [Problem]

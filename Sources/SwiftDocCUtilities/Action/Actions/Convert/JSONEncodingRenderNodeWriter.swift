@@ -29,7 +29,7 @@ class JSONEncodingRenderNodeWriter {
     
     private let renderNodeURLGenerator: NodeURLGenerator
     private let targetFolder: URL
-    private let transformForStaticHostingIndexHTML: Data?
+    private let transformForStaticHostingIndexHTML: URL?
     private let fileManager: FileManagerProtocol
     private let renderReferenceCache = RenderReferenceCache([:])
     
@@ -38,7 +38,7 @@ class JSONEncodingRenderNodeWriter {
     /// - Parameters:
     ///   - targetFolder: The folder to which the writer object writes the files.
     ///   - fileManager: The file manager with which the writer object writes data to files.
-    init(targetFolder: URL, fileManager: FileManagerProtocol, transformForStaticHostingIndexHTML: Data?) {
+    init(targetFolder: URL, fileManager: FileManagerProtocol, transformForStaticHostingIndexHTML: URL?) {
         self.renderNodeURLGenerator = NodeURLGenerator(
             baseURL: targetFolder.appendingPathComponent("data", isDirectory: true)
         )
@@ -115,6 +115,7 @@ class JSONEncodingRenderNodeWriter {
             withIntermediateDirectories: true,
             attributes: nil
         )
-        try fileManager.createFile(at: htmlTargetFileURL, contents: indexHTML)
+        
+        try fileManager.copyItem(at: indexHTML, to: htmlTargetFileURL)
     }
 }

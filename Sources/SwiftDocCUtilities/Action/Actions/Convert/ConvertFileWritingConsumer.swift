@@ -32,7 +32,7 @@ struct ConvertFileWritingConsumer: ConvertOutputConsumer {
         context: DocumentationContext,
         indexer: ConvertAction.Indexer?,
         enableCustomTemplates: Bool = false,
-        transformForStaticHostingIndexHTML: Data?
+        transformForStaticHostingIndexHTML: URL?
     ) {
         self.targetFolder = targetFolder
         self.bundleRootFolder = bundleRootFolder
