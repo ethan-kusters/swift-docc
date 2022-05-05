@@ -20,7 +20,9 @@ class JSONEncodingRenderNodeWriterTests: XCTestCase {
         // that is guaranteed to throw if we try writing a file.
         let writer = JSONEncodingRenderNodeWriter(
             targetFolder: URL(fileURLWithPath: String(repeating: "A", count: 4096)),
-            fileManager: FileManager.default)
+            fileManager: FileManager.default,
+            transformForStaticHostingIndexHTML: Data("html".utf8)
+        )
         
         let renderNode = RenderNode(identifier: .init(bundleIdentifier: "com.test", path: "/documentation/test", sourceLanguage: .swift), kind: .article)
         
