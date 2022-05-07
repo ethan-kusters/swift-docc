@@ -73,49 +73,88 @@ class JSONEncodingRenderNodeWriter {
         
         let renderNodeTargetFolderURL = renderNodeTargetFileURL.deletingLastPathComponent()
         
-        // On Linux sometimes it takes a moment for the directory to be created and that leads to
-        // errors when trying to write files concurrently in the same target location.
-        // We keep an index in `directoryIndex` and create new sub-directories as needed.
-        // When the symbol's directory already exists no code is executed during the lock below
-        // besides the set lookup.
-        try directoryIndex.sync { directoryIndex in
-            let (insertedRenderNodeTargetFolderURL, _) = directoryIndex.insert(renderNodeTargetFolderURL)
-            if insertedRenderNodeTargetFolderURL {
-                try fileManager.createDirectory(
-                    at: renderNodeTargetFolderURL,
-                    withIntermediateDirectories: true,
-                    attributes: nil
-                )
+        let queue = DispatchQueue(
+            label: "org.swift.JSONEncodingRenderNodeWriterQueue",
+            qos: .unspecified,
+            attributes: .concurrent
+        )
+        let group = DispatchGroup()
+        
+        var renderJSONWritingError: Swift.Error? = nil
+        
+        group.enter()
+        queue.async { [self] in
+            defer {
+                group.leave()
+            }
+            
+            do {
+                // On Linux sometimes it takes a moment for the directory to be created and that leads to
+                // errors when trying to write files concurrently in the same target location.
+                // We keep an index in `directoryIndex` and create new sub-directories as needed.
+                // When the symbol's directory already exists no code is executed during the lock below
+                // besides the set lookup.
+                try directoryIndex.sync { directoryIndex in
+                    let (insertedRenderNodeTargetFolderURL, _) = directoryIndex.insert(renderNodeTargetFolderURL)
+                    if insertedRenderNodeTargetFolderURL {
+                        try fileManager.createDirectory(
+                            at: renderNodeTargetFolderURL,
+                            withIntermediateDirectories: true,
+                            attributes: nil
+                        )
+                    }
+                }
+                
+                let encoder = RenderJSONEncoder.makeEncoder()
+                
+                let data = try renderNode.encodeToJSON(with: encoder, renderReferenceCache: renderReferenceCache)
+                try fileManager.createFile(at: renderNodeTargetFileURL, contents: data)
+            } catch {
+                renderJSONWritingError = error
             }
         }
         
-        let encoder = RenderJSONEncoder.makeEncoder()
+        var indexHTMLWritingError: Swift.Error? = nil
         
-        let data = try renderNode.encodeToJSON(with: encoder, renderReferenceCache: renderReferenceCache)
-        try fileManager.createFile(at: renderNodeTargetFileURL, contents: data)
-        
-        guard let indexHTML = transformForStaticHostingIndexHTML else {
-            return
+        group.enter()
+        queue.async { [self] in
+            defer {
+                group.leave()
+            }
+            
+            guard let indexHTML = transformForStaticHostingIndexHTML else {
+                return
+            }
+            
+            let htmlTargetFolderURL = targetFolder.appendingPathComponent(
+                fileSafePath,
+                isDirectory: true
+            )
+            let htmlTargetFileURL = htmlTargetFolderURL.appendingPathComponent(
+                HTMLTemplate.indexFileName.rawValue,
+                isDirectory: false
+            )
+            
+            do {
+                // Note that it doesn't make sense to use the above-described `directoryIndex` for this use
+                // case since we expect every 'index.html' file to require the creation of
+                // its own unique parent directory.
+                try fileManager.createDirectory(
+                    at: htmlTargetFolderURL,
+                    withIntermediateDirectories: true,
+                    attributes: nil
+                )
+                
+                try fileManager.copyItem(at: indexHTML, to: htmlTargetFileURL)
+            } catch {
+                indexHTMLWritingError = error
+            }
         }
         
-        let htmlTargetFolderURL = targetFolder.appendingPathComponent(
-            fileSafePath,
-            isDirectory: true
-        )
-        let htmlTargetFileURL = htmlTargetFolderURL.appendingPathComponent(
-            HTMLTemplate.indexFileName.rawValue,
-            isDirectory: false
-        )
+        group.wait()
         
-        // Note that it doesn't make sense to use the above-described `directoryIndex` for this use
-        // case since we expect every 'index.html' file to require the creation of
-        // its own unique parent directory.
-        try fileManager.createDirectory(
-            at: htmlTargetFolderURL,
-            withIntermediateDirectories: true,
-            attributes: nil
-        )
-        
-        try fileManager.copyItem(at: indexHTML, to: htmlTargetFileURL)
+        if let error = renderJSONWritingError ?? indexHTMLWritingError {
+            throw error
+        }
     }
 }
