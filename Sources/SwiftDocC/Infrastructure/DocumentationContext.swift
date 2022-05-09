@@ -2562,10 +2562,15 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
     public func resolve(_ reference: TopicReference, in parent: ResolvedTopicReference, fromSymbolLink isCurrentlyResolvingSymbolLink: Bool = false) -> TopicReferenceResolutionResult {
         switch reference {
         case .unresolved(let unresolvedReference):
+            let referenceCacheIdentifier = ResolvedTopicReference.cacheIdentifier(
+                unresolvedReference.topicURL.url,
+                fromSymbolLink: isCurrentlyResolvingSymbolLink,
+                in: parent
+            )
             
             // Check if that unresolved reference was already resolved in that parent context
             if let cachedReference: ResolvedTopicReference = self.referenceCache.sync({
-                return $0[ResolvedTopicReference.cacheIdentifier(unresolvedReference, fromSymbolLink: isCurrentlyResolvingSymbolLink, in: parent)]
+                return $0[referenceCacheIdentifier]
             }) {
                 if isCurrentlyResolvingSymbolLink && !(documentationCache[cachedReference]?.semantic is Symbol) {
                     // When resolving a symbol link, ignore non-symbol matches,
@@ -2600,7 +2605,15 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
                         allCandidateURLs.append(reference.url)
                         return nil
                     }
-                    cacheReference(resolved, withKey: ResolvedTopicReference.cacheIdentifier(unresolvedReference, fromSymbolLink: isCurrentlyResolvingSymbolLink, in: parent))
+                    
+                    let resolvedReferenceCacheIdentifier = ResolvedTopicReference.cacheIdentifier(
+                        resolved.url,
+                        fromSymbolLink: false,
+                        in: parent
+                    )
+                    
+                    cacheReference(resolved, withKey: referenceCacheIdentifier)
+                    cacheReference(resolved, withKey: resolvedReferenceCacheIdentifier)
                     return .success(resolved)
                 } else if reference.fragment != nil, nodeAnchorSections.keys.contains(reference) {
                     return .success(reference)
@@ -2732,7 +2745,7 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
                     let reference = fallbackResolver.resolve(.unresolved(unresolvedReference), sourceLanguage: parent.sourceLanguage)
                     
                     if case .success(let resolvedReference) = reference {
-                        cacheReference(resolvedReference, withKey: ResolvedTopicReference.cacheIdentifier(unresolvedReference, fromSymbolLink: isCurrentlyResolvingSymbolLink, in: parent))
+                        cacheReference(resolvedReference, withKey: referenceCacheIdentifier)
                         
                         // Register the resolved reference in the context so that it can be looked up via its absolute
                         // path. We only do this for in-bundle content, and since we've just resolved an in-bundle link,
