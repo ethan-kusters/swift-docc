@@ -283,11 +283,10 @@ public struct ResolvedTopicReference: Hashable, Codable, Equatable, CustomString
     /// - Returns: The resulting topic reference.
     public func appendingPathOfReference(_ reference: UnresolvedTopicReference) -> ResolvedTopicReference {
         // Only append the path component if it's not empty (rdar://66580574).
-        let referencePath = urlReadablePath(reference.path)
-        guard !referencePath.isEmpty else {
+        guard !reference.urlReadablePath.isEmpty else {
             return self
         }
-        let newPath = url.appendingPathComponent(referencePath, isDirectory: false).path
+        let newPath = url.appendingPathComponent(reference.urlReadablePath, isDirectory: false).path
         let newReference = ResolvedTopicReference(
             bundleIdentifier: bundleIdentifier,
             urlReadablePath: newPath,
@@ -474,6 +473,13 @@ public struct UnresolvedTopicReference: Hashable, CustomStringConvertible {
         return topicURL.components.fragment
     }
     
+    
+    /// A version of the this topic reference's path that has been trasnformed to guarantee
+    /// it can be written to disk.
+    ///
+    /// For more details, see `urlReadablePath(_:)` in `Identifier.swift`.
+    let urlReadablePath: String
+    
     /// An optional title.
     public var title: String? = nil
     
@@ -494,6 +500,7 @@ public struct UnresolvedTopicReference: Hashable, CustomStringConvertible {
     /// - Parameter topicURL: The URL of this unresolved reference.
     public init(topicURL: ValidatedURL) {
         self.topicURL = topicURL
+        self.urlReadablePath = SwiftDocC.urlReadablePath(topicURL.components.path)
     }
     
     /// Creates a new unresolved reference with the given validated URL and title.
@@ -503,6 +510,7 @@ public struct UnresolvedTopicReference: Hashable, CustomStringConvertible {
     public init(topicURL: ValidatedURL, title: String) {
         self.topicURL = topicURL
         self.title = title
+        self.urlReadablePath = SwiftDocC.urlReadablePath(topicURL.components.path)
     }
     
     public var description: String {

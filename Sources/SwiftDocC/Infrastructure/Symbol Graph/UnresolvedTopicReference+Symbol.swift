@@ -23,7 +23,7 @@ extension UnresolvedTopicReference {
             components.path.insert("/", at: components.path.startIndex)
         }
         
-        self.topicURL = ValidatedURL(components: components)
+        self.init(topicURL: ValidatedURL(components: components))
     }
 }
 
