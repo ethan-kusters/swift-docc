@@ -2684,15 +2684,12 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
                 // 4. Try resolving as a sibling and within `Self`.
                 // To look for siblings we require at least a module (first)
                 // and a symbol (second) path components.
-                let parentPath = parent.path.components(separatedBy: "/").dropLast()
+                let parentReference = parent.removingLastPathComponent()
                 let siblingSymbolReference: ResolvedTopicReference?
-                if parentPath.count >= 2 {
-                    siblingSymbolReference = ResolvedTopicReference(
-                        bundleIdentifier: knownBundleIdentifier,
-                        path: parentPath.joined(separator: "/"),
-                        fragment: unresolvedReference.topicURL.components.fragment,
-                        sourceLanguages: parent.sourceLanguages
-                    ).appendingPathOfReference(unresolvedReference)
+                if parentReference.pathComponents.count >= 2 {
+                    siblingSymbolReference = parentReference.appendingPathOfReference(
+                        unresolvedReference
+                    )
                     
                     if let resolved = attemptToResolve(siblingSymbolReference!) {
                         return resolved
@@ -2705,8 +2702,8 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
 
                 // Check that the parent is not an article (ignoring if absolute or relative link)
                 // because we cannot resolve in the parent context if it's not a symbol.
-                if parent.path.hasPrefix(currentBundle.documentationRootReference.path) && parentPath.count > 2 {
-                    let rootPath = currentBundle.documentationRootReference.appendingPath(parentPath[2])
+                if parentReference.pathComponents.count > 2 && parentReference.path.hasPrefix(currentBundle.documentationRootReference.path) {
+                    let rootPath = currentBundle.documentationRootReference.appendingPath(parentReference.pathComponents[2])
                     let resolvedInRoot = rootPath.appendingPathOfReference(unresolvedReference)
                     
                     // Confirm here that we we're not already considering this link. We only need to specifically
