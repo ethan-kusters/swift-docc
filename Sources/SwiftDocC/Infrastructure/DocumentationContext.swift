@@ -2635,10 +2635,14 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
                 }
             }
             
+            let currentBundle = bundle(identifier: referenceBundleIdentifier) ?? registeredBundles.first { bundle -> Bool in
+                urlReadablePath(bundle.displayName) == referenceBundleIdentifier
+            }
+            
             // If a known bundle is referenced via the "doc:" scheme try to resolve in topic graph
-            if let knownBundleIdentifier = registeredBundles.first(where: { bundle -> Bool in
-                return bundle.identifier == referenceBundleIdentifier || urlReadablePath(bundle.displayName) == referenceBundleIdentifier
-            })?.identifier {
+            if let currentBundle = currentBundle {
+                let knownBundleIdentifier = currentBundle.identifier
+                
                 // 1. Check if reference is already resolved but not found in the cache
                 let alreadyResolved = ResolvedTopicReference(
                     bundleIdentifier: knownBundleIdentifier,
@@ -2651,7 +2655,6 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
                 }
 
                 // 2. Check if resolvable in any of the root non-symbol contexts
-                let currentBundle = bundle(identifier: knownBundleIdentifier)!
                 if !isCurrentlyResolvingSymbolLink {
                     // First look up articles path
                     let articleReference = currentBundle.articlesDocumentationRootReference.appendingPathOfReference(unresolvedReference)
