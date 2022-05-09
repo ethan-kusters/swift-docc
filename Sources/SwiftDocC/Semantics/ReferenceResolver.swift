@@ -28,9 +28,7 @@ func unresolvedResourceProblem(resource: ResourceReference, source: URL?, range:
 /**
  Rewrites a `Semantic` tree by attempting to resolve `.unresolved(UnresolvedTopicReference)` references using a `DocumentationContext`.
  */
-struct ReferenceResolver: SemanticVisitor {
-    typealias Result = Semantic
-
+struct ReferenceResolver: SemanticWalker {
     /// The context to use to resolve references.
     var context: DocumentationContext
     
@@ -56,6 +54,7 @@ struct ReferenceResolver: SemanticVisitor {
         self.inheritanceParentReference = inheritanceParentReference
     }
     
+    @discardableResult
     mutating func resolve(_ reference: TopicReference, in parent: ResolvedTopicReference, range: SourceRange?, severity: DiagnosticSeverity) -> TopicReferenceResolutionResult {
         switch context.resolve(reference, in: parent) {
         case .success(let resolved):
@@ -80,39 +79,28 @@ struct ReferenceResolver: SemanticVisitor {
         }
     }
     
-    mutating func visitCode(_ code: Code) -> Semantic {
-        return code
-    }
-    
-    mutating func visitSteps(_ steps: Steps) -> Semantic {
-        let newStepsContent = steps.content.map { visit($0) }
-        return Steps(originalMarkup: steps.originalMarkup, content: newStepsContent)
-    }
-    
-    mutating func visitStep(_ step: Step) -> Semantic {
-        let newContent = visit(step.content) as! MarkupContainer
-        let newCaption = visit(step.caption) as! MarkupContainer
+    mutating func visitStep(_ step: Step) {
+        visitMarkupContainer(step.content)
+        visitMarkupContainer(step.caption)
         if let media = step.media, let problem = resolve(resource: media.source, range: step.originalMarkup.range, severity: .warning) {
             problems.append(problem)
         }
         if let code = step.code, let problem = resolve(resource: code.fileReference, range: step.originalMarkup.range, severity: .warning) {
             problems.append(problem)
         }
-        return Step(originalMarkup: step.originalMarkup, media: step.media, code: step.code, content: newContent, caption: newCaption)
     }
         
-    mutating func visitTutorialSection(_ tutorialSection: TutorialSection) -> Semantic {
-        let newIntroduction = visitMarkupLayouts(tutorialSection.introduction)
-        let newStepsContent: Steps? = tutorialSection.stepsContent.map { (visitSteps($0) as! Steps) }
-        return TutorialSection(originalMarkup: tutorialSection.originalMarkup, title: tutorialSection.title, introduction: newIntroduction, stepsContent: newStepsContent, redirects: tutorialSection.redirects)
+    mutating func visitTutorialSection(_ tutorialSection: TutorialSection) {
+        visitMarkupLayouts(tutorialSection.introduction)
+        tutorialSection.stepsContent.map { visitSteps($0) }
     }
     
-    mutating func visitTutorial(_ tutorial: Tutorial) -> Semantic {
-        let newRequirements = tutorial.requirements.map { visit($0) } as! [XcodeRequirement]
-        let newIntro = visit(tutorial.intro) as! Intro
-        let newSections = tutorial.sections.map { visit($0) } as! [TutorialSection]
-        let newAssessments = tutorial.assessments.map { visit($0) as! Assessments } 
-        let newCallToActionImage = tutorial.callToActionImage.map { visit($0) as! ImageMedia }
+    mutating func visitTutorial(_ tutorial: Tutorial) {
+        tutorial.requirements.forEach { visitXcodeRequirement($0) }
+        visitIntro(tutorial.intro)
+        tutorial.sections.forEach { visitTutorialSection($0) }
+        tutorial.assessments.map { visitAssessments($0) }
+        tutorial.callToActionImage.map { visitImageMedia($0) }
         
         // Change the context of the project file to `download`
         if let projectFiles = tutorial.projectFiles,
@@ -120,45 +108,34 @@ struct ReferenceResolver: SemanticVisitor {
             resolvedDownload.context = .download
             context.updateAsset(named: projectFiles.path, asset: resolvedDownload, in: bundle.rootReference)
         }
-        
-        return Tutorial(originalMarkup: tutorial.originalMarkup, durationMinutes: tutorial.durationMinutes, projectFiles: tutorial.projectFiles, requirements: newRequirements, intro: newIntro, sections: newSections, assessments: newAssessments, callToActionImage: newCallToActionImage, redirects: tutorial.redirects)
     }
     
-    mutating func visitIntro(_ intro: Intro) -> Semantic {
-        let newImage = intro.image.map { visit($0) } as! ImageMedia?
-        let newVideo = intro.video.map { visit($0) } as! VideoMedia?
-        let newContent = visit(intro.content) as! MarkupContainer
-        return Intro(originalMarkup: intro.originalMarkup, title: intro.title, image: newImage, video: newVideo, content: newContent)
+    mutating func visitIntro(_ intro: Intro) {
+        intro.image.map { visitImageMedia($0) }
+        intro.video.map { visitVideoMedia($0) }
+        visitMarkupContainer(intro.content)
     }
     
-    mutating func visitXcodeRequirement(_ xcodeRequirement: XcodeRequirement) -> Semantic {
-        return xcodeRequirement
+    mutating func visitAssessments(_ assessments: Assessments) {
+        assessments.questions.forEach { visitMultipleChoice($0) }
     }
     
-    mutating func visitAssessments(_ assessments: Assessments) -> Semantic {
-        let newQuestions = assessments.questions.map { visit($0) } as! [MultipleChoice]
-        return Assessments(originalMarkup: assessments.originalMarkup, questions: newQuestions)
+    mutating func visitMultipleChoice(_ multipleChoice: MultipleChoice) {
+        visitMarkupContainer(multipleChoice.questionPhrasing)
+        visitMarkupContainer(multipleChoice.content)
+        multipleChoice.choices.forEach { visitChoice($0) }
     }
     
-    mutating func visitMultipleChoice(_ multipleChoice: MultipleChoice) -> Semantic {
-        let newPhrasing = visit(multipleChoice.questionPhrasing) as! MarkupContainer
-        let newContent = visit(multipleChoice.content) as! MarkupContainer
-        let newChoices = multipleChoice.choices.map { visit($0) } as! [Choice]
-        return MultipleChoice(originalMarkup: multipleChoice.originalMarkup, questionPhrasing: newPhrasing, content: newContent, image: multipleChoice.image, choices: newChoices)
+    mutating func visitJustification(_ justification: Justification) {
+        visitMarkupContainer(justification.content)
     }
     
-    mutating func visitJustification(_ justification: Justification) -> Semantic {
-        let newContent = visit(justification.content) as! MarkupContainer
-        return Justification(originalMarkup: justification.originalMarkup, content: newContent, reaction: justification.reaction)
+    mutating func visitChoice(_ choice: Choice) {
+        visitMarkupContainer(choice.content)
+        visitJustification(choice.justification)
     }
     
-    mutating func visitChoice(_ choice: Choice) -> Semantic {
-        let newContent = visit(choice.content) as! MarkupContainer
-        let newJustification = visit(choice.justification) as! Justification
-        return Choice(originalMarkup: choice.originalMarkup, isCorrect: choice.isCorrect, content: newContent, image: choice.image, justification: newJustification)
-    }
-    
-    mutating func visitMarkupContainer(_ markupContainer: MarkupContainer) -> Semantic {
+    mutating func visitMarkupContainer(_ markupContainer: MarkupContainer) {
         var markupResolver = MarkupReferenceResolver(context: context, bundle: bundle, source: source, rootReference: rootReference)
         let parent = inheritanceParentReference
         let context = self.context
@@ -196,57 +173,56 @@ struct ReferenceResolver: SemanticVisitor {
             return nil
         }
         
-        let newElements = markupContainer.elements.compactMap { markupResolver.visit($0) }
+        markupContainer.elements.forEach { markupResolver.visit($0) }
         problems.append(contentsOf: markupResolver.problems)
-        return MarkupContainer(newElements)
     }
     
-    mutating func visitMarkup(_ markup: Markup) -> Markup {
+    mutating func visitMarkup(_ markup: Markup) {
         // Wrap in a markup container and the first child of the result.
-        return (visitMarkupContainer(MarkupContainer(markup)) as! MarkupContainer).elements.first!
+        visitMarkupContainer(MarkupContainer(markup))
     }
     
-    mutating func visitTechnology(_ technology: Technology) -> Semantic {
-        let newIntro = visit(technology.intro) as! Intro
-        let newVolumes = technology.volumes.map { visit($0) } as! [Volume]
-        let newResources = technology.resources.map { visit($0) as! Resources }
-        return Technology(originalMarkup: technology.originalMarkup, name: technology.name, intro: newIntro, volumes: newVolumes, resources: newResources, redirects: technology.redirects)
+    mutating func visitTechnology(_ technology: Technology) {
+        visitIntro(technology.intro)
+        technology.volumes.forEach { visitVolume($0) }
+        technology.resources.map { visitResources($0) }
     }
     
-    mutating func visitImageMedia(_ imageMedia: ImageMedia) -> Semantic {
+    mutating func visitImageMedia(_ imageMedia: ImageMedia) {
         if let problem = resolve(resource: imageMedia.source, range: imageMedia.originalMarkup.range, severity: .warning) {
             problems.append(problem)
         }
-        return imageMedia
     }
     
-    mutating func visitVideoMedia(_ videoMedia: VideoMedia) -> Semantic {
+    mutating func visitVideoMedia(_ videoMedia: VideoMedia) {
         if let problem = resolve(resource: videoMedia.source, range: videoMedia.originalMarkup.range, severity: .warning) {
             problems.append(problem)
         }
-        return videoMedia
     }
     
-    mutating func visitContentAndMedia(_ contentAndMedia: ContentAndMedia) -> Semantic {
-        let newContent = visit(contentAndMedia.content) as! MarkupContainer
-        let newMedia = contentAndMedia.media.map { visit($0) } as! Media?
-        return ContentAndMedia(originalMarkup: contentAndMedia.originalMarkup, title: contentAndMedia.title, layout: contentAndMedia.layout, eyebrow: contentAndMedia.eyebrow, content: newContent, media: newMedia, mediaPosition: contentAndMedia.mediaPosition)
+    mutating func visitContentAndMedia(_ contentAndMedia: ContentAndMedia) {
+        visitMarkupContainer(contentAndMedia.content)
+        
+        contentAndMedia.media.map { media in
+            if let problem = resolve(resource: media.source, range: contentAndMedia.originalMarkup.range, severity: .warning) {
+                problems.append(problem)
+            }
+        }
     }
     
-    mutating func visitVolume(_ volume: Volume) -> Semantic {
-        let newContent = volume.content.map { visit($0) as! MarkupContainer }
-        let image = volume.image.map { visit($0) as! ImageMedia }
-        let newChapters = volume.chapters.map { visit($0) } as! [Chapter]
-        return Volume(originalMarkup: volume.originalMarkup, name: volume.name, image: image, content: newContent, chapters: newChapters, redirects: volume.redirects)
+    mutating func visitVolume(_ volume: Volume) {
+        volume.content.map { visitMarkupContainer($0) }
+        volume.image.map { visitImageMedia($0) }
+        volume.chapters.forEach { visitChapter($0) }
     }
     
-    mutating func visitChapter(_ chapter: Chapter) -> Semantic {
-        let newContent = visit(chapter.content) as! MarkupContainer
-        let newImage = chapter.image.map { visit($0) as! ImageMedia }
-        let newTutorialReferences = chapter.topicReferences.map { visit($0) } as! [TutorialReference]
+    mutating func visitChapter(_ chapter: Chapter) {
+        visitMarkupContainer(chapter.content)
+        chapter.image.map { visitImageMedia($0) }
+        chapter.topicReferences.forEach { visitTutorialReference($0) }
         
         var uniqueReferences = Set<TopicReference>()
-        let newTutorialReferencesWithoutDupes = newTutorialReferences.filter { newTutorialReference in
+        for newTutorialReference in chapter.topicReferences {
             guard !uniqueReferences.contains(newTutorialReference.topic) else {
                 let diagnostic = Diagnostic(source: source, severity: .warning, range: newTutorialReference.originalMarkup.range, identifier: "org.swift.docc.\(Chapter.self).Duplicate\(TutorialReference.self)", summary: "Duplicate \(TutorialReference.directiveName.singleQuoted) directive refers to \(newTutorialReference.topic.description.singleQuoted)")
                 let solutions = newTutorialReference.originalMarkup.range.map {
@@ -255,102 +231,73 @@ struct ReferenceResolver: SemanticVisitor {
                     ])]
                 } ?? []
                 problems.append(Problem(diagnostic: diagnostic, possibleSolutions: solutions))
-                return false
+                continue
             }
+            
             uniqueReferences.insert(newTutorialReference.topic)
-            return true
         }
-
-        return Chapter(originalMarkup: chapter.originalMarkup, name: chapter.name, content: newContent, image: newImage, tutorialReferences: newTutorialReferencesWithoutDupes, redirects: chapter.redirects)
     }
     
-    mutating func visitTutorialReference(_ tutorialReference: TutorialReference) -> Semantic {
+    mutating func visitTutorialReference(_ tutorialReference: TutorialReference) {
         // This should always be an absolute topic URL rooted at the bundle, as there isn't necessarily one parent of a tutorial.
         // i.e. doc:/${SOME_TECHNOLOGY}/${PROJECT} or doc://${BUNDLE_ID}/${SOME_TECHNOLOGY}/${PROJECT}
         switch tutorialReference.topic {
         case .unresolved:
             let arguments = tutorialReference.originalMarkup.arguments()
-            let maybeResolved = resolve(tutorialReference.topic, in: bundle.technologyTutorialsRootReference,
+            resolve(tutorialReference.topic, in: bundle.technologyTutorialsRootReference,
                                         range: arguments[TutorialReference.Semantics.Tutorial.argumentName]?.valueRange,
                                         severity: .warning)
-            return TutorialReference(originalMarkup: tutorialReference.originalMarkup, tutorial: .resolved(maybeResolved))
         case .resolved:
-            return tutorialReference
+            return
         }
     }
 
-    mutating func visitResources(_ resources: Resources) -> Semantic {
-        let newContent = visitMarkupContainer(resources.content) as! MarkupContainer
-        let newTiles = resources.tiles.map { visitTile($0) as! Tile }
-        return Resources(originalMarkup: resources.originalMarkup, content: newContent, tiles: newTiles, redirects: resources.redirects)
+    mutating func visitResources(_ resources: Resources) {
+        visitMarkupContainer(resources.content)
+        resources.tiles.forEach { visitTile($0) }
     }
     
-    mutating func visitTile(_ tile: Tile) -> Semantic {
-        let newContent = visitMarkupContainer(tile.content) as! MarkupContainer
-        return Tile(originalMarkup: tile.originalMarkup, identifier: tile.identifier, title: tile.title, destination: tile.destination, content: newContent)
+    mutating func visitTile(_ tile: Tile) {
+        visitMarkupContainer(tile.content)
     }
     
-    mutating func visitTutorialArticle(_ article: TutorialArticle) -> Semantic {
-        let newIntro: Intro?
-        if let intro = article.intro {
-            newIntro = (visitIntro(intro) as! Intro)
-        } else {
-            newIntro = nil
-        }
-        
-        let newContent = visitMarkupLayouts(article.content)
-        
-        let newAssessments = article.assessments.map { visit($0) as! Assessments }
-        
-        let newCallToActionImage = article.callToActionImage.map { visit($0) as! ImageMedia }
-  
-        return TutorialArticle(originalMarkup: article.originalMarkup, durationMinutes: article.durationMinutes, intro: newIntro, content: newContent, assessments: newAssessments, callToActionImage: newCallToActionImage, landmarks: article.landmarks, redirects: article.redirects)
+    mutating func visitTutorialArticle(_ article: TutorialArticle) {
+        article.intro.map { visitIntro($0) }
+        visitMarkupLayouts(article.content)
+        article.assessments.map { visitAssessments($0) }
+        article.callToActionImage.map { visitImageMedia($0) }
     }
     
-    mutating func visitArticle(_ article: Article) -> Semantic {
-        let newAbstract = article.abstractSection.map {
-            AbstractSection(paragraph: visitMarkup($0.paragraph) as! Paragraph)
+    mutating func visitArticle(_ article: Article) {
+        article.abstractSection.map {
+            visitMarkup($0.paragraph)
         }
-        let newDiscussion = article.discussion.map {
-            DiscussionSection(content: $0.content.map { visitMarkup($0) })
+        article.discussion.map {
+            $0.content.forEach { visitMarkup($0) }
         }
-        let newTopics = article.topics.map { topic -> TopicsSection in
-            return TopicsSection(content: topic.content.map { visitMarkup($0) }, originalLinkRangesByGroup: topic.originalLinkRangesByGroup)
+        article.topics.map { topic in
+            topic.content.forEach { visitMarkup($0) }
         }
-        let newSeeAlso = article.seeAlso.map {
-            SeeAlsoSection(content: $0.content.map { visitMarkup($0) })
+        article.seeAlso.map {
+            $0.content.forEach { visitMarkup($0) }
         }
-        let newDeprecationSummary = article.deprecationSummary.flatMap {
-            visitMarkupContainer($0) as? MarkupContainer
+        article.deprecationSummary.map {
+            visitMarkupContainer($0)
         }
-
-        return Article(
-            title: article.title,
-            abstractSection: newAbstract,
-            discussion: newDiscussion,
-            topics: newTopics,
-            seeAlso: newSeeAlso,
-            deprecationSummary: newDeprecationSummary,
-            metadata: article.metadata,
-            redirects: article.redirects,
-            automaticTaskGroups: article.automaticTaskGroups
-        )
     }
 
-    private mutating func visitMarkupLayouts<MarkupLayouts: Sequence>(_ markupLayouts: MarkupLayouts) -> [MarkupLayout] where MarkupLayouts.Element == MarkupLayout {
-        return markupLayouts.map { content in
+    private mutating func visitMarkupLayouts<MarkupLayouts: Sequence>(_ markupLayouts: MarkupLayouts) where MarkupLayouts.Element == MarkupLayout {
+        markupLayouts.forEach { content in
             switch content {
-            case .markup(let markup): return .markup(visitMarkupContainer(markup) as! MarkupContainer)
-            case .contentAndMedia(let contentAndMedia): return .contentAndMedia(visitContentAndMedia(contentAndMedia) as! ContentAndMedia)
-            case .stack(let stack): return .stack(visitStack(stack) as! Stack)
+            case .markup(let markup): visitMarkupContainer(markup)
+            case .contentAndMedia(let contentAndMedia): visitContentAndMedia(contentAndMedia)
+            case .stack(let stack): visitStack(stack)
             }
         }
     }
     
-    mutating func visitStack(_ stack: Stack) -> Semantic {
-        let newElements = stack.contentAndMedia.map { visitContentAndMedia($0) as! ContentAndMedia }
-        
-        return Stack(originalMarkup: stack.originalMarkup, contentAndMedias: newElements)
+    mutating func visitStack(_ stack: Stack) {
+        stack.contentAndMedia.forEach { visitContentAndMedia($0) }
     }
 
     /// Returns a name that's suitable to use as a title for a given node.
@@ -372,66 +319,31 @@ struct ReferenceResolver: SemanticVisitor {
         return comment
     }
     
-    mutating func visitSymbol(_ symbol: Symbol) -> Semantic {
-        let newAbstractVariants = symbol.abstractSectionVariants.map {
-            AbstractSection(paragraph: visitMarkup($0.paragraph) as! Paragraph)
+    mutating func visitSymbol(_ symbol: Symbol) {
+        symbol.abstractSectionVariants.allValues.map(\.variant).forEach {
+            visitMarkup($0.paragraph)
         }
-        let newDiscussionVariants = symbol.discussionVariants.map {
-            DiscussionSection(content: $0.content.map { visitMarkup($0) })
+        symbol.discussionVariants.allValues.map(\.variant).forEach {
+            $0.content.forEach { visitMarkup($0) }
         }
-        let newTopicsVariants = symbol.topicsVariants.map { topic -> TopicsSection in
-            return TopicsSection(content: topic.content.map { visitMarkup($0) }, originalLinkRangesByGroup: topic.originalLinkRangesByGroup)
+        symbol.topicsVariants.allValues.map(\.variant).forEach { topic in
+            topic.content.forEach { visitMarkup($0) }
         }
-        let newSeeAlsoVariants = symbol.seeAlsoVariants.map {
-            SeeAlsoSection(content: $0.content.map { visitMarkup($0) })
+        symbol.seeAlsoVariants.allValues.map(\.variant).forEach {
+            $0.content.forEach { visitMarkup($0) }
         }
-        let newReturnsVariants = symbol.returnsSectionVariants.map {
-            ReturnsSection(content: $0.content.map { visitMarkup($0) })
+        symbol.returnsSectionVariants.allValues.map(\.variant).forEach {
+            $0.content.forEach { visitMarkup($0) }
         }
-        let newParametersVariants = symbol.parametersSectionVariants.map { parametersSection -> ParametersSection in
-            let parameters = parametersSection.parameters.map {
-                Parameter(name: $0.name, contents: $0.contents.map { visitMarkup($0) })
+        symbol.parametersSectionVariants.allValues.map(\.variant).forEach { parametersSection in
+            parametersSection.parameters.forEach {
+                $0.contents.forEach { visitMarkup($0) }
             }
-            return ParametersSection(parameters: parameters)
         }
-        
-        // It's important to carry over aggregate data like the merged declarations
-        // or the merged default implementations to the new `Symbol` instance.
-        
-        return Symbol(
-            kindVariants: symbol.kindVariants,
-            titleVariants: symbol.titleVariants,
-            subHeadingVariants: symbol.subHeadingVariants,
-            navigatorVariants: symbol.navigatorVariants,
-            roleHeadingVariants: symbol.roleHeadingVariants,
-            platformNameVariants: symbol.platformNameVariants,
-            moduleReference: symbol.moduleReference,
-            extendedModule: symbol.extendedModule,
-            requiredVariants: symbol.isRequiredVariants,
-            externalIDVariants: symbol.externalIDVariants,
-            accessLevelVariants: symbol.accessLevelVariants,
-            availabilityVariants: symbol.availabilityVariants,
-            deprecatedSummaryVariants: symbol.deprecatedSummaryVariants,
-            mixinsVariants: symbol.mixinsVariants,
-            declarationVariants: symbol.declarationVariants,
-            defaultImplementationsVariants: symbol.defaultImplementationsVariants,
-            relationshipsVariants: symbol.relationshipsVariants,
-            abstractSectionVariants: newAbstractVariants,
-            discussionVariants: newDiscussionVariants,
-            topicsVariants: newTopicsVariants,
-            seeAlsoVariants: newSeeAlsoVariants,
-            returnsSectionVariants: newReturnsVariants,
-            parametersSectionVariants: newParametersVariants,
-            redirectsVariants: symbol.redirectsVariants,
-            bystanderModuleNames: symbol.bystanderModuleNames,
-            originVariants: symbol.originVariants,
-            automaticTaskGroupsVariants: symbol.automaticTaskGroupsVariants
-        )
     }
     
-    mutating func visitDeprecationSummary(_ summary: DeprecationSummary) -> Semantic {
-        let newContent = visit(summary.content) as! MarkupContainer
-        return DeprecationSummary(originalMarkup: summary.originalMarkup, content: newContent)
+    mutating func visitDeprecationSummary(_ summary: DeprecationSummary) {
+        visitMarkupContainer(summary.content)
     }
 }
 

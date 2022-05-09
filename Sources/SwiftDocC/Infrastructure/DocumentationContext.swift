@@ -522,7 +522,7 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
         results.sync({ $0.reserveCapacity(references.count) })
 
         let resolveNodeWithReference: (ResolvedTopicReference) -> Void = { [unowned self] reference in
-            if var documentationNode = try? entity(with: reference), documentationNode.semantic is Article || documentationNode.semantic is Symbol {
+            if let documentationNode = try? entity(with: reference), documentationNode.semantic is Article || documentationNode.semantic is Symbol {
                 for doc in documentationNode.docChunks {
                     let source: URL?
                     switch doc.source {
@@ -563,7 +563,7 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
                     // Update the cache with the resolved node.
                     // We aggressively release used memory, since we're copying all semantic objects
                     // on the line below while rewriting nodes with the resolved content.
-                    documentationNode.semantic = autoreleasepool { resolver.visit(documentationNode.semantic) }
+                    resolver.visit(documentationNode.semantic)
 
                     var problems = resolver.problems
 
@@ -621,9 +621,9 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
         for technologyResult in technologies {
             autoreleasepool {
                 let url = technologyResult.source
-                let unresolvedTechnology = technologyResult.value
+                let technology = technologyResult.value
                 var resolver = ReferenceResolver(context: self, bundle: bundle, source: url)
-                let technology = resolver.visit(unresolvedTechnology) as! Technology
+                resolver.visit(technology)
                 diagnosticEngine.emit(resolver.problems)
                 
                 // Add to document map
@@ -693,9 +693,9 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
         for tutorialResult in tutorials {
             autoreleasepool {
                 let url = tutorialResult.source
-                let unresolvedTutorial = tutorialResult.value
+                let tutorial = tutorialResult.value
                 var resolver = ReferenceResolver(context: self, bundle: bundle, source: url)
-                let tutorial = resolver.visit(unresolvedTutorial) as! Tutorial
+                resolver.visit(tutorial)
                 diagnosticEngine.emit(resolver.problems)
                 
                 // Add to document map
@@ -727,9 +727,9 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
         for articleResult in tutorialArticles {
             autoreleasepool {
                 let url = articleResult.source
-                let unresolvedTutorialArticle = articleResult.value
+                let article = articleResult.value
                 var resolver = ReferenceResolver(context: self, bundle: bundle, source: url)
-                let article = resolver.visit(unresolvedTutorialArticle) as! TutorialArticle
+                resolver.visit(article)
                 diagnosticEngine.emit(resolver.problems)
                             
                 // Add to document map
@@ -2606,14 +2606,7 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
                         return nil
                     }
                     
-                    let resolvedReferenceCacheIdentifier = ResolvedTopicReference.cacheIdentifier(
-                        resolved.url,
-                        fromSymbolLink: false,
-                        in: parent
-                    )
-                    
                     cacheReference(resolved, withKey: referenceCacheIdentifier)
-                    cacheReference(resolved, withKey: resolvedReferenceCacheIdentifier)
                     return .success(resolved)
                 } else if reference.fragment != nil, nodeAnchorSections.keys.contains(reference) {
                     return .success(reference)

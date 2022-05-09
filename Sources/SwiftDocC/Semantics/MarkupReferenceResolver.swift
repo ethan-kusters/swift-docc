@@ -23,7 +23,7 @@ fileprivate func disabledLinkDestinationProblem(reference: ResolvedTopicReferenc
 /**
  Rewrites a ``Markup`` tree to resolve ``UnresolvedTopicReference`s using a ``DocumentationContext``.
  */
-struct MarkupReferenceResolver: MarkupRewriter {
+struct MarkupReferenceResolver: MarkupWalker {
     var context: DocumentationContext
     var bundle: DocumentationBundle
     var source: URL?
@@ -44,6 +44,7 @@ struct MarkupReferenceResolver: MarkupRewriter {
     // precise diagnostics.
     var problemForUnresolvedReference: ((_ unresolvedReference: UnresolvedTopicReference, _ source: URL?, _ range: SourceRange?, _ fromSymbolLink: Bool, _ underlyingErrorMessage: String) -> Problem?)? = nil
 
+    @discardableResult
     private mutating func resolve(reference: TopicReference, range: SourceRange?, severity: DiagnosticSeverity, fromSymbolLink: Bool = false) -> URL? {
         switch context.resolve(reference, in: rootReference, fromSymbolLink: fromSymbolLink) {
         case .success(let resolved):
@@ -71,47 +72,29 @@ struct MarkupReferenceResolver: MarkupRewriter {
         }
     }
 
-    mutating func visitImage(_ image: Image) -> Markup? {
+    mutating func visitImage(_ image: Image) {
         if let reference = image.reference(in: bundle), !context.resourceExists(with: reference) {
             problems.append(unresolvedResourceProblem(resource: reference, source: source, range: image.range, severity: .warning))
         }
-
-        var image = image
-        let newChildren = image.children.compactMap {
-            visit($0) as? InlineMarkup
-        }
-        image.replaceChildrenInRange(0..<image.childCount, with: newChildren)
-        return image
+        descendInto(image)
     }
     
-    mutating func visitInlineHTML(_ inlineHTML: InlineHTML) -> Markup? {
-        return inlineHTML
-    }
-    
-    mutating func visitLineBreak(_ lineBreak: LineBreak) -> Markup? {
-        return lineBreak
-    }
-
-    mutating func visitLink(_ link: Link) -> Markup? {
+    mutating func visitLink(_ link: Link) {
         guard let destination = link.destination else {
-            return link
+            return
         }
         guard let url = ValidatedURL(parsing: destination) else {
             problems.append(invalidLinkDestinationProblem(destination: destination, source: source, range: link.range, severity: .warning))
-            return link
+            return
         }
         guard url.components.scheme == ResolvedTopicReference.urlScheme else {
-            return link // Create a non-topic link
+            return
         }
         let unresolved = TopicReference.unresolved(.init(topicURL: url))
-        guard let resolvedURL = resolve(reference: unresolved, range: link.range, severity: .warning) else {
-            return link
-        }
-        var link = link
-        link.destination = resolvedURL.absoluteString
-        return link
+        resolve(reference: unresolved, range: link.range, severity: .warning)
     }
 
+    @discardableResult
     mutating func resolveAbsoluteSymbolLink(unresolvedDestination: String, elementRange range: SourceRange?) -> String {
         if let cached = context.referenceFor(absoluteSymbolPath: unresolvedDestination, parent: rootReference) {
             guard context.topicGraph.isLinkable(cached) == true else {
@@ -132,27 +115,24 @@ struct MarkupReferenceResolver: MarkupRewriter {
 
     }
     
-    mutating func visitSymbolLink(_ symbolLink: SymbolLink) -> Markup? {
+    mutating func visitSymbolLink(_ symbolLink: SymbolLink) {
         guard let destination = symbolLink.destination else {
-            return symbolLink
+            return
         }
         
-        var symbolLink = symbolLink
-        symbolLink.destination = resolveAbsoluteSymbolLink(unresolvedDestination: destination, elementRange: symbolLink.range)
-        return symbolLink
+        resolveAbsoluteSymbolLink(unresolvedDestination: destination, elementRange: symbolLink.range)
     }
 
-    mutating func visitBlockDirective(_ blockDirective: BlockDirective) -> Markup? {
+    mutating func visitBlockDirective(_ blockDirective: BlockDirective) {
         switch blockDirective.name {
         case Snippet.directiveName:
             var problems = [Problem]()
             guard let snippet = Snippet(from: blockDirective, source: source, for: bundle, in: context, problems: &problems) else {
-                return blockDirective
+                return
             }
-            let resolvedDestination = resolveAbsoluteSymbolLink(unresolvedDestination: snippet.path, elementRange: blockDirective.range)
-            return BlockDirective(name: Snippet.directiveName, argumentText: "path: \"\(resolvedDestination)\"", children: [])
+            resolveAbsoluteSymbolLink(unresolvedDestination: snippet.path, elementRange: blockDirective.range)
         default:
-            return defaultVisit(blockDirective)
+            defaultVisit(blockDirective)
         }
     }
 }

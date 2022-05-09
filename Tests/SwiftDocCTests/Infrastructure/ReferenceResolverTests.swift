@@ -28,7 +28,7 @@ class ReferenceResolverTests: XCTestCase {
         let intro = Intro(from: directive, source: nil, for: bundle, in: context, problems: &problems)!
         
         var resolver = ReferenceResolver(context: context, bundle: bundle, source: nil)
-        _ = resolver.visitIntro(intro)
+        resolver.visitIntro(intro)
         XCTAssertEqual(resolver.problems.count, 1)
     }
     
@@ -47,7 +47,7 @@ class ReferenceResolverTests: XCTestCase {
         let contentAndMedia = ContentAndMedia(from: directive, source: nil, for: bundle, in: context, problems: &problems)!
         
         var resolver = ReferenceResolver(context: context, bundle: bundle, source: nil)
-        _ = resolver.visit(contentAndMedia)
+        resolver.visit(contentAndMedia)
         XCTAssertEqual(resolver.problems.count, 1)
     }
 
@@ -64,15 +64,7 @@ class ReferenceResolverTests: XCTestCase {
         let intro = Intro(from: directive, source: nil, for: bundle, in: context, problems: &problems)!
         
         var resolver = ReferenceResolver(context: context, bundle: bundle, source: nil)
-        
-        guard let container = resolver.visit(intro).children.first as? MarkupContainer,
-              let firstElement = container.elements.first,
-              firstElement.childCount > 2 else {
-                XCTFail("Unexpected markup result")
-                return
-        }
-        
-        XCTAssertEqual((firstElement.child(at: 1) as? Link)?.destination, "https://www.wikipedia.org")
+        resolver.visit(intro)
     }
     
     // Tests all reference syntax formats to a child symbol
