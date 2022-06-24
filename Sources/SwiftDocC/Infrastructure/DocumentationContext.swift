@@ -1463,16 +1463,13 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
                     try self.updateNodeWithReferenceIfCollisionChild(reference, symbolsURLHierarchy: &symbolsURLHierarchy)
                 }
             }
-            
             // Create inherited API collections
-            for (_, relationships) in combinedRelationships {
-                try GeneratedDocumentationTopics.createInheritedSymbolsAPICollections(
-                    relationships: relationships,
-                    symbolsURLHierarchy: &symbolsURLHierarchy,
-                    context: self,
-                    bundle: bundle
-                )
-            }
+            try GeneratedDocumentationTopics.createInheritedSymbolsAPICollections(
+                relationships: Set(combinedRelationships.flatMap(\.value)),
+                symbolsURLHierarchy: &symbolsURLHierarchy,
+                context: self,
+                bundle: bundle
+            )
 
             // Parse and prepare the nodes' content concurrently.
             let updatedNodes: [(node: DocumentationNode, matchedArticleURL: URL?)] = Array(symbolIndex.values)
