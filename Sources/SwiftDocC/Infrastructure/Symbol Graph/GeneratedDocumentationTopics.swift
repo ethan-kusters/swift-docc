@@ -40,7 +40,7 @@ enum GeneratedDocumentationTopics {
         ///   - reference: The parent type reference.
         ///   - originDisplayName: The origin display name as provided by the symbol graph.
         ///   - extendedModuleName: Extended module name.
-        mutating func add(_ childReference: ResolvedTopicReference, to reference: ResolvedTopicReference, originDisplayName: String, originParentSymbol: ResolvedTopicReference?, extendedModuleName: String) throws {
+        mutating func add(_ childReference: ResolvedTopicReference, to reference: ResolvedTopicReference, originDisplayName: String, originParentSymbol: SymbolGraph.Symbol?, extendedModuleName: String) throws {
             let fromType: String
             let typeSimpleName: String
             if let originParentSymbol = originParentSymbol, !originParentSymbol.pathComponents.isEmpty {
@@ -225,9 +225,10 @@ enum GeneratedDocumentationTopics {
                let child = context.symbolIndex[relationship.source],
                // Get the swift extension data
                let extends = child.symbol?.mixins[SymbolGraph.Symbol.Swift.Extension.mixinKey] as? SymbolGraph.Symbol.Swift.Extension {
-                var originParentSymbol: ResolvedTopicReference? = nil
+                var originParentSymbol: SymbolGraph.Symbol? = nil
                 if let originSymbol = context.symbolIndex[origin.identifier] {
-                    originParentSymbol = try? symbolsURLHierarchy.parent(of: originSymbol.reference)
+                    let originParentReference = try? symbolsURLHierarchy.parent(of: originSymbol.reference)
+                    originParentSymbol = originParentReference.flatMap { context.documentationCache[$0] }?.symbol
                 }
                 // Add the inherited symbol to the index.
                 try inheritanceIndex.add(child.reference, to: parent.reference, originDisplayName: origin.displayName, originParentSymbol: originParentSymbol, extendedModuleName: extends.extendedModule)
