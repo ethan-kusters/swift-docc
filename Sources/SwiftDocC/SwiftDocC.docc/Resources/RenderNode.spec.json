@@ -438,6 +438,9 @@
                         "$ref": "#/components/schemas/Aside"
                     },
                     {
+                        "$ref": "#/components/schemas/Small"
+                    },
+                    {
                         "$ref": "#/components/schemas/Heading"
                     },
                     {
@@ -726,6 +729,25 @@
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/RenderInlineContent"
+                        }
+                    }
+                }
+            },
+            "Small": {
+                "type": "object",
+                "required": [
+                    "type",
+                    "content",
+                ],
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": ["small"]
+                    },
+                    "content": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/RenderBlockContent"
                         }
                     }
                 }
