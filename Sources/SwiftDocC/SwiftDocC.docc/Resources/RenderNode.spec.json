@@ -1299,6 +1299,13 @@
                         "type": "string",
                         "nullable": true
                     },
+                    "caption": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/RenderBlockContent"
+                        },
+                        nullable: true
+                    },
                     "identifier": {
                         "type": "string"
                     },
@@ -1347,6 +1354,13 @@
                     "alt": {
                         "type": "string",
                         "nullable": true
+                    },
+                    "caption": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/RenderBlockContent"
+                        },
+                        nullable: true
                     },
                     "identifier": {
                         "type": "string"
