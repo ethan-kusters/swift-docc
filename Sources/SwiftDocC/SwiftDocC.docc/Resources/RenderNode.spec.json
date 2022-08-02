@@ -1988,7 +1988,8 @@
                         "enum": [
                             "list",
                             "simpleGrid",
-                            "detailedGrid"
+                            "detailedGrid",
+                            "hidden"
                         ],
                         default: "list"
                     },
