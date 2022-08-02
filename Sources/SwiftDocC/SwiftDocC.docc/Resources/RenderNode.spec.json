@@ -1048,6 +1048,9 @@
                         "$ref": "#/components/schemas/Image"
                     },
                     {
+                        "$ref": "#/components/schemas/Video"
+                    },
+                    {
                         "$ref": "#/components/schemas/InlineHead"
                     },
                     {
@@ -1183,6 +1186,26 @@
                     "identifier": {
                         "type": "string",
                         "format": "reference(ImageRenderReference)"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/RenderContentMetadata"
+                    }
+                }
+            },
+            "Video": {
+                "type": "object",
+                "required": [
+                    "type",
+                    "identifier"
+                ],
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": ["video"]
+                    },
+                    "identifier": {
+                        "type": "string",
+                        "format": "reference(VideoRenderReference)"
                     },
                     "metadata": {
                         "$ref": "#/components/schemas/RenderContentMetadata"
@@ -1405,13 +1428,6 @@
                         "type": "string",
                         "nullable": true
                     },
-                    "caption": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/RenderBlockContent"
-                        },
-                        nullable: true
-                    },
                     "identifier": {
                         "type": "string"
                     },
@@ -1460,13 +1476,6 @@
                     "alt": {
                         "type": "string",
                         "nullable": true
-                    },
-                    "caption": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/RenderBlockContent"
-                        },
-                        nullable: true
                     },
                     "identifier": {
                         "type": "string"
