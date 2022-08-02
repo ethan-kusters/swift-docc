@@ -441,6 +441,9 @@
                         "$ref": "#/components/schemas/Small"
                     },
                     {
+                        "$ref": "#/components/schemas/Links"
+                    },
+                    {
                         "$ref": "#/components/schemas/Heading"
                     },
                     {
@@ -825,6 +828,37 @@
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/TermListItem"
+                        }
+                    }
+                }
+            },
+            "Links": {
+                "required": [
+                    "type",
+                    "style",
+                    "items"
+                ],
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "links"
+                        ]
+                    },
+                    "style": {
+                        "type": "string",
+                        "enum": [
+                            "list",
+                            "simpleGrid",
+                            "detailedGrid"
+                        ]
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "reference(TopicRenderReference)"
                         }
                     }
                 }
