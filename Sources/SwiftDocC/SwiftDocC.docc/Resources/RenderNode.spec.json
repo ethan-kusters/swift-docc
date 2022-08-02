@@ -1650,6 +1650,12 @@
                             "$ref": "#/components/schemas/DeclarationToken"
                         }
                     },
+                    "images": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TopicImage"
+                        }
+                    },
                     "navigatorTitle": {
                         "type": "array",
                         "items": {
@@ -1688,6 +1694,23 @@
                         "items": {
                             "$ref": "#/components/schemas/SymbolTag"
                         }
+                    }
+                }
+            },
+            "TopicImage": {
+                "type": "object",
+                "required": [
+                    "type",
+                    "reference"
+                ],
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": ["icon", "card"]
+                    },
+                    "image": {
+                        "type": "string",
+                        "format": "reference(ImageRenderReference)"
                     }
                 }
             },
