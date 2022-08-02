@@ -1930,7 +1930,8 @@
                         "type": "string",
                         "enum": [
                             "list",
-                            "grid"
+                            "simpleGrid",
+                            "detailedGrid"
                         ],
                         default: "list"
                     },
