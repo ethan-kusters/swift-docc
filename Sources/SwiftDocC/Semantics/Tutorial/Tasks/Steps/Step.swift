@@ -14,23 +14,41 @@ import Markdown
 /**
  An instructional step to complete as a part of a ``TutorialSection``. ``DirectiveConvertible``
  */
-public final class Step: Semantic, DirectiveConvertible {
-    public static let directiveName = "Step"
+public final class Step: Semantic, AutomaticDirectiveConvertible {
     /// The original `Markup` node that was parsed into this semantic step,
     /// or `nil` if it was created elsewhere.
     public let originalMarkup: BlockDirective
     
     /// A piece of media associated with the step to display when selected.
-    public let media: Media?
+    @ChildDirective
+    public private(set) var image: ImageMedia? = nil
+    
+    @ChildDirective
+    public private(set) var video: VideoMedia? = nil
+    
+    public var media: Media? {
+        return image ?? video
+    }
     
     /// A code file associated with the step to display when selected.
-    public let code: Code?
+    @ChildDirective
+    public private(set) var code: Code? = nil
     
     /// `Markup` content inside the step.
-    public let content: MarkupContainer
+    @ChildMarkup(numberOfParagraphs: .custom(1))
+    public private(set) var content: MarkupContainer
     
     /// The step's caption.
-    public let caption: MarkupContainer
+    @ChildMarkup(numberOfParagraphs: .zeroOrOne)
+    public private(set) var caption: MarkupContainer
+    
+    static var keyPaths: [String : AnyKeyPath] = [
+        "image"     : \Step._image,
+        "video"     : \Step._video,
+        "code"      : \Step._code,
+        "content"   : \Step._content,
+        "caption"   : \Step._caption,
+    ]
     
     override var children: [Semantic] {
         let contentChild: [Semantic] = [content]
@@ -41,28 +59,53 @@ public final class Step: Semantic, DirectiveConvertible {
     
     init(originalMarkup: BlockDirective, media: Media?, code: Code?, content: MarkupContainer, caption: MarkupContainer) {
         self.originalMarkup = originalMarkup
-        self.media = media
+        super.init()
+        
+        if let image = media as? ImageMedia {
+            self.image = image
+        } else if let video = media as? VideoMedia {
+            self.video = video
+        }
+        
         self.code = code
         self.content = content
         self.caption = caption
     }
     
-    public convenience init?(from directive: BlockDirective, source: URL?, for bundle: DocumentationBundle, in context: DocumentationContext, problems: inout [Problem]) {
-        precondition(directive.name == Step.directiveName)
+    @available(*, deprecated, message: "Do not call directly. Required for 'AutomaticDirectiveConvertible'.")
+    init(originalMarkup: BlockDirective) {
+        self.originalMarkup = originalMarkup
+    }
+    
+    func validate(
+        source: URL?,
+        for bundle: DocumentationBundle,
+        in context: DocumentationContext,
+        problems: inout [Problem]
+    ) -> Bool {
+        _ = Semantic.Analyses.HasExactlyOneMedia<Step>(severityIfNotFound: nil).analyze(
+            originalMarkup,
+            children: originalMarkup.children,
+            source: source,
+            for: bundle,
+            in: context,
+            problems: &problems
+        )
         
-        _ = Semantic.Analyses.HasOnlyKnownArguments<Step>(severityIfFound: .warning, allowedArguments: []).analyze(directive, children: directive.children, source: source, for: bundle, in: context, problems: &problems)
-        
-        Semantic.Analyses.HasOnlyKnownDirectives<Step>(severityIfFound: .warning, allowedDirectives: [ImageMedia.directiveName, VideoMedia.directiveName, Code.directiveName]).analyze(directive, children: directive.children, source: source, for: bundle, in: context, problems: &problems)
-        
-        var remainder: MarkupContainer
-        let optionalMedia: Media?
-        (optionalMedia, remainder) = Semantic.Analyses.HasExactlyOneMedia<Step>(severityIfNotFound: nil).analyze(directive, children: directive.children, source: source, for: bundle, in: context, problems: &problems)
-        
-        let optionalCode: Code?
-        (optionalCode, remainder) = Semantic.Analyses.HasExactlyOne<Step, Code>(severityIfNotFound: nil).analyze(directive, children: remainder, source: source, for: bundle, in: context, problems: &problems)
+        return true
+    }
+    
+    func parseChildMarkup(
+        from children: MarkupContainer,
+        source: URL?,
+        for bundle: DocumentationBundle,
+        in context: DocumentationContext,
+        problems: inout [Problem]
+    ) -> Bool {
+        var remainder = children
         
         let paragraphs: [Paragraph]
-        (paragraphs, remainder) = Semantic.Analyses.ExtractAllMarkup<Paragraph>().analyze(directive, children: remainder, source: source, for: bundle, in: context, problems: &problems)
+        (paragraphs, remainder) = Semantic.Analyses.ExtractAllMarkup<Paragraph>().analyze(originalMarkup, children: remainder, source: source, for: bundle, in: context, problems: &problems)
         
         let content: MarkupContainer
         let caption: MarkupContainer
@@ -98,7 +141,7 @@ public final class Step: Semantic, DirectiveConvertible {
         }
         
         let blockQuotes: [BlockQuote]
-        (blockQuotes, remainder) = Semantic.Analyses.ExtractAllMarkup<BlockQuote>().analyze(directive, children: remainder, source: source, for: bundle, in: context, problems: &problems)
+        (blockQuotes, remainder) = Semantic.Analyses.ExtractAllMarkup<BlockQuote>().analyze(originalMarkup, children: remainder, source: source, for: bundle, in: context, problems: &problems)
         
         for extraneousElement in remainder {
             guard (extraneousElement as? BlockDirective)?.name != Comment.directiveName else {
@@ -108,11 +151,14 @@ public final class Step: Semantic, DirectiveConvertible {
         }
         
         if content.isEmpty {
-            let diagnostic = Diagnostic(source: source, severity: .warning, range: directive.range, identifier: "org.swift.docc.HasContent", summary: "\(Step.directiveName.singleQuoted) has no content; \(Step.directiveName.singleQuoted) directive should at least have an instructional sentence")
+            let diagnostic = Diagnostic(source: source, severity: .warning, range: originalMarkup.range, identifier: "org.swift.docc.HasContent", summary: "\(Step.directiveName.singleQuoted) has no content; \(Step.directiveName.singleQuoted) directive should at least have an instructional sentence")
             problems.append(Problem(diagnostic: diagnostic, possibleSolutions: []))
         }
         
-        self.init(originalMarkup: directive, media: optionalMedia, code: optionalCode, content: MarkupContainer(content.elements), caption: MarkupContainer(caption.elements + blockQuotes as [Markup]))
+        self.content = content
+        self.caption = MarkupContainer(caption.elements + blockQuotes as [Markup])
+        
+        return true
     }
     
     public override func accept<V: SemanticVisitor>(_ visitor: inout V) -> V.Result {

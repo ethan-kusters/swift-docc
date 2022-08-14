@@ -26,11 +26,9 @@ class MultipleChoiceTests: XCTestCase {
             XCTAssertEqual(MultipleChoice.directiveName, directive.name)
             let multipleChoice = MultipleChoice(from: directive, source: nil, for: bundle, in: context, problems: &problems)
             XCTAssertNil(multipleChoice)
-            XCTAssertEqual(3, problems.count)
+            XCTAssertEqual(1, problems.count)
             let diagnosticIdentifiers = Set(problems.map { $0.diagnostic.identifier })
             XCTAssertTrue(diagnosticIdentifiers.contains("org.swift.docc.\(MultipleChoice.self).missingPhrasing"))
-            XCTAssertTrue(diagnosticIdentifiers.contains("org.swift.docc.\(MultipleChoice.self).CorrectNumberOfChoices"))
-            XCTAssertTrue(diagnosticIdentifiers.contains("org.swift.docc.\(MultipleChoice.self).CorrectChoiceProvided"))
         }
     }
     
