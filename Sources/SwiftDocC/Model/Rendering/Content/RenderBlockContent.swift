@@ -67,6 +67,8 @@ public enum RenderBlockContent: Equatable {
     /// A paragraph of small print content that should be rendered in a small font.
     case small(Small)
 
+    case video(Video)
+
     // Warning: If you add a new case to this enum, make sure to handle it in the Codable
     // conformance at the bottom of this file, and in the `rawIndexableTextContent` method in
     // RenderBlockContent+TextIndexing.swift!
@@ -440,6 +442,12 @@ public enum RenderBlockContent: Equatable {
         /// The inline content that should be rendered.
         public let inlineContent: [RenderInlineContent]
     }
+   
+    public struct Video: Codable, Equatable {
+        public let identifier: RenderReferenceIdentifier
+        
+        public let metadata: RenderContentMetadata?
+    }
 }
 
 // Codable conformance
@@ -450,6 +458,7 @@ extension RenderBlockContent: Codable {
         case request, response
         case header, rows
         case numberOfColumns, columns
+        case identifier
     }
     
     public init(from decoder: Decoder) throws {
@@ -506,11 +515,18 @@ extension RenderBlockContent: Codable {
             self = try .small(
                 Small(inlineContent: container.decode([RenderInlineContent].self, forKey: .inlineContent))
             )
+        case .video:
+            self = try .video(
+                Video(
+                    identifier: container.decode(RenderReferenceIdentifier.self, forKey: .identifier),
+                    metadata: container.decodeIfPresent(RenderContentMetadata.self, forKey: .metadata)
+                )
+            )
         }
     }
     
     private enum BlockType: String, Codable {
-        case paragraph, aside, codeListing, heading, orderedList, unorderedList, step, endpointExample, dictionaryExample, table, termList, row, small
+        case paragraph, aside, codeListing, heading, orderedList, unorderedList, step, endpointExample, dictionaryExample, table, termList, row, small, video
     }
     
     private var type: BlockType {
@@ -528,6 +544,7 @@ extension RenderBlockContent: Codable {
         case .termList: return .termList
         case .row: return .row
         case .small: return .small
+        case .video: return .video
         default: fatalError("unknown RenderBlockContent case in type property")
         }
     }
@@ -579,6 +596,9 @@ extension RenderBlockContent: Codable {
             try container.encode(row.columns, forKey: .columns)
         case .small(let small):
             try container.encode(small.inlineContent, forKey: .inlineContent)
+        case .video(let video):
+            try container.encode(video.identifier, forKey: .identifier)
+            try container.encodeIfPresent(video.metadata, forKey: .metadata)
         default:
             fatalError("unknown RenderBlockContent case in encode method")
         }

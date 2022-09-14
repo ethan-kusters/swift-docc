@@ -64,6 +64,8 @@ extension RenderBlockContent: TextIndexing {
             }.joined(separator: " ")
         case .small(let small):
             return small.inlineContent.rawIndexableTextContent(references: references)
+        case .video(let video):
+            return video.metadata?.rawIndexableTextContent(references: references) ?? ""
         default:
             fatalError("unknown RenderBlockContent case in rawIndexableTextContent")
         }

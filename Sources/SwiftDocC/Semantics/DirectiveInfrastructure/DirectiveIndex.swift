@@ -19,6 +19,8 @@ struct DirectiveIndex {
         Row.self,
         Options.self,
         Small.self,
+        ImageMedia.self,
+        VideoMedia.self,
     ]
     
     private static let topLevelTutorialDirectives: [AutomaticDirectiveConvertible.Type] = [

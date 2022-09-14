@@ -2381,12 +2381,26 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
     }
     
     /// Returns true if a resource with the given identifier exists in the registered bundle.
-    public func resourceExists(with identifier: ResourceReference) -> Bool{
+    public func resourceExists(with identifier: ResourceReference, ofType assetType: AssetType? = nil) -> Bool {
         guard let assetManager = assetManagers[identifier.bundleIdentifier] else {
             return false
         }
         
-        return assetManager.bestKey(forAssetName: identifier.path) != nil
+        guard let key = assetManager.bestKey(forAssetName: identifier.path) else {
+            return false
+        }
+        
+        guard let assetType = assetType else {
+            return true
+        }
+        
+        guard let asset = assetManager.storage[key] else {
+            return false
+        }
+        
+        return asset.variants.values.map(\.pathExtension).contains { pathExtension in
+            return Self.isFileExtension(pathExtension, supported: assetType)
+        }
     }
     
     /**
