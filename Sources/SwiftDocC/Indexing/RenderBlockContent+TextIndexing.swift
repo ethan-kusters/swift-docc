@@ -66,6 +66,10 @@ extension RenderBlockContent: TextIndexing {
             return small.inlineContent.rawIndexableTextContent(references: references)
         case .video(let video):
             return video.metadata?.rawIndexableTextContent(references: references) ?? ""
+        case .tabNavigator(let tabNavigator):
+            return tabNavigator.tabs.map { tab in
+                return tab.content.rawIndexableTextContent(references: references)
+            }.joined(separator: " ")
         default:
             fatalError("unknown RenderBlockContent case in rawIndexableTextContent")
         }

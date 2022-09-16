@@ -21,6 +21,7 @@ struct DirectiveIndex {
         Small.self,
         ImageMedia.self,
         VideoMedia.self,
+        TabNavigator.self,
     ]
     
     private static let topLevelTutorialDirectives: [AutomaticDirectiveConvertible.Type] = [

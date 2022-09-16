@@ -138,11 +138,14 @@ extension XCTestCase {
         var analyzer = SemanticAnalyzer(source: nil, context: context, bundle: bundle)
         let result = analyzer.visit(blockDirectiveContainer)
         
-        let problemIDs = analyzer.problems.map { problem -> String in
-            let line = problem.diagnostic.range?.lowerBound.line.description ?? "unknown-line"
+        let problemIDs = try analyzer.problems.map { problem -> (line: Int, id: String) in
+            let line = try XCTUnwrap(problem.diagnostic.range).lowerBound.line
             
-            return "\(line): \(problem.diagnostic.severity) – \(problem.diagnostic.identifier)"
-        }.sorted()
+            return (line, "\(line): \(problem.diagnostic.severity) – \(problem.diagnostic.identifier)")
+        }
+        .sorted(by: \.id)
+        .sorted(by: \.line)
+        .map(\.id)
         
         guard let directive = result as? Directive else {
             return ([], problemIDs, nil)

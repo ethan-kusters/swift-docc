@@ -435,6 +435,9 @@
                         "$ref": "#/components/schemas/Video"
                     },
                     {
+                        "$ref": "#/components/schemas/TabNavigator"
+                    },
+                    {
                         "$ref": "#/components/schemas/Aside"
                     },
                     {
@@ -615,6 +618,43 @@
                     },
                     "metadata": {
                         "$ref": "#/components/schemas/RenderContentMetadata"
+                    }
+                }
+            },
+            "TabNavigator": {
+                "type": "object",
+                "required": [
+                    "kind",
+                    "tabs"
+                ],
+                "properties": {
+                    "kind": {
+                        "type": "string",
+                        "enum": ["tabNavigator"]
+                    },
+                    "tabs": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Tab"
+                        }
+                    }
+                }
+            },
+            "Tab": {
+                "type": "object",
+                "required": [
+                    "content",
+                    "title"
+                ],
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "content": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/RenderBlockContent"
+                        }
                     }
                 }
             },
