@@ -16,6 +16,7 @@
             },
             "LinkDestinationSummary": {
                 "type": "object",
+                "additionalProperties": false,
                 "required": [
                     "kind",
                     "language",
@@ -122,6 +123,7 @@
             },
             "LinkDestinationSummaryVariant": {
                 "type": "object",
+                "additionalProperties": false,
                 "required": [
                     "traits"
                 ],

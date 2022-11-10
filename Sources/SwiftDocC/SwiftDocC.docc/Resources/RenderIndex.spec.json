@@ -10,12 +10,13 @@
         "schemas": {
             "RenderIndex": {
                 "type": "object",
+                "additionalProperties": false,
                 "required": [
                     "schemaVersion",
                     "interfaceLanguages"
                 ],
                 "properties": {
-                    "identifier": {
+                    "schemaVersion": {
                         "$ref": "#/components/schemas/SchemaVersion"
                     },
                     "interfaceLanguages": {
@@ -37,6 +38,7 @@
             },
             "Node": {
                 "type": "object",
+                "additionalProperties": false,
                 "required": [
                     "title"
                 ],
