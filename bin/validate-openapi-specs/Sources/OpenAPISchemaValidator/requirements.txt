@@ -1,0 +1,2 @@
+openapi-schema-validator==0.3.4
+openapi-spec-validator==0.5.1

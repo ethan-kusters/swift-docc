@@ -24,8 +24,9 @@ docc-dist-build
 .swiftpm
 .vscode
 
-# The bin/benchmark tool is its own local Package that depend on 
+# The bin/benchmark and bin/validate-open-api-specs tools are local Packages that depend on 
 # Swift-DocC using a relative local file path ("../..")
-# It should always use the resolved dependencies for the local 
-# Swift-DocC  so we don't track its resolved package file.
+# They should always use the resolved dependencies for the local 
+# Swift-DocC  so we don't track their resolved package files.
 bin/benchmark/Package.resolved
+/bin/validate-openapi-specs/Package.resolved
