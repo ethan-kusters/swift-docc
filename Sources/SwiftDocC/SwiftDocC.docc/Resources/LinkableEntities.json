@@ -68,7 +68,7 @@
                     "usr": {
                         "type": "string"
                     },
-                    "declarationFragments": {
+                    "fragments": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/DeclarationToken"
@@ -99,6 +99,15 @@
                         "type": "string"
                     },
                     "id": {
+                        "type": "string"
+                    },
+                    "idAliases": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "linkDisambiguationID": {
                         "type": "string"
                     }
                 }
@@ -135,37 +144,45 @@
                         }
                     },
                     "kind": {
-                        "type": "string"
+                        "type": "string",
+                        "nullable": true
                     },
                     "language": {
-                        "type": "string"
+                        "$ref": "#/components/schemas/SourceLanguage",
+                        "nullable": true
                     },
                     "path": {
-                        "type": "string"
+                        "type": "string",
+                        "nullable": true
                     },
                     "title": {
-                        "type": "string"
+                        "type": "string",
+                        "nullable": true
                     },
                     "abstract": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/RenderInlineContent"
-                        }
+                        },
+                        "nullable": true
                     },
                     "usr": {
-                        "type": "string"
+                        "type": "string",
+                        "nullable": true
                     },
-                    "declarationFragments": {
+                    "fragments": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/DeclarationToken"
-                        }
+                        },
+                        "nullable": true
                     },
                     "taskGroups": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/TaskGroup"
-                        }
+                        },
+                        "nullable": true
                     }
                 }
             },
