@@ -29,7 +29,12 @@ struct ValidateOpenAPISpecs {
         }
         
         // Install open api schema validator requirements into the local directory.
-        try shell("pip3 install -r requirements.txt -t .", workingDirectory: schemaValidator, suppressStandardOutput: true, requireSuccess: true)
+        try shell(
+            "pip3 install -r requirements.txt -t .",
+            workingDirectory: schemaValidator,
+            suppressOutput: true,
+            requireSuccess: true
+        )
         
         guard let mixedLanguageFrameworkCatalog = Bundle.module.url(
             forResource: "MixedLanguageFramework",
@@ -39,8 +44,7 @@ struct ValidateOpenAPISpecs {
             fatalError("Failed to find 'MixedLanguageFramework.docc' text fixture in bundle resources.")
         }
         
-        let outputDirectory = FileManager.default.temporaryDirectory
-            .appendingPathComponent("SwiftDocC-ValidateOpenAPISpecs", isDirectory: true)
+        let outputDirectory = temporaryDirectory
             .appendingPathComponent("MixedLanguageFramework.doccarchive", isDirectory: true)
         
         try FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true)
@@ -74,7 +78,7 @@ struct ValidateOpenAPISpecs {
             
             let specName = spec.fileName.split(separator: ".").first!
             
-            print("Beginning validation for \(spec.fileName).")
+            print("Beginning validation for \(specURL.path)")
             
             for conformingJSON in try spec.conformingJSONInDocCArchive(generatedDocCArchive) {
                 print("Validating \(conformingJSON.path) against \(spec.fileName):", terminator: "\n\n")
@@ -179,11 +183,20 @@ let swiftDocCSpecsDirectory = URL(fileURLWithPath: #file)
     .appendingPathComponent("SwiftDocC.docc", isDirectory: true)
     .appendingPathComponent("Resources", isDirectory: true)
 
+var temporaryDirectory: URL {
+    let directory = Bundle.module.resourceURL!.appendingPathComponent("TemporaryOutputDirectory", isDirectory: true)
+    
+    try? FileManager.default.removeItem(at: directory)
+    try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: false)
+    
+    return directory
+}
+
 @discardableResult
 func shell(
     _ command: String,
     workingDirectory: URL,
-    suppressStandardOutput: Bool = false,
+    suppressOutput: Bool = false,
     requireSuccess: Bool = false
 ) throws -> Int {
     let process = Process()
@@ -191,8 +204,9 @@ func shell(
     process.arguments = ["-c", command]
     process.currentDirectoryURL = workingDirectory
     
-    if suppressStandardOutput {
+    if suppressOutput {
         process.standardOutput = nil
+        process.standardError = nil
     }
     
     try process.run()
