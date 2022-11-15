@@ -28,6 +28,8 @@ struct ValidateOpenAPISpecs {
             fatalError("Failed to find 'OpenAPISchemaValidator' in bundle resources.")
         }
         
+        print("Installing OpenAPI validation dependencies with pip3...")
+        
         // Install open api schema validator requirements into the local directory.
         try shell(
             "pip3 install -r requirements.txt -t .",
@@ -35,6 +37,8 @@ struct ValidateOpenAPISpecs {
             suppressOutput: true,
             requireSuccess: true
         )
+        
+        print("Generating documentation for 'MixedLanguageFramework.docc'...")
         
         guard let mixedLanguageFrameworkCatalog = Bundle.module.url(
             forResource: "MixedLanguageFramework",

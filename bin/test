@@ -26,6 +26,10 @@ DOCC_USE_HIERARCHY_BASED_LINK_RESOLVER=YES  swift test --parallel --package-path
 # Run source code checks for the codebase.
 LC_ALL=C "$DOCC_ROOT"/bin/check-source
 
+# Validate OpenAPI specs
+echo "=> Validating OpenAPI specifications… "
+swift run --package-path "$DOCC_ROOT/bin/validate-openapi-specs" validate-specs
+
 # Test utility scripts validity.
 printf "=> Validating scripts in bin subdirectory… "
 

@@ -16,6 +16,9 @@ let package = Package(
     platforms: [
         .macOS(.v10_15),
     ],
+    products: [
+        .executable(name: "validate-specs", targets: ["validate-specs"]),
+    ],
     dependencies: [
         .package(name: "swift-docc", path: "../../"),
     ],
