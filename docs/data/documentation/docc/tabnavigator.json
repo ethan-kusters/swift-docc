@@ -211,6 +211,13 @@
       "title" : "Creating Custom Page Layouts"
     }
   ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tab"
+      ]
+    }
+  ],
   "variants" : [
     {
       "paths" : [

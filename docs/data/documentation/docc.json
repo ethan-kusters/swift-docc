@@ -128,13 +128,6 @@
         "doc:\/\/org.swift.docc\/documentation\/docc\/Comment"
       ],
       "title" : "Shared Syntax"
-    },
-    {
-      "identifiers" : [
-        "doc:\/\/org.swift.docc\/documentation\/docc\/Column",
-        "doc:\/\/org.swift.docc\/documentation\/docc\/Tab"
-      ],
-      "title" : "Classes"
     }
   ],
   "variants" : [
@@ -164,69 +157,6 @@
   "title" : "DocC",
   "type" : "topic",
   "url" : "\/documentation\/docc"
-},
-"doc://org.swift.docc/documentation/docc/Column": {
-  "abstract" : [
-    {
-      "text" : "A container directive that holds general markup content describing a column",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "with a row in a grid-based layout.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "@"
-    },
-    {
-      "kind" : "identifier",
-      "text" : "Column"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "identifier",
-      "text" : "size"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Int"
-    },
-    {
-      "kind" : "text",
-      "text" : ")"
-    }
-  ],
-  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Column",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "attribute",
-      "text" : "@"
-    },
-    {
-      "kind" : "identifier",
-      "preciseIdentifier" : "__docc_universal_symbol_reference_$Column",
-      "text" : "Column"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "Column",
-  "type" : "topic",
-  "url" : "\/documentation\/docc\/column"
 },
 "doc://org.swift.docc/documentation/docc/Comment": {
   "abstract" : [
@@ -262,73 +192,6 @@
   "title" : "Comment",
   "type" : "topic",
   "url" : "\/documentation\/docc\/comment"
-},
-"doc://org.swift.docc/documentation/docc/Tab": {
-  "abstract" : [
-    {
-      "text" : "A container directive that holds general markup content describing an individual",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "tab within a tab-based layout.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "@"
-    },
-    {
-      "kind" : "identifier",
-      "text" : "Tab"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "text",
-      "text" : "_ "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "title"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "String"
-    },
-    {
-      "kind" : "text",
-      "text" : ")"
-    }
-  ],
-  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tab",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "attribute",
-      "text" : "@"
-    },
-    {
-      "kind" : "identifier",
-      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tab",
-      "text" : "Tab"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "Tab",
-  "type" : "topic",
-  "url" : "\/documentation\/docc\/tab"
 },
 "doc://org.swift.docc/documentation/docc/adding-structure-to-your-documentation-pages": {
   "abstract" : [

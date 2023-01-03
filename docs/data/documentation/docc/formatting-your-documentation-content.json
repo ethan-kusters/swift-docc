@@ -3362,6 +3362,10 @@
           "type" : "paragraph"
         },
         {
+          "alignments" : [
+            "right",
+            "left"
+          ],
           "header" : "row",
           "rows" : [
             [

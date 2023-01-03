@@ -303,6 +303,13 @@
       "title" : "Creating Custom Page Layouts"
     }
   ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Column"
+      ]
+    }
+  ],
   "variants" : [
     {
       "paths" : [

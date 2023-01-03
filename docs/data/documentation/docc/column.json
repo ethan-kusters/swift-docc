@@ -16,7 +16,9 @@
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/org.swift.docc\/documentation\/docc"
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Row"
       ]
     ]
   },
@@ -361,6 +363,20 @@
   "title" : "Row",
   "type" : "topic",
   "url" : "\/documentation\/docc\/row"
+},
+"doc://org.swift.docc/documentation/docc/api-reference-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through reference documentation you create from comments in source code and documentation extension files.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "API Documentation",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/api-reference-syntax"
 }
 }
 }

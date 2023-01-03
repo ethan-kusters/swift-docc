@@ -144,11 +144,25 @@
                 "type" : "groupMarker"
               },
               {
+                "children" : [
+                  {
+                    "path" : "\/documentation\/docc\/column",
+                    "title" : "Column",
+                    "type" : "class"
+                  }
+                ],
                 "path" : "\/documentation\/docc\/row",
                 "title" : "Row",
                 "type" : "class"
               },
               {
+                "children" : [
+                  {
+                    "path" : "\/documentation\/docc\/tab",
+                    "title" : "Tab",
+                    "type" : "class"
+                  }
+                ],
                 "path" : "\/documentation\/docc\/tabnavigator",
                 "title" : "TabNavigator",
                 "type" : "class"
@@ -650,20 +664,6 @@
             "path" : "\/documentation\/docc\/comment",
             "title" : "Comment",
             "type" : "class"
-          },
-          {
-            "title" : "Classes",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/docc\/column",
-            "title" : "Column",
-            "type" : "class"
-          },
-          {
-            "path" : "\/documentation\/docc\/tab",
-            "title" : "Tab",
-            "type" : "class"
           }
         ],
         "path" : "\/documentation\/docc",
@@ -675,6 +675,6 @@
   "schemaVersion" : {
     "major" : 0,
     "minor" : 1,
-    "patch" : 0
+    "patch" : 1
   }
 }
