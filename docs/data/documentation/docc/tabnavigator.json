@@ -1,0 +1,544 @@
+{
+  "abstract" : [
+    {
+      "text" : "A container directive that arranges content into a tab-based layout.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/TabNavigator"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "__docc_universal_symbol_reference_$TabNavigator",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "text" : "TabNavigator"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "docc",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$TabNavigator",
+        "text" : "TabNavigator"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "TabNavigator"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "TabNavigator"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n"
+            },
+            {
+              "kind" : "text",
+              "text" : "    "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tab",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "__docc_universal_symbol_reference_$Tab",
+              "text" : "Tab"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "text",
+              "text" : "_ "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "title"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            },
+            {
+              "kind" : "text",
+              "text" : " { ... }"
+            },
+            {
+              "kind" : "text",
+              "text" : "\n"
+            },
+            {
+              "kind" : "text",
+              "text" : "}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Create a new tab navigator by writing a ",
+              "type" : "text"
+            },
+            {
+              "code" : "@TabNavigator",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive that contains child",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "@Tab",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directives.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@TabNavigator {",
+            "   @Tab(\"Powers\") {",
+            "      ![A diagram with the five sloth power types.](sloth-powers)",
+            "   }",
+            "",
+            "   @Tab(\"Excerise routines\") {",
+            "      ![A sloth relaxing and enjoying a good book.](sloth-exercise)",
+            "   }",
+            "",
+            "   @Tab(\"Hats\") {",
+            "      ![A sloth discovering newfound confidence after donning a fedora.](sloth-hats)",
+            "   }",
+            "}"
+          ],
+          "syntax" : "md",
+          "type" : "codeListing"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Row",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Links",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Small"
+      ],
+      "title" : "Creating Custom Page Layouts"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/tabnavigator"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/Links": {
+  "abstract" : [
+    {
+      "text" : "A directive for authoring authoring embedded",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "previews of documentation links (similar to how links are currently",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "rendered in Topics sections) anywhere on the page without affecting page",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "curation behavior.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Links"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "visualStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "VisualStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Links",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Links",
+      "text" : "Links"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Links",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/links"
+},
+"doc://org.swift.docc/documentation/docc/Row": {
+  "abstract" : [
+    {
+      "text" : "A container directive that arranges content into a grid-based row and column",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "layout.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Row"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "numberOfColumns"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Row",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Row",
+      "text" : "Row"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Row",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/row"
+},
+"doc://org.swift.docc/documentation/docc/Small": {
+  "abstract" : [
+    {
+      "text" : "A directive for specifying small print text like legal, license, or copyright text that",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "should be rendered in a smaller font size.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Small"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Small",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Small",
+      "text" : "Small"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Small",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/small"
+},
+"doc://org.swift.docc/documentation/docc/Tab": {
+  "abstract" : [
+    {
+      "text" : "A container directive that holds general markup content describing an individual",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "tab within a tab-based layout.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tab"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "text",
+      "text" : "_ "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "title"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tab",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tab",
+      "text" : "Tab"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tab",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tab"
+},
+"doc://org.swift.docc/documentation/docc/TabNavigator": {
+  "abstract" : [
+    {
+      "text" : "A container directive that arranges content into a tab-based layout.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TabNavigator"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/TabNavigator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$TabNavigator",
+      "text" : "TabNavigator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TabNavigator",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tabnavigator"
+},
+"doc://org.swift.docc/documentation/docc/api-reference-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through reference documentation you create from comments in source code and documentation extension files.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "API Documentation",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/api-reference-syntax"
+}
+}
+}

@@ -1,0 +1,469 @@
+{
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through reference documentation you create from comments in source code and documentation extension files.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "DocC"
+      }
+    ],
+    "role" : "collectionGroup",
+    "title" : "API Documentation"
+  },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use documentation markup, a custom variant of Markdown, to add in-source documentation to your APIs. Then, use DocC to build your documentation and share it with developers.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "2_docs",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax"
+      ],
+      "title" : "Documentation Types"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Options",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata"
+      ],
+      "title" : "Configuring Documentation Behavior"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Row",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/TabNavigator",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Links",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Small"
+      ],
+      "title" : "Creating Custom Page Layouts"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/api-reference-syntax"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"2_docs": {
+  "alt" : "A screenshot showing the rendered documentation for the SlothCreator framework, including the overview and a partially obscured image.",
+  "identifier" : "2_docs",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/2_docs@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/2_docs~dark@2x.png"
+    }
+  ]
+},
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/Links": {
+  "abstract" : [
+    {
+      "text" : "A directive for authoring authoring embedded",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "previews of documentation links (similar to how links are currently",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "rendered in Topics sections) anywhere on the page without affecting page",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "curation behavior.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Links"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "visualStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "VisualStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Links",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Links",
+      "text" : "Links"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Links",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/links"
+},
+"doc://org.swift.docc/documentation/docc/Metadata": {
+  "abstract" : [
+    {
+      "text" : "Use metadata directives to instruct DocC how to build certain documentation files.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Metadata"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Metadata",
+      "text" : "Metadata"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Metadata",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/metadata"
+},
+"doc://org.swift.docc/documentation/docc/Options": {
+  "abstract" : [
+    {
+      "text" : "Use Option directives to adjust DocC’s default behaviors when rendering a page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Options"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scope"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Scope"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Options",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Options",
+      "text" : "Options"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Options",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/options"
+},
+"doc://org.swift.docc/documentation/docc/Row": {
+  "abstract" : [
+    {
+      "text" : "A container directive that arranges content into a grid-based row and column",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "layout.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Row"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "numberOfColumns"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Row",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Row",
+      "text" : "Row"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Row",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/row"
+},
+"doc://org.swift.docc/documentation/docc/Small": {
+  "abstract" : [
+    {
+      "text" : "A directive for specifying small print text like legal, license, or copyright text that",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "should be rendered in a smaller font size.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Small"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Small",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Small",
+      "text" : "Small"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Small",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/small"
+},
+"doc://org.swift.docc/documentation/docc/TabNavigator": {
+  "abstract" : [
+    {
+      "text" : "A container directive that arranges content into a tab-based layout.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TabNavigator"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/TabNavigator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$TabNavigator",
+      "text" : "TabNavigator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TabNavigator",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tabnavigator"
+},
+"doc://org.swift.docc/documentation/docc/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

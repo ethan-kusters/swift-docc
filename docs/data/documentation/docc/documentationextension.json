@@ -1,0 +1,449 @@
+{
+  "abstract" : [
+    {
+      "text" : "Defines whether the content in a documentation extension file amends or replaces in-source documentation.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/DocumentationExtension"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "__docc_universal_symbol_reference_$DocumentationExtension",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "text" : "DocumentationExtension"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "identifier",
+        "text" : "mergeBehavior"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Behavior"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "docc",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$DocumentationExtension",
+        "text" : "DocumentationExtension"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "DocumentationExtension"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "DocumentationExtension"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "identifier",
+              "text" : "mergeBehavior"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Behavior"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A value of ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "append",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " or ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "override",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ", denoting whether an extension file’s content amends or replaces the in-source documentation. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "mergeBehavior"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Swift framework and package APIs are typically documented using comments that reside in-source, alongside the APIs themselves. In some cases, you may wish to supplement or replace in-source documentation with content from dedicated documentation extension files. To learn about this process, see ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/adding-supplemental-content-to-a-documentation-catalog",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Place the ",
+              "type" : "text"
+            },
+            {
+              "code" : "DocumentationExtension",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive within a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Metadata",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive in a documentation extension file. Set the ",
+              "type" : "text"
+            },
+            {
+              "code" : "mergeBehavior",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter to ",
+              "type" : "text"
+            },
+            {
+              "code" : "append",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " or ",
+              "type" : "text"
+            },
+            {
+              "code" : "override",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to indicate whether the extension file’s content amends or replaces the in-source documentation.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# ``SlothCreator\/Sloth``",
+            "",
+            "@Metadata {",
+            "    @DocumentationExtension(mergeBehavior: append)",
+            "}",
+            "",
+            "## Sleeping Habits",
+            "",
+            "Sloths sleep in trees by curling into a ball and hanging by their claws."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following items can include a documentation extension element:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/documentationextension"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/DocumentationExtension": {
+  "abstract" : [
+    {
+      "text" : "Defines whether the content in a documentation extension file amends or replaces in-source documentation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "mergeBehavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Behavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/DocumentationExtension",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$DocumentationExtension",
+      "text" : "DocumentationExtension"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocumentationExtension",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/documentationextension"
+},
+"doc://org.swift.docc/documentation/docc/Metadata": {
+  "abstract" : [
+    {
+      "text" : "Use metadata directives to instruct DocC how to build certain documentation files.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Metadata"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Metadata",
+      "text" : "Metadata"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Metadata",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/metadata"
+},
+"doc://org.swift.docc/documentation/docc/adding-supplemental-content-to-a-documentation-catalog": {
+  "abstract" : [
+    {
+      "text" : "Include articles and extension files to extend your source documentation comments or provide supporting conceptual content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/adding-supplemental-content-to-a-documentation-catalog",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Adding Supplemental Content to a Documentation Catalog",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/adding-supplemental-content-to-a-documentation-catalog"
+},
+"doc://org.swift.docc/documentation/docc/api-reference-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through reference documentation you create from comments in source code and documentation extension files.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "API Documentation",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/api-reference-syntax"
+}
+}
+}

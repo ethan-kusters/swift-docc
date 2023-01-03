@@ -1,6 +1,6 @@
 {
-  "bundleDisplayName" : "SwiftDocCUtilities",
-  "bundleIdentifier" : "SwiftDocCUtilities",
+  "bundleDisplayName" : "docc",
+  "bundleIdentifier" : "org.swift.docc",
   "schemaVersion" : {
     "major" : 0,
     "minor" : 1,

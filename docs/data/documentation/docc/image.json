@@ -1,0 +1,1549 @@
+{
+  "abstract" : [
+    {
+      "text" : "Displays an image in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-shared-directives"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Intro"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Intro"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Volume"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-shared-directives",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-shared-directives",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Intro"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/ContentAndMedia"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Volume",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Assessments",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/MultipleChoice",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Choice"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Stack",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/ContentAndMedia"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Steps",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Step"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Steps",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Step",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Code"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/Image"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "__docc_universal_symbol_reference_$Image",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Image"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "identifier",
+        "text" : "source"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "ResourceReference"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "alt"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "docc",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Image",
+        "text" : "Image"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Image"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Image"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "identifier",
+              "text" : "source"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "ResourceReference"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "alt"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n    ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name and file extension of an image in your Swift framework or package project. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "source"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Alternative text that describes the image to screen readers. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "alt"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The ",
+              "type" : "text"
+            },
+            {
+              "code" : "Image",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive displays an image in your tutorial. Provide the name of an image and alternative text that describes the image in sufficient detail so screen readers can read that text aloud for people who are blind or have low-vision.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Image(source: \"overview-hero.png\", alt: \"An illustration of a sleeping sloth, hanging from a tree branch.”)"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Images can exist anywhere in your code base, but it’s good practice to centralize them in a resources folder. You create this folder in your documentation catalog. Within your code base, image names must be unique. Images must be in ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".png",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".jpg",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".jpeg",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".svg",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : ", or ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : ".gif",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " format.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "To differentiate tutorial images from reference documentation images, you may wish to prefix image file names with tutorial.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Tip",
+          "style" : "tip",
+          "type" : "aside"
+        },
+        {
+          "anchor" : "Provide-Image-Variants",
+          "level" : 3,
+          "text" : "Provide Image Variants",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To ensure images render well on both standard and high-resolution displays, and in light and dark appearance modes, you can provide up to four versions of each image.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the following naming conventions for your image files:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "[filename].[extension]",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      },
+                      {
+                        "text" : ", e.g. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "filename.png",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "text" : "Standard Light",
+                    "type" : "text"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "[filename]@2x.[extension]",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      },
+                      {
+                        "text" : ", e.g. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "filename@2x.png",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "text" : "High-Resolution Light",
+                    "type" : "text"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "[filename]~dark.[extension]",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      },
+                      {
+                        "text" : ", e.g. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "filename~dark.png",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "text" : "Standard Dark",
+                    "type" : "text"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "[filename]~dark@2x.[extension]",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      },
+                      {
+                        "text" : ", e.g. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "filename~dark@2x.png",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "emphasis"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "text" : "High-Resolution Dark",
+                    "type" : "text"
+                  }
+                ]
+              }
+            }
+          ],
+          "type" : "termList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Exclude the resolution and appearance-variant suffixes when specifying an image name in the ",
+              "type" : "text"
+            },
+            {
+              "code" : "source",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter. For example, when you specify ",
+              "type" : "text"
+            },
+            {
+              "code" : "@Image(source: \"overview-hero.png\", alt: \" ... \")",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", the appropriate variant automatically displays based on the reader’s context. If the reader views the tutorial ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "on a display that has dark appearance mode",
+                  "type" : "text"
+                }
+              ],
+              "type" : "strong"
+            },
+            {
+              "text" : " enabled, ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "overview-hero~dark@2x.png",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " is shown. At minimum, strive to provide high resolution variants ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "in light and dark appearance modes.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "strong"
+            },
+            {
+              "text" : " If you don’t provide a certain variant, ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "the system displays the closest match.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "strong"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following tutorial elements can include images.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Choice",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/ContentAndMedia",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Intro",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Step",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Volume",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/image"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/Assessments": {
+  "abstract" : [
+    {
+      "text" : "Tests the reader’s knowledge at the end of a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Assessments"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Assessments",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Assessments",
+      "text" : "Assessments"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Assessments",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/assessments"
+},
+"doc://org.swift.docc/documentation/docc/Chapter": {
+  "abstract" : [
+    {
+      "text" : "Organizes related tutorial pages into a chapter on a table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Chapter"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Chapter",
+      "text" : "Chapter"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Chapter",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/chapter"
+},
+"doc://org.swift.docc/documentation/docc/Choice": {
+  "abstract" : [
+    {
+      "text" : "Defines a single choice for a multiple-choice question in the assessments section of a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Choice"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isCorrect"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Choice",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Choice",
+      "text" : "Choice"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Choice",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/choice"
+},
+"doc://org.swift.docc/documentation/docc/Code": {
+  "abstract" : [
+    {
+      "text" : "Defines the code for an individual step on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Code"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Code",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Code",
+      "text" : "Code"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Code",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/code"
+},
+"doc://org.swift.docc/documentation/docc/ContentAndMedia": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping that contains text and an image or a video in a section on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContentAndMedia"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/ContentAndMedia",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$ContentAndMedia",
+      "text" : "ContentAndMedia"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContentAndMedia",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/contentandmedia"
+},
+"doc://org.swift.docc/documentation/docc/Image": {
+  "abstract" : [
+    {
+      "text" : "Displays an image in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Image"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "source"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "alt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Image",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Image",
+      "text" : "Image"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Image",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/image"
+},
+"doc://org.swift.docc/documentation/docc/Intro": {
+  "abstract" : [
+    {
+      "text" : "Displays an introduction section at the top of a table of contents or tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Intro"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "title"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Intro",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Intro",
+      "text" : "Intro"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Intro",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/intro"
+},
+"doc://org.swift.docc/documentation/docc/MultipleChoice": {
+  "abstract" : [
+    {
+      "text" : "Defines a single question and multiple possible answers to include in the Assessments section of a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MultipleChoice"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/MultipleChoice",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$MultipleChoice",
+      "text" : "MultipleChoice"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MultipleChoice",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/multiplechoice"
+},
+"doc://org.swift.docc/documentation/docc/Section": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping of text, images, and tasks on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Section"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+      "text" : "Section"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Section",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/section"
+},
+"doc://org.swift.docc/documentation/docc/Stack": {
+  "abstract" : [
+    {
+      "text" : "Displays set of horizontally arranged groupings that contain text and media in a section on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Stack"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Stack",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Stack",
+      "text" : "Stack"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Stack",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/stack"
+},
+"doc://org.swift.docc/documentation/docc/Step": {
+  "abstract" : [
+    {
+      "text" : "Defines an individual task the reader performs within a set of steps on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Step"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Step",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Step",
+      "text" : "Step"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Step",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/step"
+},
+"doc://org.swift.docc/documentation/docc/Steps": {
+  "abstract" : [
+    {
+      "text" : "Defines a set of tasks the reader performs on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Steps"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Steps",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Steps",
+      "text" : "Steps"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Steps",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/steps"
+},
+"doc://org.swift.docc/documentation/docc/Tutorial": {
+  "abstract" : [
+    {
+      "text" : "Displays a tutorial page that teaches your Swift framework or package APIs through interactive coding exercises.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tutorial"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "time"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "projectFiles"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorial",
+      "text" : "Tutorial"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tutorial",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial"
+},
+"doc://org.swift.docc/documentation/docc/Tutorials": {
+  "abstract" : [
+    {
+      "text" : "Displays a table of contents page for readers to navigate the pages of an interactive tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tutorials"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorials",
+      "text" : "Tutorials"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorials"
+},
+"doc://org.swift.docc/documentation/docc/Volume": {
+  "abstract" : [
+    {
+      "text" : "Organizes related chapters into a volume on a tutorial’s table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Volume"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Volume",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Volume",
+      "text" : "Volume"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Volume",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/volume"
+},
+"doc://org.swift.docc/documentation/docc/tutorial-shared-directives": {
+  "abstract" : [
+    {
+      "text" : "Directives supported by multiple directives in interactive tutorials.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-shared-directives",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Shared Directives",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-shared-directives"
+},
+"doc://org.swift.docc/documentation/docc/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

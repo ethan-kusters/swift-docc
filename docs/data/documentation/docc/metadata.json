@@ -1,0 +1,840 @@
+{
+  "abstract" : [
+    {
+      "text" : "Use metadata directives to instruct DocC how to build certain documentation files.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "__docc_universal_symbol_reference_$Metadata",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Metadata"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "docc",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Metadata",
+        "text" : "Metadata"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Metadata"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Metadata"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n    ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Metadata",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive with other directives to configure how certain documentation files build. Place the directive after the documentation page’s title. Use it with the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/DocumentationExtension",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to indicate whether content in a documentation extension file amends or replaces in-source documentation.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# ``SlothCreator\/Sloth``",
+            "",
+            "@Metadata {",
+            "    @DocumentationExtension(mergeBehavior: append)",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Metadata",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive with the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/TechnologyRoot",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to configure a documentation page that’s not associated with a particular framework, so that page appears as a top-level page.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Metadata",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive with the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/DisplayName",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to configure a symbol’s documentation page to use a custom display name.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# ``SlothCreator``",
+            "",
+            "@Metadata {",
+            "    @DisplayName(\"Sloth Creator\")",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Contained-Elements",
+          "level" : 3,
+          "text" : "Contained Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A metadata element must contain one of the following items:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "Defines whether the content in a documentation extension file amends or replaces in-source documentation. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/DocumentationExtension",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "Configures a documentation page that’s not associated with a particular framework to appear as a top-level page. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/TechnologyRoot",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "Configures a symbol’s documentation page to use a custom display name. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/DisplayName",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            }
+          ],
+          "type" : "termList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Options"
+      ],
+      "title" : "Configuring Documentation Behavior"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/DocumentationExtension"
+      ],
+      "title" : "Extending or Overriding Source Documentation"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/TechnologyRoot"
+      ],
+      "title" : "Creating a Top-Level Technology Page"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/DisplayName",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/PageImage",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/CallToAction"
+      ],
+      "title" : "Customizing the Presentation of a Page"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/metadata"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/CallToAction": {
+  "abstract" : [
+    {
+      "text" : "A directive that adds a prominent button or link to a page’s header.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CallToAction"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "URL"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "file"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "purpose"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Purpose"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "label"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/CallToAction",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$CallToAction",
+      "text" : "CallToAction"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CallToAction",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/calltoaction"
+},
+"doc://org.swift.docc/documentation/docc/DisplayName": {
+  "abstract" : [
+    {
+      "text" : "Configures a symbol’s documentation page and any references to that page to show a custom name instead of the symbol name.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DisplayName"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "text",
+      "text" : "_ "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "style"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Style"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/DisplayName",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$DisplayName",
+      "text" : "DisplayName"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DisplayName",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/displayname"
+},
+"doc://org.swift.docc/documentation/docc/DocumentationExtension": {
+  "abstract" : [
+    {
+      "text" : "Defines whether the content in a documentation extension file amends or replaces in-source documentation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "mergeBehavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Behavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/DocumentationExtension",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$DocumentationExtension",
+      "text" : "DocumentationExtension"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocumentationExtension",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/documentationextension"
+},
+"doc://org.swift.docc/documentation/docc/Metadata": {
+  "abstract" : [
+    {
+      "text" : "Use metadata directives to instruct DocC how to build certain documentation files.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Metadata"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Metadata",
+      "text" : "Metadata"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Metadata",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/metadata"
+},
+"doc://org.swift.docc/documentation/docc/Options": {
+  "abstract" : [
+    {
+      "text" : "Use Option directives to adjust DocC’s default behaviors when rendering a page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Options"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scope"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Scope"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Options",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Options",
+      "text" : "Options"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Options",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/options"
+},
+"doc://org.swift.docc/documentation/docc/PageImage": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PageImage"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "purpose"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Purpose"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "source"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "alt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/PageImage",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$PageImage",
+      "text" : "PageImage"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PageImage",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/pageimage"
+},
+"doc://org.swift.docc/documentation/docc/TechnologyRoot": {
+  "abstract" : [
+    {
+      "text" : "Configures a documentation page that’s not associated with a particular framework so it appears as a top-level page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TechnologyRoot"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/TechnologyRoot",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$TechnologyRoot",
+      "text" : "TechnologyRoot"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TechnologyRoot",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/technologyroot"
+},
+"doc://org.swift.docc/documentation/docc/api-reference-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through reference documentation you create from comments in source code and documentation extension files.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "API Documentation",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/api-reference-syntax"
+}
+}
+}

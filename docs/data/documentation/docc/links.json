@@ -1,0 +1,629 @@
+{
+  "abstract" : [
+    {
+      "text" : "A directive for authoring authoring embedded",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "previews of documentation links (similar to how links are currently",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "rendered in Topics sections) anywhere on the page without affecting page",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "curation behavior.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/Links"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "__docc_universal_symbol_reference_$Links",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Links"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "identifier",
+        "text" : "visualStyle"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "VisualStyle"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "docc",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Links",
+        "text" : "Links"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Links"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Links"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "identifier",
+              "text" : "visualStyle"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "VisualStyle"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n    ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The specified style that should be used when rendering the specified links.",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            },
+            {
+              "items" : [
+                {
+                  "definition" : {
+                    "content" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "A list of the linked pages, including their full declaration and abstract.",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "paragraph"
+                      }
+                    ]
+                  },
+                  "term" : {
+                    "inlineContent" : [
+                      {
+                        "code" : "list",
+                        "type" : "codeVoice"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "definition" : {
+                    "content" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "A grid of items based on the card image for the linked pages.",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "paragraph"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "Includes each page’s title and card image but excludes their abstracts.",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "paragraph"
+                      }
+                    ]
+                  },
+                  "term" : {
+                    "inlineContent" : [
+                      {
+                        "code" : "compactGrid",
+                        "type" : "codeVoice"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "definition" : {
+                    "content" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "A grid of items based on the card image for the linked pages.",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "paragraph"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "Unlike ",
+                            "type" : "text"
+                          },
+                          {
+                            "code" : "compactGrid",
+                            "type" : "codeVoice"
+                          },
+                          {
+                            "text" : ", this style includes the abstract for each page.",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "paragraph"
+                      }
+                    ]
+                  },
+                  "term" : {
+                    "inlineContent" : [
+                      {
+                        "code" : "detailedGrid",
+                        "type" : "codeVoice"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "type" : "termList"
+            }
+          ],
+          "name" : "visualStyle"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "code" : "@Links",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " gives authors flexibility in choosing how they want to highlight",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation on the page itself versus in the navigation sidebar.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "It also allows for mixing and matching different visual styles of",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "topics.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "...",
+            "",
+            "### What's New in SlothCreator",
+            "",
+            "@Links(visualStyle: compactGrid) {",
+            "   - <doc:get-started-preparing-sloth-food>",
+            "   - <doc:feeding-your-sloth-in-winter>",
+            "   - <doc:ordering-food-delivery>",
+            "}",
+            "",
+            "..."
+          ],
+          "syntax" : "md",
+          "type" : "codeListing"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Row",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/TabNavigator",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Small"
+      ],
+      "title" : "Creating Custom Page Layouts"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/links"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/Links": {
+  "abstract" : [
+    {
+      "text" : "A directive for authoring authoring embedded",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "previews of documentation links (similar to how links are currently",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "rendered in Topics sections) anywhere on the page without affecting page",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "curation behavior.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Links"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "visualStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "VisualStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Links",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Links",
+      "text" : "Links"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Links",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/links"
+},
+"doc://org.swift.docc/documentation/docc/Row": {
+  "abstract" : [
+    {
+      "text" : "A container directive that arranges content into a grid-based row and column",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "layout.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Row"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "numberOfColumns"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Row",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Row",
+      "text" : "Row"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Row",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/row"
+},
+"doc://org.swift.docc/documentation/docc/Small": {
+  "abstract" : [
+    {
+      "text" : "A directive for specifying small print text like legal, license, or copyright text that",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "should be rendered in a smaller font size.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Small"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Small",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Small",
+      "text" : "Small"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Small",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/small"
+},
+"doc://org.swift.docc/documentation/docc/TabNavigator": {
+  "abstract" : [
+    {
+      "text" : "A container directive that arranges content into a tab-based layout.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TabNavigator"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/TabNavigator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$TabNavigator",
+      "text" : "TabNavigator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TabNavigator",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tabnavigator"
+},
+"doc://org.swift.docc/documentation/docc/api-reference-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through reference documentation you create from comments in source code and documentation extension files.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "API Documentation",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/api-reference-syntax"
+}
+}
+}

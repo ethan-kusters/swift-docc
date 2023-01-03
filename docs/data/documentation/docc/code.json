@@ -1,0 +1,881 @@
+{
+  "abstract" : [
+    {
+      "text" : "Defines the code for an individual step on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Steps",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Step"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/Code"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "__docc_universal_symbol_reference_$Code",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Code"
+      },
+      {
+        "kind" : "text",
+        "text" : "(...)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "docc",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Code",
+        "text" : "Code"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Code"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Code"
+            },
+            {
+              "kind" : "text",
+              "text" : "(...)"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n    ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The file name and extension of the Swift code file that the reader edits in their project when performing the step. This name appears above the code of the step. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "name"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name and extension of the Swift file in which the code resides within your documentation catalog. The code appears next to the related step on the tutorial page. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "file"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name and extension of the Swift file in which the previous step’s code resides within your documentation catalog. DocC uses this file for comparison against the current step’s code, so the reader can see what changed. By default, DocC automatically compares the current step’s code against the previous step’s code for differences. This parameter only needs a value if you want to override the default comparison and use a different previous file. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(optional)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "previousFile"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A Boolean ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "true",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " or ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "false",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " value. Set this parameter to ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "true",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " to disable comparison against a previous step’s code. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(optional)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "reset"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Code",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive to display a code listing when the reader reaches a step on a tutorial page.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "4",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Write the code listing in a ",
+              "type" : "text"
+            },
+            {
+              "code" : ".swift",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " file in your Swift framework or package project. To help with organization, it’s a good practice to create a folder in your code base’s tutorial folder that contains all your code listing files. It’s also recommended that you devise a naming convention for your code listing files to make them easy to find and reference. For example:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "[TutorialNameOrNumber]-[SectionNumber]-[StepNumber]-[DescriptiveName].swift",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Code",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive, use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "file",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter to list the file name and extension of your code listing file. When you build your tutorial, DocC extracts the code and shows it on the tutorial page.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "name",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter to indicate the name of the Swift file the reader edits in their own project when performing the step. The name appears above the code.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Add an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Image",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to show a preview of what the reader sees after performing the step.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: 30) {",
+            "    ",
+            "    ...",
+            "    ",
+            "    @Section(title: \"Add a customization view\") {",
+            "        ",
+            "        ...",
+            "        ",
+            "        @Steps {",
+            "",
+            "            ...",
+            "",
+            "            @Step {",
+            "                Add the `sloth` parameter to initialize the `CustomizedSlothView` in the preview provider, and pass a new `Sloth` instance for the value.",
+            "                ",
+            "                @Code(name: \"CustomizedSlothView.swift\", file: \"01-creating-code-02-07.swift\") {",
+            "                    @Image(source: \"preview-01-creating-code-02-07.png\", alt: \"A portrait of a generic sloth displayed in the center of the canvas.\")",
+            "                }",
+            "            }",
+            "",
+            "            @Step {",
+            "                Set the preview provider sloth's `name` to `\"Super Sloth\"`, `color` to `.blue`, and `power` to `.ice`.",
+            "                ",
+            "                @Code(name: \"CustomizedSlothView.swift\", file: \"01-creating-code-02-08.swift\") {",
+            "                    @Image(source: \"preview-01-creating-code-02-08.png\", alt: \"A portrait of an ice sloth on top, followed by four power icons below. The power icons, clockwise from top left, include: ice, fire, wind, and lightning. The ice icon is selected.\")",
+            "                }    ",
+            "            ",
+            "                ...",
+            "            }",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Showing-Differences-Between-Steps",
+          "level" : 3,
+          "text" : "Showing Differences Between Steps",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC automatically compares the code for each step against the code of the previous step, and highlights the differences on the tutorial page so the reader knows what to change in their own code. This automatic comparison doesn’t happen on the first step of a section. You can force a comparison or override it for any step’s code by using the ",
+              "type" : "text"
+            },
+            {
+              "code" : "previousFile",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter to denote a specific file for DocC to use for comparison. If you don’t want to show any differences, provide the optional ",
+              "type" : "text"
+            },
+            {
+              "code" : "reset",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter and set it to ",
+              "type" : "text"
+            },
+            {
+              "code" : "true",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Contained-Elements",
+          "level" : 3,
+          "text" : "Contained Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A code directive can contain the following items:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "An image showing a preview of what the reader sees after performing the step. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Image",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            }
+          ],
+          "type" : "termList"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following items can include a code element:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Step",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Image"
+      ],
+      "title" : "Previewing the Expected Result"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/code"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"4": {
+  "alt" : "A screenshot of an interactive coding step on a tutorial page. The step’s text appears on the left. The code and a preview of the result appear on the right.",
+  "identifier" : "4",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/4@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/4~dark@2x.png"
+    }
+  ]
+},
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/Code": {
+  "abstract" : [
+    {
+      "text" : "Defines the code for an individual step on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Code"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Code",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Code",
+      "text" : "Code"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Code",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/code"
+},
+"doc://org.swift.docc/documentation/docc/Image": {
+  "abstract" : [
+    {
+      "text" : "Displays an image in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Image"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "source"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "alt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Image",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Image",
+      "text" : "Image"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Image",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/image"
+},
+"doc://org.swift.docc/documentation/docc/Section": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping of text, images, and tasks on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Section"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+      "text" : "Section"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Section",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/section"
+},
+"doc://org.swift.docc/documentation/docc/Step": {
+  "abstract" : [
+    {
+      "text" : "Defines an individual task the reader performs within a set of steps on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Step"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Step",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Step",
+      "text" : "Step"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Step",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/step"
+},
+"doc://org.swift.docc/documentation/docc/Steps": {
+  "abstract" : [
+    {
+      "text" : "Defines a set of tasks the reader performs on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Steps"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Steps",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Steps",
+      "text" : "Steps"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Steps",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/steps"
+},
+"doc://org.swift.docc/documentation/docc/Tutorial": {
+  "abstract" : [
+    {
+      "text" : "Displays a tutorial page that teaches your Swift framework or package APIs through interactive coding exercises.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tutorial"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "time"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "projectFiles"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorial",
+      "text" : "Tutorial"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tutorial",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial"
+},
+"doc://org.swift.docc/documentation/docc/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

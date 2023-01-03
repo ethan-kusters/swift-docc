@@ -1,0 +1,655 @@
+{
+  "abstract" : [
+    {
+      "text" : "Use Option directives to adjust DocC’s default behaviors when rendering a page.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/Options"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "__docc_universal_symbol_reference_$Options",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Options"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "identifier",
+        "text" : "scope"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Scope"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "docc",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Options",
+        "text" : "Options"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Options"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Options"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "identifier",
+              "text" : "scope"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Scope"
+            },
+            {
+              "kind" : "text",
+              "text" : " = local"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n    ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Whether the options in this Options directive should apply locally to the page",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "or globally to the DocC catalog.",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(optional)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            },
+            {
+              "items" : [
+                {
+                  "definition" : {
+                    "content" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "The directive should only affect the current page.",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "paragraph"
+                      }
+                    ]
+                  },
+                  "term" : {
+                    "inlineContent" : [
+                      {
+                        "code" : "local",
+                        "type" : "codeVoice"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "definition" : {
+                    "content" : [
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "The directive should affect all pages in the current DocC catalog.",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "paragraph"
+                      }
+                    ]
+                  },
+                  "term" : {
+                    "inlineContent" : [
+                      {
+                        "code" : "global",
+                        "type" : "codeVoice"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "type" : "termList"
+            }
+          ],
+          "name" : "scope"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata"
+      ],
+      "title" : "Configuring Documentation Behavior"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/AutomaticSeeAlso",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/AutomaticTitleHeading",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/AutomaticArticleSubheading"
+      ],
+      "title" : "Adjusting Automatic Behaviors"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/TopicsVisualStyle"
+      ],
+      "title" : "Adjusting Visual Style"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/options"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/AutomaticArticleSubheading": {
+  "abstract" : [
+    {
+      "text" : "A directive that modifies Swift-DocC’s default behavior for automatic subheading generation on",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "article pages.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AutomaticArticleSubheading"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "text",
+      "text" : "_ "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "behavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Behavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/AutomaticArticleSubheading",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$AutomaticArticleSubheading",
+      "text" : "AutomaticArticleSubheading"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AutomaticArticleSubheading",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/automaticarticlesubheading"
+},
+"doc://org.swift.docc/documentation/docc/AutomaticSeeAlso": {
+  "abstract" : [
+    {
+      "text" : "A directive for specifying Swift-DocC’s automatic behavior when generating a page’s",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "See Also section.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AutomaticSeeAlso"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "text",
+      "text" : "_ "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "behavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Behavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/AutomaticSeeAlso",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$AutomaticSeeAlso",
+      "text" : "AutomaticSeeAlso"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AutomaticSeeAlso",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/automaticseealso"
+},
+"doc://org.swift.docc/documentation/docc/AutomaticTitleHeading": {
+  "abstract" : [
+    {
+      "text" : "A directive for specifying Swift-DocC’s automatic behavior when generating a page’s",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "title heading.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AutomaticTitleHeading"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "text",
+      "text" : "_ "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "behavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Behavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/AutomaticTitleHeading",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$AutomaticTitleHeading",
+      "text" : "AutomaticTitleHeading"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AutomaticTitleHeading",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/automatictitleheading"
+},
+"doc://org.swift.docc/documentation/docc/Metadata": {
+  "abstract" : [
+    {
+      "text" : "Use metadata directives to instruct DocC how to build certain documentation files.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Metadata"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Metadata",
+      "text" : "Metadata"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Metadata",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/metadata"
+},
+"doc://org.swift.docc/documentation/docc/Options": {
+  "abstract" : [
+    {
+      "text" : "Use Option directives to adjust DocC’s default behaviors when rendering a page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Options"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scope"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Scope"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Options",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Options",
+      "text" : "Options"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Options",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/options"
+},
+"doc://org.swift.docc/documentation/docc/TopicsVisualStyle": {
+  "abstract" : [
+    {
+      "text" : "A directive for specifying the style that should be used when rendering a page’s",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "Topics section.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TopicsVisualStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "text",
+      "text" : "_ "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "style"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Style"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/TopicsVisualStyle",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$TopicsVisualStyle",
+      "text" : "TopicsVisualStyle"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TopicsVisualStyle",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/topicsvisualstyle"
+},
+"doc://org.swift.docc/documentation/docc/api-reference-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through reference documentation you create from comments in source code and documentation extension files.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/api-reference-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "API Documentation",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/api-reference-syntax"
+}
+}
+}

@@ -1,0 +1,1211 @@
+{
+  "abstract" : [
+    {
+      "text" : "Construct a step-by-step guided learning experience for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/building-an-interactive-tutorial"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "DocC"
+      }
+    ],
+    "role" : "article",
+    "roleHeading" : "Article",
+    "title" : "Building an Interactive Tutorial"
+  },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A tutorial expands your Swift framework or package’s reference documentation with interactive educational content. Create a tutorial by adding a table of contents and individual tutorial pages that walk the reader through coding exercises that teach your APIs.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "building-tutorial",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Scope-Your-Tutorial",
+          "level" : 3,
+          "text" : "Scope Your Tutorial",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A good tutorial starts with a well-designed plan of what you’re going to teach. When deciding what your tutorial covers, do the following:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Define Your Audience. Decide whether you’re targeting new developers or experienced programmers. Consider what skills you expect readers to have before they start working through the tutorial. Knowing your audience helps you write to their level of knowledge and experience.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Define Teaching Goals. Consider what you need the reader be able to do after working through your tutorial. Outline everything you expect the reader to learn. Then, use your outline to structure the different parts of your tutorial.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Define the Scope. Think about what the reader actually does to learn the concepts you defined. A tutorial needs to be engaging and produce a sense of accomplishment. Identify specific tasks the reader can perform and projects they can build.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "anchor" : "Prepare-Your-Code-Project",
+          "level" : 3,
+          "text" : "Prepare Your Code Project",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In order to prepare your framework or package project for a tutorial, you need a documentation catalog. If your code base’s folder doesn’t have a documentation catalog, learn how to add one in ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/documenting-a-swift-framework-or-package",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ". Inside the documentation catalog, add a folder for your tutorial content. By default, a documentation catalog includes a Resources folder. This is where you place tutorial images, code-listing files, and other assets.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Add-a-Table-of-Contents-Page",
+          "level" : 3,
+          "text" : "Add a Table of Contents Page",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A table of contents page sets context and introduces the reader to your tutorial. It needs to provide enough information that the reader can gain a solid understanding of what your APIs do, before they start performing tutorial steps. The table of contents also organizes your tutorial pages into chapters so readers can browse and navigate to them.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use a text editor and the following listing to create a table of contents file named ",
+              "type" : "text"
+            },
+            {
+              "code" : "Table Of Contents.tutorial",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorials(name: \"Add the name of your tutorial here. This usually matches your framework name.\") {",
+            "    @Intro(title: \"Add a title for your introduction here.\") {",
+            "        Add engaging introduction text here.",
+            "        ",
+            "        @Image(source: \"toc-introduction-image-filename.png\", alt: \"Add an accessible description for your image here.\")",
+            "    }",
+            "    ",
+            "    @Chapter(name: \"Add a chapter title here.\") {",
+            "        Add chapter text here.",
+            "        ",
+            "        @Image(source: \"chapter-image-filename-here.png\", alt: \"Add an accessible description for your image here.\")",
+            "        ",
+            "        @TutorialReference(tutorial: \"doc:tutorial-page-file-name-here\")",
+            "        @TutorialReference(tutorial: \"doc:another-tutorial-page-file-name-here\")",
+            "    }",
+            "",
+            "    @Chapter(name: \"Add the next chapter title here.\") {",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The top level of the listing the includes a ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive. This directive and the directives it contains, define the structure of the page.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Rename the table of contents file and replace the placeholder content with your custom content. Use the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Intro",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to introduce the reader to your tutorial through engaging text and imagery. Next, use ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directives to reference the step-by-step pages.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For more information about table of contents pages, see ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Add-Step-By-Step-Pages",
+          "level" : 3,
+          "text" : "Add Step-By-Step Pages",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Tutorial pages provide instructions that walk through using your APIs in realistic ways. A tutorial project can include a single tutorial page, or many. Create a new tutorial page using your favorite editor. Give the file a name and add the ",
+              "type" : "text"
+            },
+            {
+              "code" : ".tutorial",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " extension, then copy the following template into the file.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: number) {",
+            "    @Intro(title: \"Add the name of your title here.\") {",
+            "        Add engaging introduction text here.",
+            "        ",
+            "        @Image(source: \"intro-image-filename-here.jpg\", alt: \"Add an accessible description for your image here.\")",
+            "    }",
+            "    ",
+            "    @Section(title: \"Add the name of your section here.\") {",
+            "        @ContentAndMedia(layout: horizontal) {",
+            "            Add engaging section text here.",
+            "            ",
+            "            @Image(source: \"section-image-filename-here.jpg\", alt: \"Add an accessible description for your image here.\")    ",
+            "        }",
+            "        ",
+            "        @Steps {",
+            "            @Step {",
+            "                Add engaging step 1 text here.",
+            "",
+            "                @Image(source: \"step-1-image-filename-here.jpg\", alt: \"Add an accessible description for your step here.\")",
+            "            }",
+            "            ",
+            "            @Step {",
+            "                Add code for step 1 here.",
+            "",
+            "                @Code(name: \"code-display-name-here\", file: \"step-1-code-image-filename-here.jpg\")",
+            "            }",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Replace the placeholders with your custom content. Use the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Intro",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to introduce the reader to the page’s content, ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Steps",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directives to define steps the reader follows, and ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directives to organize the steps into related groups. For example, your tutorial might include a section of steps that walks through creating something, and another section that walks through customizing it. At the end of each tutorial page, you can optionally use an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Assessments",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to test the reader’s knowledge. See the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Code",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to learn how to provide code for a step.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: 20) {",
+            "    @Intro(title: \"Add a title for your tutorial page here.\") {",
+            "        Add engaging introduction text here.",
+            "        ",
+            "        @Image(source: \"tutorial-introduction-image-filename.png\", alt: \"Add an accessible description for your image here.\")",
+            "    }",
+            "    ",
+            "    @Section(title: \"Add a section title here\") {",
+            "        @ContentAndMedia(layout: \"horizontal\") {",
+            "            Add some content here to introduce the steps that follow.",
+            "            ",
+            "            @Image(source: \"section-image-filename.png\", alt: \"Add an accessible description for your image here.\")",
+            "        }",
+            "        ",
+            "        @Steps {",
+            "            @Step {",
+            "                Provide text for a step here.",
+            "                @Image(source: \"step1-image-filename.png\", alt: \"Add an accessible description for your image here.\")",
+            "            }",
+            "            @Step {",
+            "                Provide text for another step here.",
+            "                @Image(source: \"step2-image-filename.png\", alt: \"Add an accessible description for your image here.\")",
+            "            }",
+            "        }",
+            "    }",
+            "",
+            "    @Assessments {",
+            "        @MultipleChoice {",
+            "            Add a question to test the reader's knowledge here.",
+            "",
+            "            @Choice(isCorrect: false) {",
+            "                Add an incorrect answer here.",
+            "",
+            "                @Justification(reaction: \"Try again!\") {",
+            "                    Add a hint that helps direct the reader to the right answer.",
+            "                }",
+            "            }",
+            "",
+            "            @Choice(isCorrect: true) {",
+            "                Add the correct answer here.",
+            "",
+            "                @Justification(reaction: \"That's right!\") {",
+            "                    Add some text that reinforces the right answer.",
+            "                }",
+            "            }",
+            "",
+            "            @Choice(isCorrect: false) {",
+            "                Add another incorrect answer here.",
+            "",
+            "                @Justification(reaction: \"Try again!\") {",
+            "                    Add another hint that helps direct the reader to the right answer.",
+            "                }",
+            "            }",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Repeat the process for any additional tutorial pages, and remember to add each page you create to the table of contents.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For more information about tutorial pages, see ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Reference-Images-and-Videos",
+          "level" : 3,
+          "text" : "Reference Images and Videos",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Add any images and videos that you reference throughout your tutorial to the Resources folder of your documentation catalog. Because DocC references these media files by name, their names must be unique. See ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Image",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Video",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " for supported media file formats, variants, and naming conventions.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "To differentiate tutorial media from reference documentation media, you can add a prefix like ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "tutorial_",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "emphasis"
+                },
+                {
+                  "text" : " to your media files.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Tip",
+          "style" : "tip",
+          "type" : "aside"
+        },
+        {
+          "anchor" : "View-Your-Tutorial",
+          "level" : 3,
+          "text" : "View Your Tutorial",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To view your tutorial, invoke the following command to compile it:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "docc preview MyPackage.docc --fallback-display-name MyPackage --fallback-bundle-identifier com.example.MyPackage --fallback-bundle-version 1"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC compiles your documentation catalog and generates the tutorial. Copy the URL from the terminal and paste it into your browser to view the tutorial.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Learn how to share your documentation in ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/distributing-documentation-to-other-developers",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/building-an-interactive-tutorial"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"building-tutorial": {
+  "alt" : "Two diagrams representing different pages in a tutorial. On the left, a diagram of a blocked out table of contents page. On the right, a blocked out version of a tutorial page.",
+  "identifier" : "building-tutorial",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/building-tutorial@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/building-tutorial~dark@2x.png"
+    }
+  ]
+},
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/Assessments": {
+  "abstract" : [
+    {
+      "text" : "Tests the reader’s knowledge at the end of a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Assessments"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Assessments",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Assessments",
+      "text" : "Assessments"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Assessments",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/assessments"
+},
+"doc://org.swift.docc/documentation/docc/Chapter": {
+  "abstract" : [
+    {
+      "text" : "Organizes related tutorial pages into a chapter on a table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Chapter"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Chapter",
+      "text" : "Chapter"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Chapter",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/chapter"
+},
+"doc://org.swift.docc/documentation/docc/Code": {
+  "abstract" : [
+    {
+      "text" : "Defines the code for an individual step on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Code"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Code",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Code",
+      "text" : "Code"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Code",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/code"
+},
+"doc://org.swift.docc/documentation/docc/Image": {
+  "abstract" : [
+    {
+      "text" : "Displays an image in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Image"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "source"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "alt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Image",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Image",
+      "text" : "Image"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Image",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/image"
+},
+"doc://org.swift.docc/documentation/docc/Intro": {
+  "abstract" : [
+    {
+      "text" : "Displays an introduction section at the top of a table of contents or tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Intro"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "title"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Intro",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Intro",
+      "text" : "Intro"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Intro",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/intro"
+},
+"doc://org.swift.docc/documentation/docc/Section": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping of text, images, and tasks on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Section"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+      "text" : "Section"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Section",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/section"
+},
+"doc://org.swift.docc/documentation/docc/Steps": {
+  "abstract" : [
+    {
+      "text" : "Defines a set of tasks the reader performs on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Steps"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Steps",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Steps",
+      "text" : "Steps"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Steps",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/steps"
+},
+"doc://org.swift.docc/documentation/docc/Tutorial": {
+  "abstract" : [
+    {
+      "text" : "Displays a tutorial page that teaches your Swift framework or package APIs through interactive coding exercises.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tutorial"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "time"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "projectFiles"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorial",
+      "text" : "Tutorial"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tutorial",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial"
+},
+"doc://org.swift.docc/documentation/docc/Tutorials": {
+  "abstract" : [
+    {
+      "text" : "Displays a table of contents page for readers to navigate the pages of an interactive tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tutorials"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorials",
+      "text" : "Tutorials"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorials"
+},
+"doc://org.swift.docc/documentation/docc/Video": {
+  "abstract" : [
+    {
+      "text" : "Displays a video in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Video"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "source"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "alt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "poster"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Video",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Video",
+      "text" : "Video"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Video",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/video"
+},
+"doc://org.swift.docc/documentation/docc/distributing-documentation-to-other-developers": {
+  "abstract" : [
+    {
+      "text" : "Share your documentation by hosting it on a web server.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/distributing-documentation-to-other-developers",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Distributing Documentation to Other Developers",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/distributing-documentation-to-other-developers"
+},
+"doc://org.swift.docc/documentation/docc/documenting-a-swift-framework-or-package": {
+  "abstract" : [
+    {
+      "text" : "Create rich and engaging documentation from your in-source comments, and add a",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "documentation catalog to your code base to provide additional content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/documenting-a-swift-framework-or-package",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Documenting a Swift Framework or Package",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/documenting-a-swift-framework-or-package"
+},
+"doc://org.swift.docc/documentation/docc/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

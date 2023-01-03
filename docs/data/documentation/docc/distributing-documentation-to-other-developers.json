@@ -1,0 +1,957 @@
+{
+  "abstract" : [
+    {
+      "text" : "Share your documentation by hosting it on a web server.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/distributing-documentation-to-other-developers"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "DocC"
+      }
+    ],
+    "role" : "article",
+    "roleHeading" : "Article",
+    "title" : "Distributing Documentation to Other Developers"
+  },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "As soon as you create a Swift framework or package, DocC is ready to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "generate structured documentation for the public types in your code base. Whether",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "you only have documentation comments in your source files, or you craft a full",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "learning experience that includes articles and tutorials, you can easily share the documentation in your code base with other",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "developers.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To share your documentation, you create a documentation archive, a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "self-contained bundle that has everything you need, including:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Compiled documentation from in-source comments, articles, tutorials, and",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "resources",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "A single-page web app that renders the documentation",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Distributing your documentation involves the following steps:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Export your documentation using the ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "docc",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " command-line tool.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Share your documentation by hosting it on a website.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "orderedList"
+        },
+        {
+          "anchor" : "Generate-a-Publishable-Archive-of-Your-Documentation",
+          "level" : 3,
+          "text" : "Generate a Publishable Archive of Your Documentation",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To create a documentation archive for a Swift package, use the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/apple.github.io\/swift-docc-plugin\/documentation\/swiftdoccplugin\/",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "or use Xcode’s ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Build Documentation",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " command.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Alternatively, use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "docc",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " command-line tool directly, for example:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "docc convert MyNewPackage.docc \\",
+            "  --fallback-display-name MyNewPackage \\",
+            "  --fallback-bundle-identifier com.example.MyNewPackage \\",
+            "  --fallback-bundle-version 1 \\",
+            "  --additional-symbol-graph-dir .build \\",
+            "  --output-dir MyNewPackage.doccarchive"
+          ],
+          "syntax" : "shell",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Include-links-to-your-projects-sources",
+          "level" : 4,
+          "text" : "Include links to your project’s sources",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When publishing documentation to an audience that has access to your project’s",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "sources, e.g., for an open-source project hosted on GitHub, consider configuring",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "DocC to automatically include links to the declarations of your project’s symbols.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For example, in the following screenshot, the “ParsableCommand.swift” link",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "below the declaration navigates to the ",
+              "type" : "text"
+            },
+            {
+              "code" : "ParsableCommand",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " declaration in the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "project’s GitHub repository.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "link-to-source.png",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To configure DocC to generate links to your project’s sources, use the source",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "service configuration flags like so:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "GitHub",
+                  "type" : "text"
+                }
+              ],
+              "type" : "strong"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "docc convert […] \\",
+            "    --source-service github \\",
+            "    --source-service-base-url https:\/\/github.com\/<org>\/<repo>\/blob\/<branch> \\",
+            "    --checkout-path <path to local checkout>"
+          ],
+          "syntax" : "bash",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "GitLab",
+                  "type" : "text"
+                }
+              ],
+              "type" : "strong"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "docc convert […] \\",
+            "    --source-service gitlab \\",
+            "    --source-service-base-url https:\/\/gitlab.com\/<org>\/<repo>\/-\/tree\/<branch> \\",
+            "    --checkout-path <path to local checkout>"
+          ],
+          "syntax" : "bash",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "BitBucket",
+                  "type" : "text"
+                }
+              ],
+              "type" : "strong"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "docc convert […] \\",
+            "    --source-service bitbucket \\",
+            "    --source-service-base-url https:\/\/bitbucket.org\/<org>\/<repo>\/src\/<branch> \\",
+            "    --checkout-path <path to local checkout>"
+          ],
+          "syntax" : "bash",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "These arguments can also be provided to ",
+              "type" : "text"
+            },
+            {
+              "code" : "swift package generate-documentation",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "if you’re using the SwiftPM DocC Plugin or via the ",
+              "type" : "text"
+            },
+            {
+              "code" : "OTHER_DOCC_FLAGS",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " build",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "setting when building in Xcode.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Send-a-Documentation-Archive-Directly-to-Developers",
+          "level" : 3,
+          "text" : "Send a Documentation Archive Directly to Developers",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Because a documentation archive is a self-contained bundle, you can easily",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "share it with other developers. For example, you can send it by email just like",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "a regular document, include it with a binary distribution of your framework or",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "package, or make it downloadable from a website.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To remove an imported documentation archive, place your pointer over the item",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to display the More button, and then choose Remove.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Host-a-Documentation-Archive-on-Your-Website",
+          "level" : 3,
+          "text" : "Host a Documentation Archive on Your Website",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When DocC exports a documentation archive, it includes a single-page web app",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "in the bundle. This web app renders the documentation content as HTML, letting",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "you host the documentation archive on a web server.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For reference documentation and articles, the web app uses a URL path that",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "begins with ",
+              "type" : "text"
+            },
+            {
+              "code" : "\/documentation",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". For tutorials, the URL path begins with",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "\/tutorials",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". For example, if a project contains a protocol",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "with the name ",
+              "type" : "text"
+            },
+            {
+              "code" : "MyNewProtocol",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", the URL to view the ",
+              "type" : "text"
+            },
+            {
+              "code" : "MyNewPackage",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation might resemble the following:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "https:\/\/www.example.com\/documentation\/MyNewPackage\/MyNewProtocol"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The following sections use Apache as an example. Other web server",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "installations have similar mechanisms. Consult your server’s documentation",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "for details about performing similar configurations.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To host a documentation archive on your website, do the following:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Copy the documentation archive to the directory that your web server uses to",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "serve files. In this example, the documentation archive is",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "MyNewPackage.doccarchive",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ".",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Add a rule on the server to rewrite incoming URLs that begin with",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "\/documentation",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " or ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "\/tutorial",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " to ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "MyNewPackage.doccarchive\/index.html",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ".",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Add another rule for incoming requests to support bundled resources in the",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "documentation archive, such as CSS files and image assets.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "orderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following example ",
+              "type" : "text"
+            },
+            {
+              "code" : ".htaccess",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " file defines rules suitable for use with Apache:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# Enable custom routing.",
+            "RewriteEngine On",
+            "",
+            "# Route documentation and tutorial pages.",
+            "RewriteRule ^(documentation|tutorials)\\\/.*$ MyNewPackage.doccarchive\/index.html [L]",
+            "",
+            "# Route files and data for the documentation archive.",
+            "#",
+            "# If the file path doesn't exist in the website's root ...",
+            "RewriteCond %{REQUEST_FILENAME} !-f",
+            "RewriteCond %{REQUEST_FILENAME} !-d",
+            "",
+            "# ... route the request to that file path with the documentation archive.",
+            "RewriteRule .* MyNewPackage.doccarchive\/$0 [L]"
+          ],
+          "syntax" : "shell",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "With these rules in place, the web server provides access to the contents of",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the documentation archive.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "After configuring your web server to host a documentation archive, keep it up",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to date by using a continuous integration workflow that builds the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation archive using ",
+              "type" : "text"
+            },
+            {
+              "code" : "docc",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", and copies the resulting",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : ".doccarchive",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to your web server.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/customizing-the-appearance-of-your-documentation-pages"
+      ],
+      "title" : "Distribution"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/distributing-documentation-to-other-developers"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/customizing-the-appearance-of-your-documentation-pages": {
+  "abstract" : [
+    {
+      "text" : "Customize the look and feel of your documentation webpages.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/customizing-the-appearance-of-your-documentation-pages",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Customizing the Appearance of Your Documentation Pages",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/customizing-the-appearance-of-your-documentation-pages"
+},
+"https://apple.github.io/swift-docc-plugin/documentation/swiftdoccplugin/": {
+  "identifier" : "https:\/\/apple.github.io\/swift-docc-plugin\/documentation\/swiftdoccplugin\/",
+  "title" : "SwiftPM DocC Plugin",
+  "titleInlineContent" : [
+    {
+      "text" : "SwiftPM DocC",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "Plugin",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/apple.github.io\/swift-docc-plugin\/documentation\/swiftdoccplugin\/"
+},
+"link-to-source.png": {
+  "alt" : "A DocC documentation page showing the title and declaration of a symbol",
+  "identifier" : "link-to-source.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/link-to-source.png"
+    },
+    {
+      "traits" : [
+        "1x",
+        "dark"
+      ],
+      "url" : "\/images\/link-to-source~dark.png"
+    }
+  ]
+}
+}
+}

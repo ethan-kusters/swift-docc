@@ -1,0 +1,1514 @@
+{
+  "abstract" : [
+    {
+      "text" : "Displays a tutorial page that teaches your Swift framework or package APIs through interactive coding exercises.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "__docc_universal_symbol_reference_$Tutorial",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Tutorial"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "identifier",
+        "text" : "time"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "projectFiles"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "ResourceReference"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "docc",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorial",
+        "text" : "Tutorial"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "Tutorial"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Tutorial"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "identifier",
+              "text" : "time"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "projectFiles"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "ResourceReference"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n"
+            },
+            {
+              "kind" : "text",
+              "text" : "    "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Intro",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "__docc_universal_symbol_reference_$Intro",
+              "text" : "Intro"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "identifier",
+              "text" : "title"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            },
+            {
+              "kind" : "text",
+              "text" : " { ... }"
+            },
+            {
+              "kind" : "text",
+              "text" : "\n"
+            },
+            {
+              "kind" : "text",
+              "text" : "    "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+              "text" : "Section"
+            },
+            {
+              "kind" : "text",
+              "text" : "(...)"
+            },
+            {
+              "kind" : "text",
+              "text" : " { ... }"
+            },
+            {
+              "kind" : "text",
+              "text" : "\n"
+            },
+            {
+              "kind" : "text",
+              "text" : "}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "An integer value that represents the estimated time it takes to complete the tutorial, in minutes. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(optional)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "time"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name and extension of an archive in your code base, which the reader can download and use or reference while following the tutorial’s steps. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(optional)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "projectFiles"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The ",
+              "type" : "text"
+            },
+            {
+              "code" : "Tutorial",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive defines the structure of an individual tutorial page that teaches your Swift framework or package APIs through a series of interactive steps. Your tutorial can include one or more of these individual tutorial pages, and readers navigate to them from a table of contents page—defined by the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "tutorial-page",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Create-the-Tutorial-File",
+          "level" : 3,
+          "text" : "Create the Tutorial File",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use a text editor to add a Tutorial file to your documentation catalog and ensure the filename ends in ",
+              "type" : "text"
+            },
+            {
+              "code" : ".tutorial",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". Copy and paste the template below into your editor.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: <#number#>) {",
+            "    @Intro(title: \"<#text#>\") {",
+            "        <#text#>",
+            "        ",
+            "        @Image(source: <#file#>, alt: \"<#accessible description#>\")",
+            "    }",
+            "    ",
+            "    @Section(title: \"<#text#>\") {",
+            "        @ContentAndMedia(layout: horizontal) {",
+            "            <#text#>",
+            "            ",
+            "            @Image(source: <#file#>, alt: \"<#accessible description#>\")",
+            "        }",
+            "        ",
+            "        @Steps {",
+            "            @Step {",
+            "                <#text#>",
+            "                @Image(source: <#file#>, alt: \"<#accessible description#>\")",
+            "            }",
+            "            ",
+            "            @Step {",
+            "                <#text#>",
+            "                @Code(name: \"<#display name#>\", file: <#filename.swift#>)",
+            "            }",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Estimate-Completion-Time",
+          "level" : 3,
+          "text" : "Estimate Completion Time",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "You can give the reader an idea of how long the tutorial page might take to complete by providing an optional estimate in the ",
+              "type" : "text"
+            },
+            {
+              "code" : "time",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter. Completion time estimates help the reader understand how long they need to set aside to learn your APIs.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: 30) {",
+            "",
+            "    ...",
+            "",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When you provide estimates on your individual tutorial pages, the introduction section on the table of contents page automatically calculates and displays a total-completion time estimate for the entire tutorial.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Provide-Source-Material",
+          "level" : 3,
+          "text" : "Provide Source Material",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If you need to add downloadable materials, like sample projects and code examples, for your tutorials, archive them and add them to your documentation catalog. Consider offering a base project to which the reader can add code as they work through the steps, as well as a finished project for comparison with their work.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Project files can reside anywhere in your documentation catalog, but it’s good practice to centralize them in a Resources folder. You may want to create a tutorial-specific one if you created a tutorial folder in your documentation catalog.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To share project files with the reader, provide the archive’s name and extension in the ",
+              "type" : "text"
+            },
+            {
+              "code" : "projectFiles",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: 30, projectFiles: \"SlothCreatorFiles.zip\") {",
+            "",
+            "    ...",
+            "",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Add-an-Introduction",
+          "level" : 3,
+          "text" : "Add an Introduction",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A tutorial page begins with an introduction section, defined by an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Intro",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive. The introduction is the first thing a reader sees on the page, so it needs to draw them into the content that follows and let them know what to expect. An introduction includes text and an image that serves as the section’s background, or a link to an introduction video.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: 30) {",
+            "    @Intro(title: \"Creating and Building a Swift Package\") {",
+            "        This tutorial guides you through creating and building a Swift Package. Use the package to add your own re-usable classes and structures.",
+            "        ",
+            "        @Image(source: \"creating-intro.png\", alt: \"An image of the Swift logo.\")",
+            "    }",
+            "",
+            "    ...",
+            "    ",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Add-Sections-of-Steps",
+          "level" : 3,
+          "text" : "Add Sections of Steps",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A tutorial page includes sets of steps the reader performs, and those steps are organized into logical sections. For example, a tutorial might include a section of steps that guides a reader through setting up a Swift package, and another section that covers adding a class to that package.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Define sections using the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive. You can optionally start with descriptive text and an image or video animation by using the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/ContentAndMedia",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive. Once you define a section, you can include steps to perform coding tasks by using the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Steps",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive. See the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Code",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to learn how to provide code for a step.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: 30) {",
+            "    @Intro(title: \"Creating Custom Sloths\") {",
+            "        ",
+            "        ...",
+            "",
+            "    }",
+            "    ",
+            "    @Section(title: \"Create a Swift Package in a new directory\") {",
+            "        @ContentAndMedia(layout: \"horizontal\") {",
+            "            ",
+            "            ...",
+            "            ",
+            "        }",
+            "        ",
+            "        @Steps {",
+            "            @Step {",
+            "                Create the directory.",
+            "                ",
+            "                @Image(source: \"placeholder-image.png\", alt: \"A screenshot showing the command to type in the terminal to create the directory.\")",
+            "            }",
+            "            ",
+            "            @Step {",
+            "                Create the Swift Package. ",
+            "                ",
+            "                @Image(source: \"placeholder-image.png\", alt: \"A screenshot showing the command to type in the terminal to create the Swift package.\")",
+            "            }",
+            "            ",
+            "            @Step {",
+            "                ",
+            "                ...",
+            "",
+            "            }",
+            "            ",
+            "            @Step {",
+            "",
+            "                ...",
+            "",
+            "            }",
+            "        }",
+            "    }",
+            "    ",
+            "    @Section(title: \"Add a customization view\") {",
+            "        @ContentAndMedia(layout: \"horizontal\") {",
+            "",
+            "            ...",
+            "",
+            "        }",
+            "        ",
+            "        @Steps {",
+            "        ",
+            "            ...",
+            "",
+            "        }    ",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Check-the-Readers-Knowledge",
+          "level" : 3,
+          "text" : "Check the Reader’s Knowledge",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "At the end of a tutorial page, you can optionally use an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Assessments",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " directive to create a section that tests the reader’s knowledge. An assessment section includes a set of multiple-choice questions. If the reader gets a question wrong, you can provide a hint that points them toward the correct answer so they can try again.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorial(time: 30) {",
+            "    @Intro(title: \"Creating Custom Sloths\") {",
+            "        ",
+            "        ...",
+            "",
+            "    }",
+            "    ",
+            "    @Section(title: \"Create a new project and add SlothCreator\") {",
+            "        @ContentAndMedia(layout: \"horizontal\") {",
+            "            ",
+            "            ...",
+            "",
+            "        }",
+            "        ",
+            "        @Steps {",
+            "            ",
+            "            ...",
+            "",
+            "        }",
+            "    }",
+            "    ",
+            "    ...",
+            "",
+            "    @Assessments {",
+            "        @MultipleChoice {",
+            "            What element did you use to add space around and between your views?",
+            "",
+            "            @Choice(isCorrect: false) {",
+            "                A state variable.",
+            "",
+            "                @Justification(reaction: \"Try again!\") {",
+            "                    Remember, it's something you used to arrange views vertically.",
+            "                }",
+            "            }",
+            "",
+            "            @Choice(isCorrect: true) {",
+            "                A VStack with trailing padding.",
+            "",
+            "                @Justification(reaction: \"That's right!\") {",
+            "                    A VStack arranges views in a vertical line.",
+            "                }",
+            "            }",
+            "",
+            "            @Choice(isCorrect: false) {",
+            "              ",
+            "              ...",
+            "              ",
+            "            }",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To see the creation of a simple tutorial project from start to finish, see ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/building-an-interactive-tutorial",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Contained-Elements",
+          "level" : 3,
+          "text" : "Contained Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A tutorial page can contain the following items:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "Engaging introductory text and an image or video to display at the top of the page. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(required)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Intro",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "A group of related steps. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(required)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "Assessments that test the reader’s knowledge about the steps performed on the page. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Assessments",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            },
+            {
+              "definition" : {
+                "content" : [
+                  {
+                    "inlineContent" : [
+                      {
+                        "text" : "An image that appears on the page. ",
+                        "type" : "text"
+                      },
+                      {
+                        "inlineContent" : [
+                          {
+                            "text" : "(optional)",
+                            "type" : "text"
+                          }
+                        ],
+                        "type" : "strong"
+                      }
+                    ],
+                    "type" : "paragraph"
+                  }
+                ]
+              },
+              "term" : {
+                "inlineContent" : [
+                  {
+                    "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Image",
+                    "isActive" : true,
+                    "type" : "reference"
+                  }
+                ]
+              }
+            }
+          ],
+          "type" : "termList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/building-an-interactive-tutorial"
+      ],
+      "title" : "Related Documentation"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/XcodeRequirement"
+      ],
+      "title" : "Setting an Xcode Requirement"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Intro"
+      ],
+      "title" : "Providing an Introduction"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Section"
+      ],
+      "title" : "Displaying Tasks"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Image"
+      ],
+      "title" : "Displaying Images"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Assessments"
+      ],
+      "title" : "Testing Reader Knowledge"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/tutorial"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/Assessments": {
+  "abstract" : [
+    {
+      "text" : "Tests the reader’s knowledge at the end of a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Assessments"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Assessments",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Assessments",
+      "text" : "Assessments"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Assessments",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/assessments"
+},
+"doc://org.swift.docc/documentation/docc/Code": {
+  "abstract" : [
+    {
+      "text" : "Defines the code for an individual step on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Code"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Code",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Code",
+      "text" : "Code"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Code",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/code"
+},
+"doc://org.swift.docc/documentation/docc/ContentAndMedia": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping that contains text and an image or a video in a section on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContentAndMedia"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/ContentAndMedia",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$ContentAndMedia",
+      "text" : "ContentAndMedia"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContentAndMedia",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/contentandmedia"
+},
+"doc://org.swift.docc/documentation/docc/Image": {
+  "abstract" : [
+    {
+      "text" : "Displays an image in a tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Image"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "source"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "alt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Image",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Image",
+      "text" : "Image"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Image",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/image"
+},
+"doc://org.swift.docc/documentation/docc/Intro": {
+  "abstract" : [
+    {
+      "text" : "Displays an introduction section at the top of a table of contents or tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Intro"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "title"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Intro",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Intro",
+      "text" : "Intro"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Intro",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/intro"
+},
+"doc://org.swift.docc/documentation/docc/Section": {
+  "abstract" : [
+    {
+      "text" : "Displays a grouping of text, images, and tasks on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Section"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Section",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Section",
+      "text" : "Section"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Section",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/section"
+},
+"doc://org.swift.docc/documentation/docc/Steps": {
+  "abstract" : [
+    {
+      "text" : "Defines a set of tasks the reader performs on a tutorial page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Steps"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Steps",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Steps",
+      "text" : "Steps"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Steps",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/steps"
+},
+"doc://org.swift.docc/documentation/docc/Tutorial": {
+  "abstract" : [
+    {
+      "text" : "Displays a tutorial page that teaches your Swift framework or package APIs through interactive coding exercises.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tutorial"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "time"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "projectFiles"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "ResourceReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorial",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorial",
+      "text" : "Tutorial"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tutorial",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial"
+},
+"doc://org.swift.docc/documentation/docc/Tutorials": {
+  "abstract" : [
+    {
+      "text" : "Displays a table of contents page for readers to navigate the pages of an interactive tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tutorials"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorials",
+      "text" : "Tutorials"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorials"
+},
+"doc://org.swift.docc/documentation/docc/XcodeRequirement": {
+  "abstract" : [
+    {
+      "text" : "Lists the Xcode version required by a tutorial, and provides a link to download it.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XcodeRequirement"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "title"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "destination"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "URL"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/XcodeRequirement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$XcodeRequirement",
+      "text" : "XcodeRequirement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XcodeRequirement",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/xcoderequirement"
+},
+"doc://org.swift.docc/documentation/docc/building-an-interactive-tutorial": {
+  "abstract" : [
+    {
+      "text" : "Construct a step-by-step guided learning experience for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/building-an-interactive-tutorial",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Building an Interactive Tutorial",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/building-an-interactive-tutorial"
+},
+"doc://org.swift.docc/documentation/docc/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+},
+"tutorial-page": {
+  "alt" : "A screenshot of the top portion of a tutorial page.",
+  "identifier" : "tutorial-page",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/tutorial-page@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/tutorial-page~dark@2x.png"
+    }
+  ]
+}
+}
+}

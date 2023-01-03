@@ -1,0 +1,543 @@
+{
+  "abstract" : [
+    {
+      "text" : "Adds an individual tutorial page link to a chapter on a table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-shared-directives",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter"
+      ],
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Volume",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/TutorialReference"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "__docc_universal_symbol_reference_$TutorialReference",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "text" : "TutorialReference"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "identifier",
+        "text" : "tutorial"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "TopicReference"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "docc",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$TutorialReference",
+        "text" : "TutorialReference"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "TutorialReference"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "TutorialReference"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "identifier",
+              "text" : "tutorial"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "TopicReference"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A link to a tutorial page, in the format ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "<doc:[TutorialPageFileName]>",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "emphasis"
+                },
+                {
+                  "text" : ". For example, ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "<doc:Creating-Custom-Sloths>",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "emphasis"
+                },
+                {
+                  "text" : ".  ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "tutorial"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "TutorialReference",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive in a chapter on a table of contents page to link to a specific tutorial page. Include one ",
+              "type" : "text"
+            },
+            {
+              "code" : "TutorialReference",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " per chapter. For each, use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "tutorial",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter to reference the page by name, preceded by the doc: prefix.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorials(name: \"SlothCreator\") {",
+            "    ",
+            "    ...",
+            "    ",
+            "    @Chapter(name: \"SlothCreator Essentials\") {",
+            "        @Image(source: chapter1-slothcreatorEssentials.png, alt: \"A wireframe of an app interface that has an outline of a sloth and four buttons below the sloth. The buttons display the following symbols, from left to right: snowflake, fire, wind, and lightning.\")",
+            "        ",
+            "        Create custom sloths and edit their attributes and powers using SlothCreator.",
+            "        ",
+            "        @TutorialReference(tutorial: \"doc:Creating-Custom-Sloths\")",
+            "    }",
+            "",
+            "    ...",
+            "    ",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following items can include tutorial page references:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/tutorialreference"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/Chapter": {
+  "abstract" : [
+    {
+      "text" : "Organizes related tutorial pages into a chapter on a table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Chapter"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Chapter",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Chapter",
+      "text" : "Chapter"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Chapter",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/chapter"
+},
+"doc://org.swift.docc/documentation/docc/TutorialReference": {
+  "abstract" : [
+    {
+      "text" : "Adds an individual tutorial page link to a chapter on a table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TutorialReference"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "identifier",
+      "text" : "tutorial"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "TopicReference"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/TutorialReference",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$TutorialReference",
+      "text" : "TutorialReference"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TutorialReference",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorialreference"
+},
+"doc://org.swift.docc/documentation/docc/Tutorials": {
+  "abstract" : [
+    {
+      "text" : "Displays a table of contents page for readers to navigate the pages of an interactive tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tutorials"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorials",
+      "text" : "Tutorials"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorials"
+},
+"doc://org.swift.docc/documentation/docc/Volume": {
+  "abstract" : [
+    {
+      "text" : "Organizes related chapters into a volume on a tutorial’s table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Volume"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Volume",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Volume",
+      "text" : "Volume"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Volume",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/volume"
+},
+"doc://org.swift.docc/documentation/docc/tutorial-shared-directives": {
+  "abstract" : [
+    {
+      "text" : "Directives supported by multiple directives in interactive tutorials.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-shared-directives",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Shared Directives",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-shared-directives"
+},
+"doc://org.swift.docc/documentation/docc/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}

@@ -1,0 +1,1061 @@
+{
+  "abstract" : [
+    {
+      "text" : "Include articles and extension files to extend your source documentation comments or provide supporting conceptual content.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/adding-supplemental-content-to-a-documentation-catalog"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "DocC"
+      }
+    ],
+    "role" : "article",
+    "roleHeading" : "Article",
+    "title" : "Adding Supplemental Content to a Documentation Catalog"
+  },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A documentation catalog contains files that enrich your source documentation",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "comments. Two types of files that documentation catalogs can contain are",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "articles and extension files.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Typically, documentation comments in source code describe how specific APIs",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "work, but often don’t explain how all the pieces in a project fit together at a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "conceptual level. Adding an article to your documentation catalog is one way to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "include this conceptual content. Articles are markup files that contain",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "information that doesn’t relate to a specific symbol. Use articles to:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Provide a landing page that includes an overview of your package or framework",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Craft a learning path for readers to understand how to use your code base, such",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "as with a getting started guide or a tutorial",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Extension files are markup files that complement source documentation",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "comments. Use extension files to:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Organize properties and methods that a symbol contains",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Provide additional content beyond source documentation comments",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Override source documentation comments",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For details about adding a landing page and organizing symbols using extension",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "files, see",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/adding-structure-to-your-documentation-pages",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The process of crafting great documentation is an art. Your",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "content is unique; you know which elements, beyond source",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation comments, provide the most value to your readers. For",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "information about adding documentation to your code base and creating a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation catalog, see",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/documenting-a-swift-framework-or-package",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Add-Articles-to-Explain-Concepts-or-Describe-Tasks",
+          "level" : 3,
+          "text" : "Add Articles to Explain Concepts or Describe Tasks",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Adding articles to your documentation catalog helps readers understand how",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the types and methods in your code base work as a system. They let you",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "explain how to complete a task, or discuss a broader concept that doesn’t fit",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "into an Overview section for a specific symbol.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "5_article",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The structure of an article is similar to symbol files or a top-level landing",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "page, with the exception that the first level 1 header is regular content instead",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "of a symbol reference. For example, the Getting Started with Sloths article",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "contains the following title, single-sentence abstract or summary, and overview section:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# Getting Started with Sloths",
+            "",
+            "Create a sloth and assign personality traits and abilities.",
+            "",
+            "## Overview",
+            "",
+            "Sloths are complex creatures that require careful creation and a suitable",
+            "habitat.",
+            "..."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To add an article to your documentation catalog, use a text editor and create a file with an appropriate title and add a ",
+              "type" : "text"
+            },
+            {
+              "code" : ".md",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " extension.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "After the overview section, additional sections and subsections use a double",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "hash (##) for a level 2 header, and a triple hash (###) for a level 3 header.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Follow the hashes with a space, and then the title for that section or",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "subsection.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "To help readers perform a specific task, use sections to guide them",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "through the steps necessary to complete the task. For larger concepts, consider",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "adding a series of articles that build on each other.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Tip",
+          "style" : "tip",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When you add an article to a documentation catalog, DocC includes a link to it",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "on the project’s top-level page. To choose a different location for the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "article, add a link to it from a group or collection. When DocC renders a link to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "an article, it uses the article’s title for the text of the link. For more information",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "about organizing your code base’s documentation, see",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/adding-structure-to-your-documentation-pages",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Add-Extension-Files-to-Append-to-or-Override-Source-Documentation-Comments",
+          "level" : 3,
+          "text" : "Add Extension Files to Append to or Override Source Documentation Comments",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Although writing documentation comments in source files has many benefits, in some",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "circumstances it makes more sense to separate the content from the source",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "files, such as:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "When you include thorough code listings or numerous images that increase the",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "size of your documentation and make source files difficult to manage",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "When your source documentation comments focus on the implementation of your",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "code, and aren’t appropriate for external documentation",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In cases like these, DocC supports supplementing or completely replacing source",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation comments with content in extension files. To add an extension file to your",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation catalog, create a file within the documentation catalog, then modify the first line of the file to identify the symbol that the file relates to.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "You must use the symbol’s absolute path for the page title of an",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "extension file and include the name of the framework or package. DocC doesn’t",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "support relative symbol paths in this context.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Important",
+          "style" : "important",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If the symbol already has source documentation comments, add a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "DocumentationExtension",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive to specify whether the content of the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "extension file appends to or overrides the source documentation comments. Add",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the ",
+              "type" : "text"
+            },
+            {
+              "code" : "DocumentationExtension",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " after the first line of the file that specifies",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the symbol, using the following format:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Metadata {",
+            "    @DocumentationExtension(mergeBehavior: [append or override])",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The ",
+              "type" : "text"
+            },
+            {
+              "code" : "mergeBehavior",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter determines whether DocC adds the extension file’s",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "content to the bottom of the source documentation comments, or replaces",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the source documentation comments entirely.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To add the extension file’s content to source documentation comments, use",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "append",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " for the ",
+              "type" : "text"
+            },
+            {
+              "code" : "mergeBehavior",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". For example, to add a section",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "about the sleeping habits of sloths to the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Sloth",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " type, the extension file",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "contains the following:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# ``SlothCreator\/Sloth``",
+            "",
+            "@Metadata {",
+            "    @DocumentationExtension(mergeBehavior: append)",
+            "}",
+            "",
+            "## Sleeping Habits",
+            "",
+            "Sloths sleep in trees by curling into a ball and hanging by their claws."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Alternatively, to completely replace the source documentation comments, use",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "override",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". In this case, you add content after the directive that DocC uses",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "when generating documentation. For example, to replace the source documentation",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "comments of the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Sloth",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " type in SlothCreator, the extension file contains the following:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "# ``SlothCreator\/Sloth``",
+            "",
+            "@Metadata {",
+            "    @DocumentationExtension(mergeBehavior: override)",
+            "}",
+            "",
+            "This overrides the in-source summary.",
+            "",
+            "## Overview",
+            "",
+            "This content overrides in-source content."
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For additional details about ",
+              "type" : "text"
+            },
+            {
+              "code" : "Metadata",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and other directives, see",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/formatting-your-documentation-content",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/adding-structure-to-your-documentation-pages"
+      ],
+      "title" : "Structure and Formatting"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/adding-supplemental-content-to-a-documentation-catalog"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"5_article": {
+  "alt" : "A screenshot showing the rendered documentation of an article titled Getting Started with Sloths. The article contains an abstract and an overview with a diagram associating a sloth’s color with a power.",
+  "identifier" : "5_article",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/5_article@2x.png"
+    }
+  ]
+},
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/Metadata": {
+  "abstract" : [
+    {
+      "text" : "Use metadata directives to instruct DocC how to build certain documentation files.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Metadata"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Metadata",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Metadata",
+      "text" : "Metadata"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Metadata",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/metadata"
+},
+"doc://org.swift.docc/documentation/docc/adding-structure-to-your-documentation-pages": {
+  "abstract" : [
+    {
+      "text" : "Arrange symbols into groups and collections that make them easy to find.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/adding-structure-to-your-documentation-pages",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Adding Structure to Your Documentation Pages",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/adding-structure-to-your-documentation-pages"
+},
+"doc://org.swift.docc/documentation/docc/documenting-a-swift-framework-or-package": {
+  "abstract" : [
+    {
+      "text" : "Create rich and engaging documentation from your in-source comments, and add a",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "documentation catalog to your code base to provide additional content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/documenting-a-swift-framework-or-package",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Documenting a Swift Framework or Package",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/documenting-a-swift-framework-or-package"
+},
+"doc://org.swift.docc/documentation/docc/formatting-your-documentation-content": {
+  "abstract" : [
+    {
+      "text" : "Enhance your content’s presentation with special formatting and styling for text, links, and other page elements.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/formatting-your-documentation-content",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Formatting Your Documentation Content",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/formatting-your-documentation-content"
+}
+}
+}

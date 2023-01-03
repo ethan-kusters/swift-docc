@@ -1,0 +1,1201 @@
+{
+  "abstract" : [
+    {
+      "text" : "Add reference documentation to your symbols that explains how to use them.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/writing-symbol-documentation-in-your-source-files"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "DocC"
+      }
+    ],
+    "role" : "article",
+    "roleHeading" : "Article",
+    "title" : "Writing Symbol Documentation in Your Source Files"
+  },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A common characteristic of a well-crafted API is that it’s easy to read and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "practically self-documenting. However, an API alone can’t convey important",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "information like clear documentation does, such as:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The overall architecture of a framework or package",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Relationships and dependencies between components in the API",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Boundary conditions, side effects, and errors that occur when using the API",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For example, DocC generates an entry in the documentation for the following",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "method, but it doesn’t convey any details about what happens when you call the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "method, or whether there are any limits on the values you pass to it:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "\/\/ Eat the provided specialty sloth food.",
+            "mutating public func eat(_ food: Food, quantity: Int) throws -> Int {",
+            "    ...",
+            "}"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To help people who use your API better understand it, follow the steps in the sections below to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "add documentation comments to the public symbols in your code base. DocC compiles",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "those comments and generates formatted documentation that you share with your users.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Add-a-Basic-Description-for-Each-Symbol",
+          "level" : 3,
+          "text" : "Add a Basic Description for Each Symbol",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The first step toward writing great documentation is to add single-sentence abstracts or summaries, and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "where necessary, ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Discussion",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " sections, or additional details about a symbol and its use, to each of your framework’s public",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "symbols. Discussion sections are areas in documentation that provide additional detail about a symbol and its usage.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A summary describes a symbol and augments its name with additional",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "details. Try to keep summaries short and precise; use a single sentence or",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "sentence fragment that’s ideally 150 characters or fewer. Use plain text, and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "avoid including links, technical terms, or other symbol names. Summaries appear in the documentation pages that DocC generates.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If a symbol already has a source comment that begins with two forward slashes",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "(",
+              "type" : "text"
+            },
+            {
+              "code" : "\/\/",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "), insert an additional forward slash (",
+              "type" : "text"
+            },
+            {
+              "code" : "\/",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") to convert it to a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation comment. DocC uses the first line of a documentation comment as",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the summary.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "\/\/\/ Eat the provided specialty sloth food.",
+            "mutating public func eat(_ food: Food, quantity: Int) throws -> Int {"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "DocC also supports multiline documentation comments. Begin a comment",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "with a forward slash and two asterisks (",
+                  "type" : "text"
+                },
+                {
+                  "code" : "\/**",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : "), and terminate it with an asterisk",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "and a forward slash (",
+                  "type" : "text"
+                },
+                {
+                  "code" : "*\/",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : "). Content you add in between becomes the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "documentation.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Tip",
+          "style" : "tip",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When you need to provide additional content for a symbol, add one",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "or more paragraphs directly below a symbol’s summary to create a Discussion",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "section. The content you include depends on the type of symbol you’re",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documenting:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "For a property, explain how it affects the behavior of its parent.",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "Describe typical usage and any permitted or default values.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "For a method, describe its usage patterns and any side effects or additional",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "behaviors. Highlight whether the method executes asynchronously or performs any",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "expensive operations.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "For an enumeration case or constant, concisely describe what it represents.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Insert blank lines to break text into separate paragraphs.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "\/\/\/ Eat the provided specialty sloth food.",
+            "\/\/\/",
+            "\/\/\/ Sloths love to eat while they move very slowly through their rainforest ",
+            "\/\/\/ habitats. They are especially happy to consume leaves and twigs, which they ",
+            "\/\/\/ digest over long periods of time, mostly while they sleep.",
+            "\/\/\/ ",
+            "\/\/\/ When they eat food, a sloth's `energyLevel` increases by the food's `energy`.",
+            "mutating public func eat(_ food: Food, quantity: Int) throws -> Int {"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When writing content for a Discussion section, use documentation markup. For",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "more information, see ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/formatting-your-documentation-content",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Describe-the-Parameters-of-a-Method",
+          "level" : 3,
+          "text" : "Describe the Parameters of a Method",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For methods that take parameters, document those parameters directly below the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "summary, or the Discussion section, if you include one. Describe each parameter",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "in isolation. Discuss its purpose and, where necessary, the range of acceptable",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "values.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC supports two approaches to document the parameters of a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "method. You can add a Parameters section, or one or more parameter fields.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Both use Markdown’s list syntax.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A Parameters section begins with a single list item that contains the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "Parameters",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " keyword and terminates with a colon (",
+              "type" : "text"
+            },
+            {
+              "code" : ":",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "). Individual parameters",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "appear as nested list items. A colon separates a parameter’s name from its",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "description.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "\/\/\/ - Parameters:",
+            "\/\/\/   - food: The food for the sloth to eat.",
+            "\/\/\/   - quantity: The quantity of the food for the sloth to eat.",
+            "mutating public func eat(_ food: Food, quantity: Int) throws -> Int {"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Parameter fields omit the parent list item and include the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Parameter",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "keyword in each of the individual list items, between the list item marker and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the name of the parameter.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "\/\/\/ - Parameter food: The food for the sloth to eat.",
+            "\/\/\/ - Parameter quantity: The quantity of the food for the sloth to eat.",
+            "mutating public func eat(_ food: Food, quantity: Int) throws -> Int {"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "After you add documentation for a method’s parameters, preview it in a web browser to see the rendered content.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "3_eat",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Describe-the-Return-Value-of-a-Method",
+          "level" : 3,
+          "text" : "Describe the Return Value of a Method",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For methods that return a value, include a Returns section in your",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation comment to describe the returned value. If",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the return value is optional, provide information about when the method",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "returns ",
+              "type" : "text"
+            },
+            {
+              "code" : "nil",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "There are no restrictions for where you add the Returns section in a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation comment, other than it must come after the summary, and the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Discussion section, if you include one.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A Returns section contains a single list item that includes the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Returns",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "keyword. The description of the return value follows the colon (",
+              "type" : "text"
+            },
+            {
+              "code" : ":",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ").",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "\/\/\/ - Returns: The sloth's energy level after eating.",
+            "mutating public func eat(_ food: Food, quantity: Int) throws -> Int {"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "DocC supports a single Returns section. Including more than one section results in",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "undefined behavior.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "anchor" : "Describe-the-Thrown-Errors-of-a-Method",
+          "level" : 3,
+          "text" : "Describe the Thrown Errors of a Method",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If a method can throw an error, add a Throws section to your documentation",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "comment. Explain the circumstances that cause the method to throw an error, and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "list the types of possible errors.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Similar to a Returns section, there are no restrictions for where you add a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Throws section, other than it must come after the summary, and the Discussion",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "section, if you include one.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A Throws section contains a single list item that includes the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Throws",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "keyword. Add the content that describes the errors after the colon (:).",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "\/\/\/ - Throws: `SlothError.tooMuchFood` if the quantity is more than 100.",
+            "mutating public func eat(_ food: Food, quantity: Int) throws -> Int {"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "DocC supports a single Throws section. Including more than one section results in",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "undefined behavior.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "anchor" : "Create-a-Richer-Experience-for-Your-Symbol-Documentation",
+          "level" : 3,
+          "text" : "Create a Richer Experience for Your Symbol Documentation",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A documentation comment that includes each of the previously mentioned sections provides much more information to developers than a single-line source comment, as the following example shows:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "\/\/\/ Eat the provided specialty sloth food.",
+            "\/\/\/",
+            "\/\/\/ Sloths love to eat while they move very slowly through their rainforest ",
+            "\/\/\/ habitats. They're especially happy to consume leaves and twigs, which they ",
+            "\/\/\/ digest over long periods of time, mostly while they sleep.",
+            "\/\/\/",
+            "\/\/\/ When they eat food, a sloth's `energyLevel` increases by the food's `energy`.",
+            "\/\/\/",
+            "\/\/\/ - Parameters:",
+            "\/\/\/   - food: The food for the sloth to eat.",
+            "\/\/\/   - quantity: The quantity of the food for the sloth to eat.",
+            "\/\/\/",
+            "\/\/\/ - Returns: The sloth's energy level after eating.",
+            "\/\/\/",
+            "\/\/\/ - Throws: `SlothError.tooMuchFood` if the quantity is more than 100.",
+            "mutating public func eat(_ food: Food, quantity: Int) throws -> Int {"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In addition, DocC includes features that allow you to create even richer",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "documentation for your symbols:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Use symbol links instead of code voice when referring to other symbols in",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "your framework. Symbol links allow you to quickly navigate your framework’s",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "documentation when viewing in a browser. For more information, see",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/formatting-your-documentation-content",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Use extension files to provide additional content for your symbols, such as",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "code examples and images, and to help keep the size of their in-source comments",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "manageable. For more information, see",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/adding-supplemental-content-to-a-documentation-catalog",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/documenting-a-swift-framework-or-package"
+      ],
+      "title" : "Essentials"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/writing-symbol-documentation-in-your-source-files"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"3_eat": {
+  "alt" : "A screenshot showing the rendered documentation for the eat(_:quantity:) method.",
+  "identifier" : "3_eat",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/3_eat@2x.png"
+    },
+    {
+      "traits" : [
+        "2x",
+        "dark"
+      ],
+      "url" : "\/images\/3_eat~dark@2x.png"
+    }
+  ]
+},
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/adding-supplemental-content-to-a-documentation-catalog": {
+  "abstract" : [
+    {
+      "text" : "Include articles and extension files to extend your source documentation comments or provide supporting conceptual content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/adding-supplemental-content-to-a-documentation-catalog",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Adding Supplemental Content to a Documentation Catalog",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/adding-supplemental-content-to-a-documentation-catalog"
+},
+"doc://org.swift.docc/documentation/docc/documenting-a-swift-framework-or-package": {
+  "abstract" : [
+    {
+      "text" : "Create rich and engaging documentation from your in-source comments, and add a",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "documentation catalog to your code base to provide additional content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/documenting-a-swift-framework-or-package",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Documenting a Swift Framework or Package",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/documenting-a-swift-framework-or-package"
+},
+"doc://org.swift.docc/documentation/docc/formatting-your-documentation-content": {
+  "abstract" : [
+    {
+      "text" : "Enhance your content’s presentation with special formatting and styling for text, links, and other page elements.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/formatting-your-documentation-content",
+  "kind" : "article",
+  "role" : "article",
+  "title" : "Formatting Your Documentation Content",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/formatting-your-documentation-content"
+}
+}
+}

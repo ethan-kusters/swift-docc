@@ -1,0 +1,602 @@
+{
+  "abstract" : [
+    {
+      "text" : "Displays a set of sample code links in the resources section of a tutorial’s table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/org.swift.docc\/documentation\/docc",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Resources"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/org.swift.docc\/documentation\/docc\/SampleCode"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "__docc_universal_symbol_reference_$SampleCode",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "text" : "SampleCode"
+      },
+      {
+        "kind" : "text",
+        "text" : "(...)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "docc",
+        "relatedModules" : [
+
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "attribute",
+        "text" : "@"
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "__docc_universal_symbol_reference_$SampleCode",
+        "text" : "SampleCode"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Directive",
+    "symbolKind" : "class",
+    "title" : "SampleCode"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            null
+          ],
+          "tokens" : [
+            {
+              "kind" : "typeIdentifier",
+              "text" : "@"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "SampleCode"
+            },
+            {
+              "kind" : "text",
+              "text" : "(...)"
+            },
+            {
+              "kind" : "text",
+              "text" : " {\n    ...\n}"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A URL to a page of related sample code. ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "(required)",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "destination"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "Overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "SampleCode",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directive to add links to related sample code in the Resources section at the bottom of your tutorial’s table of contents page.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "DocC renders the URL you specify in the ",
+              "type" : "text"
+            },
+            {
+              "code" : "destination",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter as a “View more” link at the bottom of the sample code section. Within the directive, add descriptive text and use standard Markdown syntax to provide links to one or more more specific sample code pages. At least one specific sample code link within the directive is required.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Tutorials(name: \"SlothCreator\") {",
+            "    ",
+            "    ...",
+            "    ",
+            "    @Resources {",
+            "        Explore more resources for learning about sloths.",
+            "",
+            "        @SampleCode(destination: \"https:\/\/www.example.com\/sloth-code\/\") {",
+            "            Download and explore sample code projects to get to know SlothCreator.",
+            "",
+            "            - [SlothyRoad: Building a Fun, Yet Slow Game](https:\/\/www.example.com\/sloth-code\/slothyroad\/)",
+            "            - [SpeedySloth: Designing a Faster, More Powerful Sloth](https:\/\/www.example.com\/sloth-code\/speedy\/)",
+            "            - [SmoothSloth: Adding a Smooth and Glossy Coat to Your Sloth](https:\/\/www.example.com\/sloth-code\/smooth\/)",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : "markdown",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "You can include sample code links alongside other types of resources, like ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Documentation",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ",  ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Downloads",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Forums",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ", and ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Videos",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Containing-Elements",
+          "level" : 3,
+          "text" : "Containing Elements",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following items can contain sample code resources:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Resources",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Documentation",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Downloads",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Forums",
+        "doc:\/\/org.swift.docc\/documentation\/docc\/Videos"
+      ],
+      "title" : "Displaying Resources"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/docc\/samplecode"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://org.swift.docc/documentation/docc": {
+  "abstract" : [
+    {
+      "text" : "Produce rich API reference documentation and interactive tutorials for your Swift framework or package.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "DocC",
+  "type" : "topic",
+  "url" : "\/documentation\/docc"
+},
+"doc://org.swift.docc/documentation/docc/Documentation": {
+  "abstract" : [
+    {
+      "text" : "Displays a set of documentation links in the resources section of a tutorial’s table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Documentation"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Documentation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Documentation",
+      "text" : "Documentation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Documentation",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/documentation"
+},
+"doc://org.swift.docc/documentation/docc/Downloads": {
+  "abstract" : [
+    {
+      "text" : "Displays a set of related download links in the resources section of a tutorial’s table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Downloads"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Downloads",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Downloads",
+      "text" : "Downloads"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Downloads",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/downloads"
+},
+"doc://org.swift.docc/documentation/docc/Forums": {
+  "abstract" : [
+    {
+      "text" : "Displays a set of forum links in the resources section of a tutorial’s table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Forums"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Forums",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Forums",
+      "text" : "Forums"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Forums",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/forums"
+},
+"doc://org.swift.docc/documentation/docc/Resources": {
+  "abstract" : [
+    {
+      "text" : "Displays a set of links to related resources, like downloads, sample code, and videos.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Resources"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Resources",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Resources",
+      "text" : "Resources"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Resources",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/resources"
+},
+"doc://org.swift.docc/documentation/docc/SampleCode": {
+  "abstract" : [
+    {
+      "text" : "Displays a set of sample code links in the resources section of a tutorial’s table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SampleCode"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/SampleCode",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$SampleCode",
+      "text" : "SampleCode"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SampleCode",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/samplecode"
+},
+"doc://org.swift.docc/documentation/docc/Tutorials": {
+  "abstract" : [
+    {
+      "text" : "Displays a table of contents page for readers to navigate the pages of an interactive tutorial.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tutorials"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Tutorials",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Tutorials",
+      "text" : "Tutorials"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorials"
+},
+"doc://org.swift.docc/documentation/docc/Videos": {
+  "abstract" : [
+    {
+      "text" : "Displays a set of video links in the resources section of a tutorial’s table of contents page.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Videos"
+    },
+    {
+      "kind" : "text",
+      "text" : "(...)"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/Videos",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "attribute",
+      "text" : "@"
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "__docc_universal_symbol_reference_$Videos",
+      "text" : "Videos"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Videos",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/videos"
+},
+"doc://org.swift.docc/documentation/docc/tutorial-syntax": {
+  "abstract" : [
+    {
+      "text" : "Teach developers your Swift APIs through step-by-step, interactive content.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/org.swift.docc\/documentation\/docc\/tutorial-syntax",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Interactive Tutorials",
+  "type" : "topic",
+  "url" : "\/documentation\/docc\/tutorial-syntax"
+}
+}
+}
