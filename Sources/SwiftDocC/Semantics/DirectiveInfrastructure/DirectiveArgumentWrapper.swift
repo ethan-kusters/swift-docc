@@ -232,3 +232,22 @@ extension DirectiveArgumentWrapped where Value: OptionallyWrappedDirectiveArgume
         self.hiddenFromDocumentation = hiddenFromDocumentation
     }
 }
+
+protocol CollectionWrappedArgumentValueConvertible: CollectionWrapped {}
+extension Array: CollectionWrappedArgumentValueConvertible where Element: DirectiveArgumentValueConvertible {}
+extension DirectiveArgumentWrapped where Value: CollectionWrappedArgumentValueConvertible {
+    init(
+        name: _DirectiveArgumentName = .inferredFromPropertyName
+    ) {
+        
+        // TODO: Set some flag here to indicate that this is a variadic argument.
+        fatalError("implement me")
+    }
+    
+    init(
+        wrappedValue: Value,
+        name: _DirectiveArgumentName = .inferredFromPropertyName
+    ) {
+        fatalError("implement me")
+    }
+}

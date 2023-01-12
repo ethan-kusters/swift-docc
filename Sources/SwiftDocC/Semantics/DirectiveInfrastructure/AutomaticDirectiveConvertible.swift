@@ -153,6 +153,7 @@ extension AutomaticDirectiveConvertible {
         var unableToCreateParentDirective = false
         
         for reflectedArgument in reflectedDirective.arguments {
+            // TODO: Special-case parsing behavior here if the argument is variadic
             let parsedValue = Semantic.Analyses.ArgumentValueParser<Self>(
                 severityIfNotFound: reflectedArgument.required ? .warning : nil,
                 argumentName: reflectedArgument.name,
