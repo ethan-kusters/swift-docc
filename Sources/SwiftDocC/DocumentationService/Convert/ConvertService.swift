@@ -115,6 +115,24 @@ public struct ConvertService: DocumentationService {
         messageIdentifier: String
     ) -> Result<([RenderNode], RenderReferenceStore?), ConvertServiceError> {
         Result {
+            var request = request
+            
+            let placeholderMarkupFiles: [Data]
+            if request.symbolGraphs.isEmpty && !request.markupFiles.isEmpty {
+                let spareTechnologyRoot = """
+                    # Spare Technology Root
+                    
+                    @Metadata {
+                        @TechnologyRoot
+                    }
+                    """
+                
+                placeholderMarkupFiles = [Data(spareTechnologyRoot.utf8)]
+            } else {
+                placeholderMarkupFiles = []
+            }
+            
+            
             // Update DocC's current feature flags based on the ones provided
             // in the request.
             FeatureFlags.current = request.featureFlags
@@ -123,11 +141,13 @@ public struct ConvertService: DocumentationService {
 
             let workspace = DocumentationWorkspace()
             
+            let placeholderMarkupFileIdentifiers: [String]
             let provider: DocumentationWorkspaceDataProvider
             if let bundleLocation = request.bundleLocation {
                 // If an on-disk bundle is provided, convert it.
                 // Additional symbol graphs and markup are ignored for now.
                 provider = try LocalFileSystemDataProvider(rootURL: bundleLocation)
+                placeholderMarkupFileIdentifiers = []
             } else {
                 // Otherwise, convert the in-memory content.
                 var inMemoryProvider = InMemoryContentDataProvider()
@@ -136,9 +156,11 @@ public struct ConvertService: DocumentationService {
                     info: request.bundleInfo,
                     symbolGraphs: request.symbolGraphs,
                     markupFiles: request.markupFiles,
-                    miscResourceURLs: request.miscResourceURLs
+                    miscResourceURLs: request.miscResourceURLs,
+                    placeholderMarkupFiles: placeholderMarkupFiles
                 )
                 
+                placeholderMarkupFileIdentifiers = inMemoryProvider.placeholderMarkupFilePaths
                 provider = inMemoryProvider
             }
             
@@ -208,8 +230,11 @@ public struct ConvertService: DocumentationService {
             } else {
                 references = nil
             }
+            let renderNodes = outputConsumer.renderNodes.sync { $0 }.filter { node in
+                return !placeholderMarkupFileIdentifiers.contains(where: node.identifier.absoluteString.contains)
+            }
             
-            return (outputConsumer.renderNodes.sync({ $0 }), references)
+            return (renderNodes, references)
         }.mapErrorToConvertServiceError {
             .conversionError(underlyingError: $0.localizedDescription)
         }

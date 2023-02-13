@@ -19,21 +19,25 @@ extension ConvertService {
         var bundles: [DocumentationBundle] = []
         
         var files: [URL: Data] = [:]
+        var placeholderMarkupFilePaths: [String] = []
         
         mutating func registerBundle(
             info: DocumentationBundle.Info,
             symbolGraphs: [Data],
             markupFiles: [Data],
-            miscResourceURLs: [URL]
+            miscResourceURLs: [URL],
+            placeholderMarkupFiles: [Data]
         ) {
             let symbolGraphURLs = symbolGraphs.map { registerFile(contents: $0, isMarkupFile: false) }
             let markupFileURLs = markupFiles.map { registerFile(contents: $0, isMarkupFile: true) }
+            let placeholderMarkupFileURLs = placeholderMarkupFiles.map { registerFile(contents: $0, isMarkupFile: true) }
+            placeholderMarkupFilePaths = placeholderMarkupFileURLs.map { $0.deletingPathExtension().lastPathComponent }
             
             bundles.append(
                 DocumentationBundle(
                     info: info,
                     symbolGraphURLs: symbolGraphURLs,
-                    markupURLs: markupFileURLs,
+                    markupURLs: markupFileURLs + placeholderMarkupFileURLs,
                     miscResourceURLs: miscResourceURLs
                 )
             )

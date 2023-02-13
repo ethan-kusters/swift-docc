@@ -2142,6 +2142,7 @@ public class DocumentationContext: DocumentationContextDataProviderDelegate {
         
         // Automatically curate articles that haven't been manually curated
         // Article curation is only done automatically if there is only one root module
+        // NOTE: This check fails for single-article conversion.
         if let rootNode = rootNodeForAutomaticCuration {
             let articleReferences = try autoCurateArticles(otherArticles, in: bundle, startingFrom: rootNode)
             try preResolveExternalLinks(references: articleReferences, bundle: bundle)
