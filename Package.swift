@@ -44,21 +44,6 @@ let package = Package(
                 .product(name: "Markdown", package: "swift-markdown"),
                 "SymbolKit",
                 "CLMDB",
-                .product(name: "Crypto", package: "swift-crypto"),
-            ],
-            swiftSettings: swiftSettings
-        ),
-        .testTarget(
-            name: "SwiftDocCTests",
-            dependencies: [
-                "SwiftDocC",
-                "SwiftDocCTestUtilities",
-            ],
-            resources: [
-                .copy("Test Resources"),
-                .copy("Test Bundles"),
-                .copy("Converter/Converter Fixtures"),
-                .copy("Rendering/Rendering Fixtures"),
             ],
             swiftSettings: swiftSettings
         ),
@@ -68,29 +53,7 @@ let package = Package(
             name: "SwiftDocCUtilities",
             dependencies: [
                 "SwiftDocC",
-                .product(name: "NIOHTTP1", package: "swift-nio"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser")
-            ],
-            swiftSettings: swiftSettings
-        ),
-        .testTarget(
-            name: "SwiftDocCUtilitiesTests",
-            dependencies: [
-                "SwiftDocCUtilities",
-                "SwiftDocC",
-                "SwiftDocCTestUtilities",
-            ],
-            resources: [
-                .copy("Test Resources"),
-                .copy("Test Bundles"),
-            ],
-            swiftSettings: swiftSettings
-        ),
-        // Test utility library
-        .target(
-            name: "SwiftDocCTestUtilities",
-            dependencies: [
-                "SymbolKit"
             ],
             swiftSettings: swiftSettings
         ),
@@ -100,25 +63,6 @@ let package = Package(
             name: "docc",
             dependencies: [
                 "SwiftDocCUtilities",
-            ],
-            swiftSettings: swiftSettings
-        ),
-
-        // Test app for SwiftDocCUtilities
-        .executableTarget(
-            name: "signal-test-app",
-            dependencies: [
-                "SwiftDocCUtilities",
-            ],
-            path: "Tests/signal-test-app",
-            swiftSettings: swiftSettings
-        ),
-
-        .executableTarget(
-            name: "generate-symbol-graph",
-            dependencies: [
-                "SwiftDocC",
-                "SymbolKit",
             ],
             swiftSettings: swiftSettings
         ),
@@ -132,12 +76,10 @@ let package = Package(
 if ProcessInfo.processInfo.environment["SWIFTCI_USE_LOCAL_DEPS"] == nil {
     // Building standalone, so fetch all dependencies remotely.
     package.dependencies += [
-        .package(url: "https://github.com/apple/swift-nio.git", .upToNextMinor(from: "2.31.2")),
         .package(name: "swift-markdown", url: "https://github.com/apple/swift-markdown.git", .branch("main")),
         .package(name: "CLMDB", url: "https://github.com/apple/swift-lmdb.git", .branch("main")),
         .package(url: "https://github.com/apple/swift-argument-parser", .upToNextMinor(from: "1.0.1")),
         .package(name: "SymbolKit", url: "https://github.com/apple/swift-docc-symbolkit", .branch("main")),
-        .package(url: "https://github.com/apple/swift-crypto.git", .upToNextMinor(from: "1.1.2")),
     ]
     
     // SwiftPM command plugins are only supported by Swift version 5.6 and later.
@@ -149,11 +91,9 @@ if ProcessInfo.processInfo.environment["SWIFTCI_USE_LOCAL_DEPS"] == nil {
 } else {
     // Building in the Swift.org CI system, so rely on local versions of dependencies.
     package.dependencies += [
-        .package(path: "../swift-nio"),
         .package(path: "../swift-markdown"),
         .package(name: "CLMDB", path: "../swift-lmdb"),
         .package(path: "../swift-argument-parser"),
         .package(name: "SymbolKit", path: "../swift-docc-symbolkit"),
-        .package(path: "../swift-crypto"),
     ]
 }
