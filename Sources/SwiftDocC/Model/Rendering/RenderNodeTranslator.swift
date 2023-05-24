@@ -1268,12 +1268,39 @@ public struct RenderNodeTranslator: SemanticVisitor {
         if let pageColor = documentationNode.metadata?.pageColor {
             node.metadata.color = TopicColor(standardColorIdentifier: pageColor.rawValue)
         }
+        
+        if let callToAction = documentationNode.metadata?.callToAction {
+            if let url = callToAction.url {
+                let downloadIdentifier = RenderReferenceIdentifier(url.description)
+                node.sampleDownload = .init(
+                    action: .reference(
+                        identifier: downloadIdentifier,
+                        isActive: true,
+                        overridingTitle: callToAction.buttonLabel(for: documentationNode.metadata?.pageKind?.kind),
+                        overridingTitleInlineContent: nil))
+                externalLocationReferences[url.description] = ExternalLocationReference(identifier: downloadIdentifier)
+            } else if let fileReference = callToAction.file,
+                      let downloadIdentifier = createAndRegisterRenderReference(forMedia: fileReference, assetContext: .download)
+            {
+                node.sampleDownload = .init(action: .reference(
+                    identifier: downloadIdentifier,
+                    isActive: true,
+                    overridingTitle: callToAction.buttonLabel(for: documentationNode.metadata?.pageKind?.kind),
+                    overridingTitleInlineContent: nil
+                ))
+            }
+        }
 
         var metadataCustomDictionary : [String: String] = [:]
         if let customMetadatas = documentationNode.metadata?.customMetadata {
             for elem in customMetadatas {
                 metadataCustomDictionary[elem.key] = elem.value
             }
+        }
+        
+        if let pageKind = documentationNode.metadata?.pageKind, pageKind.kind == .sampleCode {
+            node.metadata.role = pageKind.kind.renderRole.rawValue
+            node.metadata.roleHeading = pageKind.kind.titleHeading
         }
 
         node.metadata.customMetadata = metadataCustomDictionary

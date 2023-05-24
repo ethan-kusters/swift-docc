@@ -122,6 +122,9 @@ extension RenderNode {
         case .overview:
             return NavigatorIndex.PageType.overview
         case .symbol:
+            if let role = metadata.role, NavigatorIndex.PageType(role: role) == .sampleCode {
+                return .sampleCode
+            }
             if let symbolKind = metadata.symbolKind {
                 return NavigatorIndex.PageType(symbolKind: symbolKind)
             }

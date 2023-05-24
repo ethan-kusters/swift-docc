@@ -233,10 +233,10 @@ struct DocumentationCurator {
                         continue
                 }
                 
-                guard childDocumentationNode.kind != .module else {
-                    problems.append(Problem(diagnostic: Diagnostic(source: source(), severity: .warning, range: range(), identifier: "org.swift.docc.ModuleCuration", summary: "Linking to \((link.destination ?? "").singleQuoted) from a Topics group in \(nodeReference.absoluteString.singleQuoted) isn't allowed", explanation: "The former is a module, and modules only exist at the root"), possibleSolutions: []))
-                    continue
-                }
+//                guard childDocumentationNode.kind != .module else {
+//                    problems.append(Problem(diagnostic: Diagnostic(source: source(), severity: .warning, range: range(), identifier: "org.swift.docc.ModuleCuration", summary: "Linking to \((link.destination ?? "").singleQuoted) from a Topics group in \(nodeReference.absoluteString.singleQuoted) isn't allowed", explanation: "The former is a module, and modules only exist at the root"), possibleSolutions: []))
+//                    continue
+//                }
                 
                 // Verify we are not creating a graph cyclic relationship.
                 guard childReference != nodeReference else {
