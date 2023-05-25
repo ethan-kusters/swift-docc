@@ -9,7 +9,7 @@
 */
 
 import Foundation
-import Crypto
+import CryptoKit
 
 /// A protocol to provide data to be indexed.
 public protocol RenderNodeProvider {

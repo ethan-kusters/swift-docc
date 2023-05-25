@@ -9,7 +9,7 @@
 */
 
 import Foundation
-import Crypto
+import CryptoKit
 
 /// A checksum generator.
 public struct Checksum {
