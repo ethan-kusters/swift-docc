@@ -31,7 +31,7 @@ extension Semantic.Analyses {
             if allowsStructuredMarkup {
                 allowedDirectives += DirectiveIndex.shared.renderableDirectives.values.map {
                     return $0.directiveName
-                }
+                } + ["Snippet"]
             }
             self.allowedDirectives = allowedDirectives
             
