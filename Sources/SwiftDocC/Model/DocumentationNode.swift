@@ -453,6 +453,11 @@ public struct DocumentationNode {
                     guard BlockDirective.allKnownDirectiveNames.contains(comment.name) else {
                         continue
                     }
+                    
+                    guard comment.name == "Snippet" || DirectiveIndex.shared.renderableDirectives.keys.contains(comment.name) else {
+                        // Renderable directives are supported in source documentation.
+                        continue
+                    }
 
                     let diagnostic = Diagnostic(
                         source: location,
