@@ -454,7 +454,7 @@ public struct DocumentationNode {
                         continue
                     }
                     
-                    guard comment.name == "Snippet" || DirectiveIndex.shared.renderableDirectives.keys.contains(comment.name) else {
+                    if comment.name == "Snippet" || DirectiveIndex.shared.renderableDirectives.keys.contains(comment.name) {
                         // Renderable directives are supported in source documentation.
                         continue
                     }
