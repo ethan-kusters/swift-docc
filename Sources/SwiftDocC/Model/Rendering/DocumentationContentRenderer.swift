@@ -302,10 +302,11 @@ public class DocumentationContentRenderer {
             kind = .article
             referenceRole = role(for: .sampleCode).rawValue
         case let nodeKind? where nodeKind.isSymbol:
-            kind = .symbol
             if node?.metadata?.pageKind?.kind == .sampleCode {
+                kind = .article
                 referenceRole = Metadata.PageKind.Kind.sampleCode.renderRole.rawValue
             } else {
+                kind = .symbol
                 referenceRole = role(for: nodeKind).rawValue
             }
         case _ where node?.semantic is Article:
